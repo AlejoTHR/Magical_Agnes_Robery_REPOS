@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Historia/Prueba.md",
+                "file": "Personajes/Sin título.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Prueba"
+              "title": "Sin título"
             }
           }
         ]
@@ -180,8 +180,12 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "dae7173155ce932d",
+  "active": "3b947915f93f376e",
   "lastOpenFiles": [
+    "Niveles/Prueba4.md",
+    "Personajes/Sin título.md",
+    "Mecánicas/Prueba3.md",
+    "Magias/Prueba2.md",
     "Historia/Prueba.md",
     "Magias",
     "Personajes",
