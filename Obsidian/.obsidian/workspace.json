@@ -176,6 +176,12 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "3b947915f93f376e",
-  "lastOpenFiles": []
+  "active": "dae7173155ce932d",
+  "lastOpenFiles": [
+    "Magias",
+    "Personajes",
+    "Niveles",
+    "Historia",
+    "Mecánicas"
+  ]
 }
