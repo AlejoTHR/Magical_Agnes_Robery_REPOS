@@ -13,17 +13,26 @@ La cámara se centra en una pantalla colisionando con un Objeto Trasnparente del
 
 ![[Celeste_Gameplay_CameraExample.gif]]
 [^1] ***Objetivo Final***
-La Cámara Actual no mantiene seguimiento del jugador si es que la sala es más grande que la cámara. Corrección de este problema en siguiente etapa de progreso de Movimiento de Cámara
+La Cámara Actual no mantiene seguimiento del jugador si es que la sala es más grande que la cámara, el código del movimiento de la cámara depende del movimiento del jugador. Corrección de estos problema en siguiente etapa de progreso de Movimiento de Cámara
 
-###### ***--ETAPA 2--***######
+###### ***--ETAPA 2--*** 22/01/2026######
 
-EN PROGRESO
+Corrección 1 de la cámara; el código de movimiento de la cámara ya no está ligado al script del movimiento del personaje
 
+Creación de un Scroll de un sentido en la proxima etapa
 
+###### ***--ETAPA 3--*** 22/01/2026######
+Se crearon diferentes etiquetas para la detección de diferentes salas, salas estáticas, salas de scroll horizontal y scroll verticall
 
+-Si la etiqueta del objeto colisionado es la etiqueta estática la cámara se centra en el objeto colisionado 
+-Si la etiqueta es la etiqueta de scroll vertical, la cámara se centra en el objeto pero sigue al jugador en el eje y
+-Si la etiqueta es la etiqueta de scroll horizontal, la cámara se centra en el objeto pero sigue al jugador en el eje x
 
+Problemas de este diseño de cámara: La cámara no tiene límites en su movimiento cuando sigue al jugador, teniendo un rango de visión mayor a al tamaño del objeto. 
+Solusión del Problema en la siguiente etapa
 
-
+###### ***--ETAPA 4--*** 22/01/2026######
+EN PROGRESo
 
 
 

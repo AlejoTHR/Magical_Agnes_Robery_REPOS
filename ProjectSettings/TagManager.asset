@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - ChangeCamera
+  - VerticalScroll
+  - HorizontalScroll
   layers:
   - Default
   - TransparentFX
