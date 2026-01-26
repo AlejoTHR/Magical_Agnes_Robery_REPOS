@@ -1,14 +1,14 @@
 {
   "main": {
-    "id": "7d8ecf56d77029e3",
+    "id": "b6809bcd695857fe",
     "type": "split",
     "children": [
       {
-        "id": "b98eb488ef812f63",
+        "id": "8a68d21bf98e8164",
         "type": "tabs",
         "children": [
           {
-            "id": "3b947915f93f376e",
+            "id": "42ad77d010996eed",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -27,15 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "1215b01f0e640d09",
+    "id": "db381fc6e122d6b0",
     "type": "split",
     "children": [
       {
-        "id": "84beb0f366d0df61",
+        "id": "f582b72312955cd0",
         "type": "tabs",
         "children": [
           {
-            "id": "dae7173155ce932d",
+            "id": "b0934ed2a5e411ae",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -48,7 +48,7 @@
             }
           },
           {
-            "id": "30f46bcc2abbb5c1",
+            "id": "36564d259d9693e5",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -61,39 +61,40 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "Buscar"
+              "title": "Search"
             }
           },
           {
-            "id": "9e67af95b4d41161",
+            "id": "0d43ed571ad6f714",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
               "state": {},
               "icon": "lucide-bookmark",
-              "title": "Marcadores"
+              "title": "Bookmarks"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
-    "id": "6986461c4f098401",
+    "id": "5283c5926008a6a6",
     "type": "split",
     "children": [
       {
-        "id": "2270e1136b956135",
+        "id": "ca53e1f4af8e79f4",
         "type": "tabs",
         "children": [
           {
-            "id": "f9385149da842fd5",
+            "id": "88fc5ac6ccd62334",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Mecánicas/Detectar Enemigos (Pol_Provisional).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,24 +104,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Enlaces entrantes"
+              "title": "Backlinks for Detectar Enemigos (Pol_Provisional)"
             }
           },
           {
-            "id": "3d1501046b83afbb",
+            "id": "390039d1ee41c13c",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Mecánicas/Detectar Enemigos (Pol_Provisional).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Enlaces salientes"
+              "title": "Outgoing links from Detectar Enemigos (Pol_Provisional)"
             }
           },
           {
-            "id": "9bd290e5baa78245",
+            "id": "57f20cb5fe554542",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -131,11 +133,11 @@
                 "searchQuery": ""
               },
               "icon": "lucide-tags",
-              "title": "Etiquetas"
+              "title": "Tags"
             }
           },
           {
-            "id": "40565a49deef765e",
+            "id": "3b5ca396938bff4c",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -145,21 +147,22 @@
                 "searchQuery": ""
               },
               "icon": "lucide-archive",
-              "title": "Todas las propiedades"
+              "title": "All properties"
             }
           },
           {
-            "id": "4a5a27769436c5e8",
+            "id": "b7d5320dad2e84e7",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
+                "file": "Mecánicas/Detectar Enemigos (Pol_Provisional).md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Esquema"
+              "title": "Outline of Detectar Enemigos (Pol_Provisional)"
             }
           }
         ]
@@ -180,20 +183,17 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "3b947915f93f376e",
+  "active": "42ad77d010996eed",
   "lastOpenFiles": [
-    "Mecánicas/Camara.md",
+    "Mecánicas/Detectar Enemigos (Pol_Provisional).md",
     "Mecánicas/Movimiento Enemigos.md",
-    "Mecánicas/Detectar Enemigos.md",
+    "Mecánicas/Camara.md",
     "Mecánicas/Movimiento Básico.md",
-    "Niveles/Prueba4.md",
-    "Personajes/Sin título.md",
-    "Magias/Prueba2.md",
+    "IMAGENES/Cono_Detección.png",
+    "IMAGENES/Celeste_Gameplay_CameraExample.gif",
+    "Magias/Viento (Pol_Provisional).md",
     "Historia/Prueba.md",
-    "Magias",
-    "Personajes",
-    "Niveles",
-    "Historia",
-    "Mecánicas"
+    "IMAGENES",
+    "Personajes/Prueba5.md"
   ]
 }
