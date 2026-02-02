@@ -472,6 +472,7 @@ GameObject:
   - component: {fileID: 1243286735}
   - component: {fileID: 1243286733}
   - component: {fileID: 1243286738}
+  - component: {fileID: 1243286740}
   m_Layer: 6
   m_Name: Agnes
   m_TagString: Player
@@ -626,6 +627,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stats: {fileID: 11400000, guid: 212e975100e1dce47b148d73bea12710, type: 2}
+--- !u!114 &1243286740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243286732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2e9d82df050c724e9ecbc756ed450f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1449147517
 GameObject:
   m_ObjectHideFlags: 0

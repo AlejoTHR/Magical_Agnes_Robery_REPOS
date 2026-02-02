@@ -42,8 +42,8 @@ public class MC_movement : MonoBehaviour, IPlayerController
     {
         _time += Time.deltaTime;
         GatherInput();
-        HandleMarkerInput();
-       if (_grounded)
+        //HandleMarkerInput();
+        if (_grounded)
             _stats.FallAcceleration = 110;
 
     }
@@ -72,7 +72,7 @@ public class MC_movement : MonoBehaviour, IPlayerController
         }
         if (_frameInput.Wind)
         {
-           windUsed = true;
+            windUsed = true;
         }
     }
 
@@ -225,7 +225,7 @@ public class MC_movement : MonoBehaviour, IPlayerController
 
     private void HandleMarkerInput()
     {
-        if (Input.GetKeyDown(KeyCode.K) && !markerPlaced)
+        if (Input.GetKeyDown(KeyCode.Z) && !markerPlaced)
         {
             markerPosition = transform.position;
             markerPlaced = true;
@@ -233,7 +233,7 @@ public class MC_movement : MonoBehaviour, IPlayerController
             Debug.Log("Marcador colocado en: " + markerPosition);
         }
 
-        else if (Input.GetKeyDown(KeyCode.K) && markerPlaced)
+        else if (Input.GetKeyDown(KeyCode.Z) && markerPlaced)
         {
             TeleportToMarker();
         }
@@ -252,18 +252,20 @@ public class MC_movement : MonoBehaviour, IPlayerController
 
 }
 
-public struct FrameInput
-{
-    public bool JumpDown;
-    public bool JumpHeld;
-    public Vector2 Move;
-    public bool Wind;
-}
 
-public interface IPlayerController
-{
-    public event Action<bool, float> GroundedChanged;
+    public struct FrameInput
+    {
+        public bool JumpDown;
+        public bool JumpHeld;
+        public Vector2 Move;
+        public bool Wind;
+    }
 
-    public event Action Jumped;
-    public Vector2 FrameInput { get; }
-}
+    public interface IPlayerController
+    {
+        public event Action<bool, float> GroundedChanged;
+
+        public event Action Jumped;
+        public Vector2 FrameInput { get; }
+    }
+
