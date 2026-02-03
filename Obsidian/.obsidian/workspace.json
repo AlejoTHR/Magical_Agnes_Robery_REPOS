@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mecánicas/Movimiento Básico.md",
+                "file": "Mecánicas/Lista de mecánicas.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Movimiento Básico"
+              "title": "Lista de mecánicas"
             }
           }
         ]
@@ -185,9 +185,11 @@
   },
   "active": "42ad77d010996eed",
   "lastOpenFiles": [
-    "Mecánicas/Camara.md",
-    "Mecánicas/Movimiento Enemigos.md",
     "Mecánicas/Detectar Enemigos (Pol_Provisional).md",
+    "Mecánicas/Camara.md",
+    "Mecánicas/Lista de mecánicas.md",
+    "Sin título.canvas",
+    "Mecánicas/Movimiento Enemigos.md",
     "Mecánicas/Movimiento Básico.md",
     "Magias/Viento (Pol_Provisional).md",
     "IMAGENES/Cono_Detección.png",
