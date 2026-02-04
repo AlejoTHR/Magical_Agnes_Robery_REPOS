@@ -472,12 +472,13 @@ GameObject:
   - component: {fileID: 1243286743}
   - component: {fileID: 1243286742}
   - component: {fileID: 1243286741}
+  - component: {fileID: 1243286745}
+  - component: {fileID: 1243286740}
   - component: {fileID: 1243286735}
   - component: {fileID: 1243286733}
   - component: {fileID: 1243286738}
-  - component: {fileID: 1243286740}
   m_Layer: 6
-  m_Name: Agnes
+  m_Name: PLAYER
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -688,6 +689,22 @@ MonoBehaviour:
   usingFireMagic: 0
   usingWindMagic: 0
   usingWaterMagic: 0
+--- !u!114 &1243286745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243286732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce338e73365c3aa419e7af67d55040e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _stats: {fileID: 11400000, guid: 94db11c9bf88a66478a24044ea3ab134, type: 2}
+  agnes: {fileID: 1243286733}
+  WaterDashSpeed: 40
+  WaterDashAcceleration: 100
 --- !u!1 &1449147517
 GameObject:
   m_ObjectHideFlags: 0
