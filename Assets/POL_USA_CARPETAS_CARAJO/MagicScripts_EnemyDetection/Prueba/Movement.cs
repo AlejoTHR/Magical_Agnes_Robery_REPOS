@@ -100,6 +100,17 @@ public class Movement : MonoBehaviour, IPlayerController
     {
         _frameVelocity += velocity;
     }
+
+    private float _facing = 1f;
+
+    public float ReturnDirection()
+    {
+        if (_frameInput.Move.x != 0)
+            _facing = Mathf.Sign(_frameInput.Move.x);
+
+        return _facing;
+    }
+
     //Self explanatory. Variables used here are declared below.
     private void CheckCollisions()
     {

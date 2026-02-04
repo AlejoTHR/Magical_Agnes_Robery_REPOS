@@ -5,6 +5,7 @@ public class WindMagic : MonoBehaviour
     [SerializeField] private ScriptableStats _stats;
     public Rigidbody2D agnes;
     private Movement plymov = null;
+    public float fallspeed;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,18 +16,16 @@ public class WindMagic : MonoBehaviour
     void Update()
     {
         if (plymov == null) return;
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKey(KeyCode.X))
         {
-            if (_stats.MaxFallSpeed > 0)
-            {
-                _stats.MaxFallSpeed = 0;
-                plymov.usingWindMagic = true;
-            }
-            else
-            {
-                _stats.MaxFallSpeed = 40;
-                plymov.usingWindMagic = false;
-            }
+             _stats.MaxFallSpeed = fallspeed;
+              plymov.usingWindMagic = true;
+            
+        }
+        else
+        {
+            _stats.MaxFallSpeed = 40;
+            plymov.usingWindMagic = false;
         }
     }
 }

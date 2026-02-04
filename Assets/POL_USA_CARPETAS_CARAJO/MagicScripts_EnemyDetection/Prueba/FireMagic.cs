@@ -33,7 +33,8 @@ public class FireMagic : MonoBehaviour
         else if (!Input.GetKey(KeyCode.V) && plymov.usingWindMagic == false)
         {
             _stats.MaxFallSpeed = 40;
-            _stats.FallAcceleration = 110;
+            _stats.FallAcceleration = 80;
+            plymov.usingFireMagic = false;
         }
 
     }
