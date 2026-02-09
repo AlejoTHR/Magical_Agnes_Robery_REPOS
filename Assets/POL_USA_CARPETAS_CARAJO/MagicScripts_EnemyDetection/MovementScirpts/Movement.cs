@@ -8,6 +8,9 @@ public class Movement : MonoBehaviour, IPlayerController
     //declaration of variables
     //Refers to another script that manages the different variables used for the movement (gravity, jump height etc...)
     [SerializeField] private ScriptableStats _stats;
+    // Refers to the Hide Manager Script that manages Hiding
+    [SerializeField] private Hide_Manager HideManager;
+    
     //Declaration of the player rigidbody and collider
     private Rigidbody2D _rb;
     private CapsuleCollider2D _col;
@@ -77,7 +80,7 @@ public class Movement : MonoBehaviour, IPlayerController
                 _jumpToConsume = true;
                 _timeJumpWasPressed = _time;
             }
-            if (Input.GetKey(KeyCode.H))
+            if (Input.GetKey(KeyCode.H) && HideManager.HideCollided.gameObject.tag == "Hide")
             {
                 //Mirar si colisiono con un objeto en el que me permite esconderme
                 isHiding = true;
@@ -88,6 +91,7 @@ public class Movement : MonoBehaviour, IPlayerController
             if (!Input.GetKey(KeyCode.H))
             {
                 isHiding = false;
+                gameObject.tag = "Hide";  
             }
         }
         
