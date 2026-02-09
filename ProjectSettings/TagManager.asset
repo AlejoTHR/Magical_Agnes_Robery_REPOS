@@ -8,6 +8,7 @@ TagManager:
   - VerticalScroll
   - HorizontalScroll
   - Floor
+  - Hide
   layers:
   - Default
   - TransparentFX
