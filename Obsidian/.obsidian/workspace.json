@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Magias/Fuego (Pol_Provisional).md",
+                "file": "Mecánicas/Esconderse.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Fuego (Pol_Provisional)"
+              "title": "Esconderse"
             }
           }
         ]
@@ -185,8 +185,9 @@
   },
   "active": "42ad77d010996eed",
   "lastOpenFiles": [
-    "Magias/Viento (Pol_Provisional).md",
     "Magias/Fuego (Pol_Provisional).md",
+    "Mecánicas/Esconderse.md",
+    "Magias/Viento (Pol_Provisional).md",
     "Mecánicas/Camara.md",
     "Mecánicas/Lista de mecánicas.md",
     "Mecánicas/Detectar Enemigos (Pol_Provisional).md",

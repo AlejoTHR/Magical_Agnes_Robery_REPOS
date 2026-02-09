@@ -9,7 +9,6 @@ public class Movement : MonoBehaviour, IPlayerController
     //Refers to another script that manages the different variables used for the movement (gravity, jump height etc...)
     [SerializeField] private ScriptableStats _stats;
     // Refers to the Hide Manager Script that manages Hiding
-    [SerializeField] private Hide_Manager HideManager;
     
     //Declaration of the player rigidbody and collider
     private Rigidbody2D _rb;
@@ -26,6 +25,11 @@ public class Movement : MonoBehaviour, IPlayerController
     public bool usingFireMagic = false;
     public bool usingWindMagic = false;
     public bool usingWaterMagic = false;
+
+    // HIDING
+    public Hide_Structuretmp HideStructure;
+    public GameObject Hide = null;
+
 
     #region Interface
     //Checks to see if an input was recieved, if the players grounded state changed and if he jumped
@@ -80,7 +84,7 @@ public class Movement : MonoBehaviour, IPlayerController
                 _jumpToConsume = true;
                 _timeJumpWasPressed = _time;
             }
-            if (Input.GetKey(KeyCode.H) && HideManager.HideCollided.gameObject.tag == "Hide")
+            if (Input.GetKey(KeyCode.H) && Hide.CompareTag("Hide") && Hide != null)
             {
                 //Mirar si colisiono con un objeto en el que me permite esconderme
                 isHiding = true;
@@ -91,7 +95,6 @@ public class Movement : MonoBehaviour, IPlayerController
             if (!Input.GetKey(KeyCode.H))
             {
                 isHiding = false;
-                gameObject.tag = "Hide";  
             }
         }
         
