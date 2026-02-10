@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Camera_Controller_Structure_Temp : MonoBehaviour
 {
+    public Movement Movement;
+
     [Header("Camera Movement Structure")]
     
     [Tooltip("Target Game Object, It becomes a Collider [[ See CameraReference ]]")]
@@ -18,6 +20,8 @@ public class Camera_Controller_Structure_Temp : MonoBehaviour
 
     [Tooltip("Camera's initial Position")]
     public Vector3 baseCamPosition = Vector3.zero;
+
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -52,9 +56,8 @@ public class Camera_Controller_Structure_Temp : MonoBehaviour
                     ColliderTarget.transform.position.y);
             }
 
-            baseCamPosition = Vector3.Lerp(baseCamPosition, FinalTarget, speed * Time.deltaTime);
             
-            
+             baseCamPosition = Vector3.Lerp(baseCamPosition, FinalTarget, speed * Time.deltaTime);
             
             transform.position = baseCamPosition + offset;
             // Makes a transition to the next Collided Object tagged by ChangeCamera [[ See CameraReference ]]

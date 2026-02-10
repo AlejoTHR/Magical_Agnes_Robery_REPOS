@@ -31,6 +31,9 @@ public class Movement : MonoBehaviour, IPlayerController
     public GameObject Hide = null;
 
 
+    public LayerMask obstacleLayer;
+
+
     #region Interface
     //Checks to see if an input was recieved, if the players grounded state changed and if he jumped
     public Vector2 FrameInput => _frameInput.Move;
@@ -144,7 +147,7 @@ public class Movement : MonoBehaviour, IPlayerController
         Physics2D.queriesStartInColliders = false;
 
         // Ground and Ceiling
-        bool groundHit = Physics2D.CapsuleCast(_col.bounds.center, _col.size, _col.direction, 0, Vector2.down, _stats.GrounderDistance, ~_stats.PlayerLayer);
+        bool groundHit = Physics2D.CapsuleCast(_col.bounds.center, _col.size, _col.direction, 0, Vector2.down, _stats.GrounderDistance, obstacleLayer);
         bool ceilingHit = Physics2D.CapsuleCast(_col.bounds.center, _col.size, _col.direction, 0, Vector2.up, _stats.GrounderDistance, ~_stats.PlayerLayer);
 
         // Hit a Ceiling
