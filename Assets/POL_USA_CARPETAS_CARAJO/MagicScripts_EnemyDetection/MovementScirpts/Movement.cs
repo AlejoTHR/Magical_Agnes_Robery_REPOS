@@ -8,9 +8,12 @@ public class Movement : MonoBehaviour, IPlayerController
     //declaration of variables
     //Refers to another script that manages the different variables used for the movement (gravity, jump height etc...)
     [SerializeField] private ScriptableStats _stats;
+    // Refers to the Hide Manager Script that manages Hiding
+    
     //Declaration of the player rigidbody and collider
     private Rigidbody2D _rb;
     private CapsuleCollider2D _col;
+    public bool isHiding = false;
     //Variables used to check for the input
     private FrameInput _frameInput;
     private Vector2 _frameVelocity;
@@ -22,6 +25,11 @@ public class Movement : MonoBehaviour, IPlayerController
     public bool usingFireMagic = false;
     public bool usingWindMagic = false;
     public bool usingWaterMagic = false;
+
+    // HIDING
+    public Hide_Structuretmp HideStructure;
+    public GameObject Hide = null;
+
 
     #region Interface
     //Checks to see if an input was recieved, if the players grounded state changed and if he jumped
@@ -53,27 +61,43 @@ public class Movement : MonoBehaviour, IPlayerController
 
     private void GatherInput()
     {
-        //the input collected on this exact frame
-        _frameInput = new FrameInput
+        if (!isHiding)
         {
-            //Checks if the jump is pressed or held
-            JumpDown = Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.C),
-            JumpHeld = Input.GetButton("Jump") || Input.GetKey(KeyCode.C),
-            //Checks if the player moved
-            Move = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"))
-        };
-        //Makes all Floats turn to ints when it comes to movement to make turns instant, etc. 
-        if (_stats.SnapInput)
-        {
-            _frameInput.Move.x = Mathf.Abs(_frameInput.Move.x) < _stats.HorizontalDeadZoneThreshold ? 0 : Mathf.Sign(_frameInput.Move.x);
-            _frameInput.Move.y = Mathf.Abs(_frameInput.Move.y) < _stats.VerticalDeadZoneThreshold ? 0 : Mathf.Sign(_frameInput.Move.y);
+            //the input collected on this exact frame
+            _frameInput = new FrameInput
+            {
+                //Checks if the jump is pressed or held
+                JumpDown = Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.C),
+                JumpHeld = Input.GetButton("Jump") || Input.GetKey(KeyCode.C),
+                //Checks if the player moved
+                Move = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"))
+            };
+            //Makes all Floats turn to ints when it comes to movement to make turns instant, etc. 
+            if (_stats.SnapInput)
+            {
+                _frameInput.Move.x = Mathf.Abs(_frameInput.Move.x) < _stats.HorizontalDeadZoneThreshold ? 0 : Mathf.Sign(_frameInput.Move.x);
+                _frameInput.Move.y = Mathf.Abs(_frameInput.Move.y) < _stats.VerticalDeadZoneThreshold ? 0 : Mathf.Sign(_frameInput.Move.y);
+            }
+            //Checks if the player can Jump (this is about coyote time, dont touch this)
+            if (_frameInput.JumpDown)
+            {
+                _jumpToConsume = true;
+                _timeJumpWasPressed = _time;
+            }
+            if (Input.GetKey(KeyCode.H) && Hide.CompareTag("Hide") && Hide != null)
+            {
+                //Mirar si colisiono con un objeto en el que me permite esconderme
+                isHiding = true;
+            }
         }
-        //Checks if the player can Jump (this is about coyote time, dont touch this)
-        if (_frameInput.JumpDown)
+        else
         {
-            _jumpToConsume = true;
-            _timeJumpWasPressed = _time;
+            if (!Input.GetKey(KeyCode.H))
+            {
+                isHiding = false;
+            }
         }
+        
     }
 
     private void FixedUpdate()

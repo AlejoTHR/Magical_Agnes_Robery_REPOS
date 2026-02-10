@@ -34,7 +34,7 @@ public class EnemyScript : MonoBehaviour
         viewMesh.name = "View Mesh";
         viewMeshFilter.mesh = viewMesh;
 
-        StartCoroutine("FindTargetsWithDelay", .2f);
+        StartCoroutine("FindTargetsWithDelay", .0f);
     }
 
 
@@ -60,6 +60,8 @@ public class EnemyScript : MonoBehaviour
         for (int i = 0; i < targetsInViewRadius.Length; i++)
         {
             Transform target = targetsInViewRadius[i].transform;
+            GameObject targetObject = target.gameObject;
+            if (targetObject == null) { continue; }
             Vector2 dirToTarget = (target.position - transform.position).normalized;
             if (Vector2.Angle(new Vector2(Mathf.Sin(fovRotation * Mathf.Deg2Rad), Mathf.Cos(fovRotation * Mathf.Deg2Rad)), dirToTarget) < viewAngle / 2)
             {
@@ -67,8 +69,17 @@ public class EnemyScript : MonoBehaviour
 
                 if (!Physics2D.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask))
                 {
-                    Scene currentScene = SceneManager.GetActiveScene();
-                    SceneManager.LoadScene(currentScene.name);
+                    Movement charMovement = targetObject.GetComponent<Movement>();
+                    bool visible = true;
+                    if (charMovement != null){
+                        visible = !charMovement.isHiding;
+                    }
+                    if (visible)
+                    {
+                        Scene currentScene = SceneManager.GetActiveScene();
+                        SceneManager.LoadScene(currentScene.name);
+                    }
+                    
                 }
             }
         }

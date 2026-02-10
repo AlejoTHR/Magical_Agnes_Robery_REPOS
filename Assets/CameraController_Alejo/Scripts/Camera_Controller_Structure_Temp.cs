@@ -10,7 +10,6 @@ public class Camera_Controller_Structure_Temp : MonoBehaviour
     [Tooltip("Target Game Object is the Player")]
     public GameObject Player;
 
-
     [Tooltip("Lerp Transition Speed")]
     public float speed = 1.0f;
 
