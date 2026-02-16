@@ -28,8 +28,9 @@ public class FireMagic : MonoBehaviour
     {
         if (plymov.isGrounded() == false)
         {
-            if (Input.GetKey(KeyCode.I))
-            {
+        	if (Input.GetKey(KeyCode.X))
+        	{
+           
                 _stats.MaxFallSpeed = CannonSpeed;
                 _stats.FallAcceleration = CannonAcceleration;
                 if (plymov.usingFireMagic == false)

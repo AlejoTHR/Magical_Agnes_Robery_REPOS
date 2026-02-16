@@ -38,6 +38,7 @@ public class Camera_Controller_Structure_Temp : MonoBehaviour
         if (ColliderTarget != null || Player != null)
         {
             Vector3 FinalTarget = Vector3.zero;
+            if (ColliderTarget.gameObject == null) { return; }
             if (ColliderTarget.gameObject.tag == "ChangeCamera")
             {
                 FinalTarget = ColliderTarget.transform.position;

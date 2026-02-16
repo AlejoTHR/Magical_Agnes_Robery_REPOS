@@ -25,7 +25,7 @@ public class ElectricMagic : MonoBehaviour
 
     private void HandleMarkerInput()
     {
-        if (Input.GetKeyDown(KeyCode.P) && !markerPlaced)
+        if (Input.GetKeyDown(KeyCode.C) && !markerPlaced)
         {
             markerPosition = agnes.transform.position;
             markerPlaced = true;
@@ -37,6 +37,7 @@ public class ElectricMagic : MonoBehaviour
         {
             TeleportToMarker();
             Destroy(clone);
+             plymov.isHiding = false;
 
         }
     }

@@ -1,0 +1,1831 @@
+fileFormatVersion: 2
+guid: d7fac10ff99dfbf4a8a9218a8a0aae56
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3338055596261936143
+    second: male_hero_template-export-export_0
+  - first:
+      213: 1491453441028122123
+    second: male_hero_template-export-export_1
+  - first:
+      213: 8643245984068718879
+    second: male_hero_template-export-export_2
+  - first:
+      213: -4333645051906144894
+    second: male_hero_template-export-export_3
+  - first:
+      213: 1451669568758738039
+    second: male_hero_template-export-export_4
+  - first:
+      213: 8313686456376387325
+    second: male_hero_template-export-export_5
+  - first:
+      213: -4606101268964505162
+    second: male_hero_template-export-export_6
+  - first:
+      213: 814089803770619239
+    second: male_hero_template-export-export_7
+  - first:
+      213: 3063316194141251244
+    second: male_hero_template-export-export_8
+  - first:
+      213: 1519104990172119310
+    second: male_hero_template-export-export_9
+  - first:
+      213: -1007713076065993901
+    second: male_hero_template-export-export_10
+  - first:
+      213: 4589788707936662974
+    second: male_hero_template-export-export_11
+  - first:
+      213: -862010449136036985
+    second: male_hero_template-export-export_12
+  - first:
+      213: 2248090693593936666
+    second: male_hero_template-export-export_13
+  - first:
+      213: -7995062328501902095
+    second: male_hero_template-export-export_14
+  - first:
+      213: -8976281151759240867
+    second: male_hero_template-export-export_15
+  - first:
+      213: 4864659352644276528
+    second: male_hero_template-export-export_16
+  - first:
+      213: 7654950376902974143
+    second: male_hero_template-export-export_17
+  - first:
+      213: -2479231973819618371
+    second: male_hero_template-export-export_18
+  - first:
+      213: 5061997102814669641
+    second: male_hero_template-export-export_19
+  - first:
+      213: 6033992109200280210
+    second: male_hero_template-export-export_20
+  - first:
+      213: 8043070348512862052
+    second: male_hero_template-export-export_21
+  - first:
+      213: 446723155049217747
+    second: male_hero_template-export-export_22
+  - first:
+      213: -4637216356688473076
+    second: male_hero_template-export-export_23
+  - first:
+      213: -2230052626095857507
+    second: male_hero_template-export-export_24
+  - first:
+      213: 5635122849884157841
+    second: male_hero_template-export-export_25
+  - first:
+      213: 2736579565057604059
+    second: male_hero_template-export-export_26
+  - first:
+      213: -6816848603242700254
+    second: male_hero_template-export-export_27
+  - first:
+      213: -3190829358457715408
+    second: male_hero_template-export-export_28
+  - first:
+      213: 7670832800852742147
+    second: male_hero_template-export-export_29
+  - first:
+      213: -3574811055392273023
+    second: male_hero_template-export-export_30
+  - first:
+      213: 5211223226478017433
+    second: male_hero_template-export-export_31
+  - first:
+      213: -3056787334535948721
+    second: male_hero_template-export-export_32
+  - first:
+      213: 6449864642586630776
+    second: male_hero_template-export-export_33
+  - first:
+      213: 3016170350810780869
+    second: male_hero_template-export-export_34
+  - first:
+      213: -2159845313159020795
+    second: male_hero_template-export-export_35
+  - first:
+      213: 4276789023743233226
+    second: male_hero_template-export-export_36
+  - first:
+      213: -928179233705503203
+    second: male_hero_template-export-export_37
+  - first:
+      213: 6558369961391382382
+    second: male_hero_template-export-export_38
+  - first:
+      213: -7004997410001739001
+    second: male_hero_template-export-export_39
+  - first:
+      213: 6038000504772872513
+    second: male_hero_template-export-export_40
+  - first:
+      213: 3996627639777297740
+    second: male_hero_template-export-export_41
+  - first:
+      213: -6471831691684092133
+    second: male_hero_template-export-export_42
+  - first:
+      213: -3956597886516369614
+    second: male_hero_template-export-export_43
+  - first:
+      213: -437072488497554966
+    second: male_hero_template-export-export_44
+  - first:
+      213: -1246145573185113091
+    second: male_hero_template-export-export_45
+  - first:
+      213: 6148414427701476278
+    second: male_hero_template-export-export_46
+  - first:
+      213: -4880066119130410953
+    second: male_hero_template-export-export_47
+  - first:
+      213: 3682672875226641128
+    second: male_hero_template-export-export_48
+  - first:
+      213: -7894853962428005792
+    second: male_hero_template-export-export_49
+  - first:
+      213: 1220304196833402569
+    second: male_hero_template-export-export_50
+  - first:
+      213: 3581576956004035764
+    second: male_hero_template-export-export_51
+  - first:
+      213: -3766802732716325051
+    second: male_hero_template-export-export_52
+  - first:
+      213: 8538219065921148452
+    second: male_hero_template-export-export_53
+  - first:
+      213: 7948048356118504769
+    second: male_hero_template-export-export_54
+  - first:
+      213: 2380796747256404692
+    second: male_hero_template-export-export_55
+  - first:
+      213: -1049973983345819606
+    second: male_hero_template-export-export_56
+  - first:
+      213: 4735360717938353473
+    second: male_hero_template-export-export_57
+  - first:
+      213: 6706078043443886336
+    second: male_hero_template-export-export_58
+  - first:
+      213: -1577737784564831530
+    second: male_hero_template-export-export_59
+  - first:
+      213: 8815453280024511106
+    second: male_hero_template-export-export_60
+  - first:
+      213: 3390547997769157647
+    second: male_hero_template-export-export_61
+  - first:
+      213: 227256256207101370
+    second: male_hero_template-export-export_62
+  - first:
+      213: 3820787015969245778
+    second: male_hero_template-export-export_63
+  - first:
+      213: -2606102281135695736
+    second: male_hero_template-export-export_64
+  - first:
+      213: 5227684970996531212
+    second: male_hero_template-export-export_65
+  - first:
+      213: -289056164358656430
+    second: male_hero_template-export-export_66
+  - first:
+      213: -1550894366203207199
+    second: male_hero_template-export-export_67
+  - first:
+      213: 8469341647014530734
+    second: male_hero_template-export-export_68
+  - first:
+      213: -5215386205383918460
+    second: male_hero_template-export-export_69
+  - first:
+      213: 2216952520713553154
+    second: male_hero_template-export-export_70
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: male_hero_template-export-export_0
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 1339
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0c82b701e7235e20800000000000000
+      internalID: 3338055596261936143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_1
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 1339
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b06e387a005b2b410800000000000000
+      internalID: 1491453441028122123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1339
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f11dcbabd6af2f770800000000000000
+      internalID: 8643245984068718879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_3
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 1339
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 285418239cccbd3c0800000000000000
+      internalID: -4333645051906144894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_4
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1339
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77ceb1118cd552410800000000000000
+      internalID: 1451669568758738039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_5
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 1339
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df66a46c8c5206370800000000000000
+      internalID: 8313686456376387325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_8
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 1361
+        width: 50
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca6ad7239d5138a20800000000000000
+      internalID: 3063316194141251244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_9
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 1343
+        width: 20
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e018bb3a0f1f41510800000000000000
+      internalID: 1519104990172119310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_10
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 1343
+        width: 55
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35bf191eb42e302f0800000000000000
+      internalID: -1007713076065993901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_11
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 1337
+        width: 43
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb5f9aa138432bf30800000000000000
+      internalID: 4589788707936662974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_15
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 1179
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d513b51d9d7dd6380800000000000000
+      internalID: -8976281151759240867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_16
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 1179
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 031d4ab38edb28340800000000000000
+      internalID: 4864659352644276528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_17
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1179
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fba5b846fc8db3a60800000000000000
+      internalID: 7654950376902974143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_18
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 1179
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbbe0b4c7aff79dd0800000000000000
+      internalID: -2479231973819618371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_19
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 1179
+        width: 27
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94b235f9b83df3640800000000000000
+      internalID: 5061997102814669641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_20
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 1179
+        width: 27
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29a84669adb0db350800000000000000
+      internalID: 6033992109200280210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_21
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 1179
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46f16923ed9be9f60800000000000000
+      internalID: 8043070348512862052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_22
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 1179
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3de76a9b754133600800000000000000
+      internalID: 446723155049217747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_23
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 1179
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c04d3f8ea4c45afb0800000000000000
+      internalID: -4637216356688473076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_24
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 1179
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d90212fa3f24d01e0800000000000000
+      internalID: -2230052626095857507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_25
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 1019
+        width: 29
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1973805306af33e40800000000000000
+      internalID: 5635122849884157841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_26
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 1019
+        width: 22
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd9f9da8d984af520800000000000000
+      internalID: 2736579565057604059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_27
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 1019
+        width: 21
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 222e9140050b561a0800000000000000
+      internalID: -6816848603242700254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_28
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 1019
+        width: 25
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0358d3eaa95e7b3d0800000000000000
+      internalID: -3190829358457715408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_29
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 1019
+        width: 28
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3001e326ac5447a60800000000000000
+      internalID: 7670832800852742147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_30
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 1019
+        width: 29
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18d44380948b36ec0800000000000000
+      internalID: -3574811055392273023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_31
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 1019
+        width: 22
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99bbc7b0aebf15840800000000000000
+      internalID: 5211223226478017433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_32
+      rect:
+        serializedVersion: 2
+        x: 1193
+        y: 1019
+        width: 21
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4652136d1c1495d0800000000000000
+      internalID: -3056787334535948721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_33
+      rect:
+        serializedVersion: 2
+        x: 1351
+        y: 1019
+        width: 23
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87a5ab638b5828950800000000000000
+      internalID: 6449864642586630776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_34
+      rect:
+        serializedVersion: 2
+        x: 1509
+        y: 1019
+        width: 27
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c4542624f69bd920800000000000000
+      internalID: 3016170350810780869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_35
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 859
+        width: 39
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50f3d5b8120b602e0800000000000000
+      internalID: -2159845313159020795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_36
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 859
+        width: 35
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acc418b25f43a5b30800000000000000
+      internalID: 4276789023743233226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_37
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 859
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d16d61797e17e13f0800000000000000
+      internalID: -928179233705503203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_38
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 859
+        width: 44
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6f535e6bb2040b50800000000000000
+      internalID: 6558369961391382382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_39
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 863
+        width: 44
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 703a05c38ff39ce90800000000000000
+      internalID: -7004997410001739001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_40
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 859
+        width: 45
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 149cd98e7794bc350800000000000000
+      internalID: 6038000504772872513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_41
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 859
+        width: 37
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c450f60d9afd67730800000000000000
+      internalID: 3996627639777297740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_42
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 859
+        width: 28
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b17ed0b9d5f6f26a0800000000000000
+      internalID: -6471831691684092133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_43
+      rect:
+        serializedVersion: 2
+        x: 1342
+        y: 859
+        width: 41
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23761276f275719c0800000000000000
+      internalID: -3956597886516369614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_44
+      rect:
+        serializedVersion: 2
+        x: 1503
+        y: 862
+        width: 41
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae9d10e23e43fe9f0800000000000000
+      internalID: -437072488497554966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_45
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 699
+        width: 31
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df330eb143dc4bee0800000000000000
+      internalID: -1246145573185113091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_46
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 699
+        width: 22
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bb7807a85e835550800000000000000
+      internalID: 6148414427701476278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_47
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 699
+        width: 37
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73010d868b5864cb0800000000000000
+      internalID: -4880066119130410953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_48
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 700
+        width: 39
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e2b9d7e77b7b1330800000000000000
+      internalID: 3682672875226641128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_49
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 702
+        width: 38
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 062c4ef5628df6290800000000000000
+      internalID: -7894853962428005792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_50
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 705
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ce5c2a93346fe010800000000000000
+      internalID: 1220304196833402569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_51
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 545
+        width: 38
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bc6856f34154b130800000000000000
+      internalID: 3581576956004035764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_52
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 544
+        width: 38
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54709793fd0a9bbc0800000000000000
+      internalID: -3766802732716325051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_53
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 540
+        width: 37
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42692b6c009dd7670800000000000000
+      internalID: 8538219065921148452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_54
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 539
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 145221c8ed32d4e60800000000000000
+      internalID: 7948048356118504769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_56
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 379
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a204543a93ebd61f0800000000000000
+      internalID: -1049973983345819606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_57
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 379
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 145ed04eb7167b140800000000000000
+      internalID: 4735360717938353473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_58
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 379
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 009f48f3376c01d50800000000000000
+      internalID: 6706078043443886336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_59
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 219
+        width: 74
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6da2d4a18dfba1ae0800000000000000
+      internalID: -1577737784564831530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_60
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 217
+        width: 77
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 282c9e94d08c65a70800000000000000
+      internalID: 8815453280024511106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_61
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 217
+        width: 58
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0c41f8a075ad0f20800000000000000
+      internalID: 3390547997769157647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_62
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 247
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abd95386c50672300800000000000000
+      internalID: 227256256207101370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_63
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 225
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25a85413c89260530800000000000000
+      internalID: 3820787015969245778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_64
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 57
+        width: 44
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 888529478c345dbd0800000000000000
+      internalID: -2606102281135695736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_65
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 59
+        width: 43
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0085ed98c77c8840800000000000000
+      internalID: 5227684970996531212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_66
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 59
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25ee34333f01dfbf0800000000000000
+      internalID: -289056164358656430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_67
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 65
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e1ad4a7acd1a7ae0800000000000000
+      internalID: -1550894366203207199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_68
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 59
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eae09bffa55298570800000000000000
+      internalID: 8469341647014530734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_69
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 70
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48c7e95e0e93f97b0800000000000000
+      internalID: -5215386205383918460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male_hero_template-export-export_70
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 69
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 205c909529234ce10800000000000000
+      internalID: 2216952520713553154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: bb81634320450f747bc0e0805e43d2ae
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      male_hero_template-export-export_0: 3338055596261936143
+      male_hero_template-export-export_1: 1491453441028122123
+      male_hero_template-export-export_10: -1007713076065993901
+      male_hero_template-export-export_11: 4589788707936662974
+      male_hero_template-export-export_12: -862010449136036985
+      male_hero_template-export-export_13: 2248090693593936666
+      male_hero_template-export-export_14: -7995062328501902095
+      male_hero_template-export-export_15: -8976281151759240867
+      male_hero_template-export-export_16: 4864659352644276528
+      male_hero_template-export-export_17: 7654950376902974143
+      male_hero_template-export-export_18: -2479231973819618371
+      male_hero_template-export-export_19: 5061997102814669641
+      male_hero_template-export-export_2: 8643245984068718879
+      male_hero_template-export-export_20: 6033992109200280210
+      male_hero_template-export-export_21: 8043070348512862052
+      male_hero_template-export-export_22: 446723155049217747
+      male_hero_template-export-export_23: -4637216356688473076
+      male_hero_template-export-export_24: -2230052626095857507
+      male_hero_template-export-export_25: 5635122849884157841
+      male_hero_template-export-export_26: 2736579565057604059
+      male_hero_template-export-export_27: -6816848603242700254
+      male_hero_template-export-export_28: -3190829358457715408
+      male_hero_template-export-export_29: 7670832800852742147
+      male_hero_template-export-export_3: -4333645051906144894
+      male_hero_template-export-export_30: -3574811055392273023
+      male_hero_template-export-export_31: 5211223226478017433
+      male_hero_template-export-export_32: -3056787334535948721
+      male_hero_template-export-export_33: 6449864642586630776
+      male_hero_template-export-export_34: 3016170350810780869
+      male_hero_template-export-export_35: -2159845313159020795
+      male_hero_template-export-export_36: 4276789023743233226
+      male_hero_template-export-export_37: -928179233705503203
+      male_hero_template-export-export_38: 6558369961391382382
+      male_hero_template-export-export_39: -7004997410001739001
+      male_hero_template-export-export_4: 1451669568758738039
+      male_hero_template-export-export_40: 6038000504772872513
+      male_hero_template-export-export_41: 3996627639777297740
+      male_hero_template-export-export_42: -6471831691684092133
+      male_hero_template-export-export_43: -3956597886516369614
+      male_hero_template-export-export_44: -437072488497554966
+      male_hero_template-export-export_45: -1246145573185113091
+      male_hero_template-export-export_46: 6148414427701476278
+      male_hero_template-export-export_47: -4880066119130410953
+      male_hero_template-export-export_48: 3682672875226641128
+      male_hero_template-export-export_49: -7894853962428005792
+      male_hero_template-export-export_5: 8313686456376387325
+      male_hero_template-export-export_50: 1220304196833402569
+      male_hero_template-export-export_51: 3581576956004035764
+      male_hero_template-export-export_52: -3766802732716325051
+      male_hero_template-export-export_53: 8538219065921148452
+      male_hero_template-export-export_54: 7948048356118504769
+      male_hero_template-export-export_55: 2380796747256404692
+      male_hero_template-export-export_56: -1049973983345819606
+      male_hero_template-export-export_57: 4735360717938353473
+      male_hero_template-export-export_58: 6706078043443886336
+      male_hero_template-export-export_59: -1577737784564831530
+      male_hero_template-export-export_6: -4606101268964505162
+      male_hero_template-export-export_60: 8815453280024511106
+      male_hero_template-export-export_61: 3390547997769157647
+      male_hero_template-export-export_62: 227256256207101370
+      male_hero_template-export-export_63: 3820787015969245778
+      male_hero_template-export-export_64: -2606102281135695736
+      male_hero_template-export-export_65: 5227684970996531212
+      male_hero_template-export-export_66: -289056164358656430
+      male_hero_template-export-export_67: -1550894366203207199
+      male_hero_template-export-export_68: 8469341647014530734
+      male_hero_template-export-export_69: -5215386205383918460
+      male_hero_template-export-export_7: 814089803770619239
+      male_hero_template-export-export_70: 2216952520713553154
+      male_hero_template-export-export_8: 3063316194141251244
+      male_hero_template-export-export_9: 1519104990172119310
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
