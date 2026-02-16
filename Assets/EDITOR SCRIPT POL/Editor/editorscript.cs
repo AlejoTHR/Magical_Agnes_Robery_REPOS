@@ -3,7 +3,7 @@ using UnityEditor;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
-[CustomEditor(typeof(EnemyScript))]
+[CustomEditor(typeof(EnemyScript))] 
 public class editorscript : Editor
 {
     void OnSceneGUI()
