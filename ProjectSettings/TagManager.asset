@@ -9,6 +9,7 @@ TagManager:
   - HorizontalScroll
   - Floor
   - HideSpot
+  - Destroyable
   layers:
   - Default
   - TransparentFX
