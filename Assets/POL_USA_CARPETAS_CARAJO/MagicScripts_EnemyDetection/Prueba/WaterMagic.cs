@@ -26,7 +26,7 @@ public class WaterMagic : MonoBehaviour
 
     void WaterDash()
     {
-        if (Input.GetKeyDown(KeyCode.O) && DashUsed == false)
+        if (Input.GetKeyDown(KeyCode.V) && DashUsed == false)
         {
             WaterDashForce.x *= plymov.ReturnDirection();
             agnes.constraints = RigidbodyConstraints2D.FreezePositionY;
@@ -35,7 +35,7 @@ public class WaterMagic : MonoBehaviour
             plymov.usingFireMagic = false;
             StartCoroutine(WaitForSeconds());
         }
-        else if(!Input.GetKeyDown(KeyCode.O) && plymov.usingWindMagic == false)
+        else if(!Input.GetKeyDown(KeyCode.V) && plymov.usingWindMagic == false)
         {
             
             plymov.usingWaterMagic = false;

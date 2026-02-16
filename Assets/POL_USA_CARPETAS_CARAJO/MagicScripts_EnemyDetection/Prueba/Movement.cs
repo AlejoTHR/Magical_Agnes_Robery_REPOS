@@ -58,8 +58,8 @@ public class Movement : MonoBehaviour, IPlayerController
         _frameInput = new FrameInput
         {
             //Checks if the jump is pressed or held
-            JumpDown = Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.C),
-            JumpHeld = Input.GetButton("Jump") || Input.GetKey(KeyCode.C),
+            JumpDown = Input.GetButtonDown("Jump"),
+            JumpHeld = Input.GetButton("Jump"),
             //Checks if the player moved
             Move = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"))
         };

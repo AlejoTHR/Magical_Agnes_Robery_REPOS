@@ -6,8 +6,11 @@ public class FireMagic : MonoBehaviour
     [SerializeField] private ScriptableStats _stats;
     private Movement plymov = null;
     public Rigidbody2D agnes;
+    public Transform MotherAgnes;
     public float CannonSpeed;
     public float CannonAcceleration;
+    public GameObject hitBox;
+    private GameObject clone2;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,19 +26,28 @@ public class FireMagic : MonoBehaviour
 
     void CannonBall()
     {
-        if (Input.GetKey(KeyCode.I))
+        if (plymov.isGrounded() == false)
         {
-            _stats.MaxFallSpeed = CannonSpeed;
-            _stats.FallAcceleration = CannonAcceleration;
-            plymov.usingFireMagic = true;
-            plymov.usingWindMagic = false;
+        	if (Input.GetKey(KeyCode.X))
+        	{
+           
+                _stats.MaxFallSpeed = CannonSpeed;
+                _stats.FallAcceleration = CannonAcceleration;
+                if (plymov.usingFireMagic == false)
+                {
+                    clone2 = Instantiate(hitBox, MotherAgnes, false);                
+                }
+                plymov.usingFireMagic = true;
+                plymov.usingWindMagic = false;
+                clone2.transform.position = agnes.transform.position;
+            }
         }
-        else if (!Input.GetKey(KeyCode.I) && plymov.usingWindMagic == false)
+        else if (!Input.GetKey(KeyCode.I) || plymov.isGrounded())
         {
             _stats.MaxFallSpeed = 40;
             _stats.FallAcceleration = 80;
             plymov.usingFireMagic = false;
+            Destroy(clone2);
         }
-
     }
 }

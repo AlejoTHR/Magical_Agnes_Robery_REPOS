@@ -1,3 +1,5 @@
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ElectricMagic : MonoBehaviour
@@ -6,6 +8,8 @@ public class ElectricMagic : MonoBehaviour
     private bool markerPlaced = false;
     private Vector3 markerPosition;
     private Movement plymov = null;
+    public GameObject eletrik;
+    private GameObject clone;
 
     private void Start()
     {
@@ -21,18 +25,19 @@ public class ElectricMagic : MonoBehaviour
 
     private void HandleMarkerInput()
     {
-        if (Input.GetKeyDown(KeyCode.P) && !markerPlaced)
+        if (Input.GetKeyDown(KeyCode.C) && !markerPlaced)
         {
             markerPosition = agnes.transform.position;
             markerPlaced = true;
-
+            clone = Instantiate(eletrik, transform.position, transform.rotation);
             Debug.Log("Marcador colocado en: " + markerPosition);
+            
         }
-
         else if (Input.GetKeyDown(KeyCode.P) && markerPlaced)
         {
             TeleportToMarker();
-            plymov.isHiding = false;
+            Destroy(clone);
+             plymov.isHiding = false;
 
         }
     }
@@ -47,4 +52,5 @@ public class ElectricMagic : MonoBehaviour
 
         Debug.Log("Teletransportado al marcador");
     }
+
 }
