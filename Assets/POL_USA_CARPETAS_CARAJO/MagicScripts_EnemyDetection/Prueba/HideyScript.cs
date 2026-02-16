@@ -1,3 +1,4 @@
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class HideyScript : MonoBehaviour
@@ -19,13 +20,17 @@ public class HideyScript : MonoBehaviour
                 Unhide();
             }
         }
+        if (_move.isHiding == true)
+        {
+            agnes.transform.position = transform.position;
+            agnes.constraints = RigidbodyConstraints2D.FreezePosition;
+        }
     }
 
     private void Hide()
     {
         _move.isHiding = true;
-        agnes.transform.position = transform.position;
-        agnes.constraints = RigidbodyConstraints2D.FreezePosition;
+
     }
 
     private void Unhide()
