@@ -14,7 +14,7 @@ public class CameraReference : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collided)
     {
         cam = collided.gameObject;
-        
+        /// transform.scale.x + transform.scale.x/2 - Tamaño de la Cámara en x (HACERLO EN TODOS LOS LADOS)
 
         // If collition is detected and This object has a Camera Reference Game Object
         if (collided != null && cameraRef != null)
@@ -23,7 +23,10 @@ public class CameraReference : MonoBehaviour
             if (collided.gameObject.tag == "ChangeCamera" || collided.gameObject.tag == "VerticalScroll" || collided.gameObject.tag == "HorizontalScroll")
             {
                 cameraRef.ColliderTarget = collided.gameObject;
+
                 enemy_move.RESET_ENEMIES();
+
+                collided
 
             }
 
