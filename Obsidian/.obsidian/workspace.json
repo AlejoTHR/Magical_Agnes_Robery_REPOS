@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Magias/Fuego (Pol_Provisional).md",
+                "file": "Mecánicas/Lista de mecánicas.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Fuego (Pol_Provisional)"
+              "title": "Lista de mecánicas"
             }
           }
         ]
@@ -185,11 +185,13 @@
   },
   "active": "42ad77d010996eed",
   "lastOpenFiles": [
-    "Magias/Viento (Pol_Provisional).md",
-    "Magias/Fuego (Pol_Provisional).md",
-    "Mecánicas/Camara.md",
-    "Mecánicas/Lista de mecánicas.md",
     "Mecánicas/Detectar Enemigos (Pol_Provisional).md",
+    "Mecánicas/Camara.md",
+    "Magias/Agua.md",
+    "Magias/Viento.md",
+    "Magias/Fuego.md",
+    "Magias/Electricidad.md",
+    "Mecánicas/Lista de mecánicas.md",
     "Sin título.canvas",
     "Mecánicas/Movimiento Enemigos.md",
     "Mecánicas/Movimiento Básico.md",
