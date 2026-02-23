@@ -5,9 +5,17 @@ public class CameraReference : MonoBehaviour
     [Tooltip("Camera Script Object for Reference")]
     public Camera_Controller_Structure_Temp cameraRef = null;
 
+    [Header("Camera")]
+    public GameObject cam;
+
+    [Header("Enemy Script")]
+    public Enemy_mov_TMP enemy_move;
 
     private void OnTriggerEnter2D(Collider2D collided)
     {
+        cam = collided.gameObject;
+        
+
         // If collition is detected and This object has a Camera Reference Game Object
         if (collided != null && cameraRef != null)
         {
@@ -17,6 +25,8 @@ public class CameraReference : MonoBehaviour
                 || collided.gameObject.tag == "HorizontalScroll")
             {
                 cameraRef.ColliderTarget = collided.gameObject;
+                enemy_move.RESET_ENEMIES();
+
             }
 
             //else if(collided.gameObject.tag == "VerticalScroll")

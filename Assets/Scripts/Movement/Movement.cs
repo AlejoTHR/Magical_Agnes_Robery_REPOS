@@ -34,6 +34,10 @@ public class Movement : MonoBehaviour, IPlayerController
     //Variable used to check how much time has passed.
     private float _time;
 
+
+
+
+
     private void Awake()
     {
         //Collect the player objects rigidbody and collider
