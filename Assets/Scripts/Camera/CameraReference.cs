@@ -26,8 +26,6 @@ public class CameraReference : MonoBehaviour
 
                 enemy_move.RESET_ENEMIES();
 
-                collided
-
             }
 
         }
