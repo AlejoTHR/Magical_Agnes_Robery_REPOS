@@ -54,9 +54,10 @@ public class Camera_Controller_Structure : MonoBehaviour
             {
                 offset.x = 0;
                 offset.y = 5;
+                Debug.Log("Ptata");
 
                 FinalTarget = new Vector3 (ColliderTarget.transform.position.x, Player.transform.position.y);
-
+                 
                 if(!_movement.isGrounded() || _movement.isFalling())
                 {
                     offset.y = -2;

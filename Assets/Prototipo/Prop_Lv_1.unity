@@ -29082,6 +29082,7 @@ MonoBehaviour:
   speed: 5
   offset: {x: 0, y: 0, z: -10}
   baseCamPosition: {x: 0, y: 0, z: 0}
+  _movement: {fileID: 0}
 --- !u!4 &1619464310
 Transform:
   m_ObjectHideFlags: 0
