@@ -107,7 +107,7 @@ public class Movement : MonoBehaviour, IPlayerController
     }
 
 
-    public bool _falling = false;
+    [HideInInspector] public bool _falling = false;
     public bool isFalling()
     {
         _falling = !isGrounded() && _rb.linearVelocity.y < 0f;

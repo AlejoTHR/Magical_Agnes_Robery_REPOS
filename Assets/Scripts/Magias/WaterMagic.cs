@@ -8,9 +8,6 @@ public class WaterMagic : MonoBehaviour
     public Rigidbody2D agnes;
     private bool DashUsed = false;
 
-    public Sprite water;
-    public Sprite notWater;
-
     public Vector2 WaterDashForce;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -31,20 +28,20 @@ public class WaterMagic : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.V) && DashUsed == false)
         {
-            GetComponent<SpriteRenderer>().sprite = water;
+            //water magic stuff
             WaterDashForce.x *= plymov.ReturnDirection();
             agnes.constraints = RigidbodyConstraints2D.FreezePositionY;
             plymov.SetFrameVelocity(WaterDashForce);
             DashUsed = true;
             plymov.usingWaterMagic = true;
+            //disable the fire magic thingies
+            _stats.MaxFallSpeed = 40;
+            _stats.FallAcceleration = 80;
+            plymov.usingFireMagic = false;
+            //wait for dash to end
             StartCoroutine(WaitForSeconds());
         }
-        else if(!Input.GetKeyDown(KeyCode.V) && plymov.usingWindMagic == false)
-        {
-            
-            plymov.usingWaterMagic = false;
-            GetComponent<SpriteRenderer>().sprite = notWater;
-        }
+       
     }
 
     IEnumerator WaitForSeconds()
@@ -53,6 +50,7 @@ public class WaterMagic : MonoBehaviour
         plymov.SetFrameVelocity(-WaterDashForce/3);
         WaterDashForce.x = 40;
         agnes.constraints = RigidbodyConstraints2D.None;
+        plymov.usingWaterMagic = false;
     }
 
 }
