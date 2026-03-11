@@ -80,7 +80,18 @@ public class Camera_Controller_Structure : MonoBehaviour
                     sizeX = CAMERA.orthographicSize / 2;
                     sizeY = sizeX * aspectRatio;
 
-                    baseCamPosition.y = Mathf.Clamp(baseCamPosition.y, minY + sizeY, maxY - sizeY);
+                    if (FinalTarget.y < minY + sizeY)
+                    {
+                        FinalTarget.y = minY + sizeY;
+                        //baseCamPosition.x = minX + sizeX;
+
+                    }
+                    else if (FinalTarget.y > maxY - sizeY)
+                    {
+                        FinalTarget.y = maxY - sizeY;
+                        //baseCamPosition.x = maxX - sizeX;
+
+                    }
                 }
                 baseCamPosition = Vector3.Lerp(baseCamPosition, FinalTarget + offset, speed * Time.deltaTime);
 
@@ -89,18 +100,6 @@ public class Camera_Controller_Structure : MonoBehaviour
             // HORIZONTAL SCROLL
             else if (ColliderTarget.gameObject.CompareTag("HorizontalScroll"))
             {
-
-                /// if (ColliderTarget.transform.localScale.x + ColliderTarget.transform.localScale.x / 2 - CAMERA.orthographicSize >= CAMERA.orthographicSize)
-                /// { // DEBUG IF
-                ///     prueba = false;
-                /// }
-                //  // SCALE OFFSET FOR LIMITS
-                //  scaleOffset = ColliderTarget.transform.localScale.x + ColliderTarget.transform.localScale.x / 2 - CAMERA.orthographicSize;
-                //  
-                //  // CAMERA COLLIDER SCALE FOR MESUREMENT
-                //  scaleOffsetVector = ColliderTarget.transform.localScale /2;  
-
-
                 // CAMERA COLLIDER FINAL TARGERT
                 FinalTarget = new Vector3(Player.transform.position.x, ColliderTarget.transform.position.y);
 
@@ -111,8 +110,6 @@ public class Camera_Controller_Structure : MonoBehaviour
                     aspectRatio = 1.78f;
                     sizeY = CAMERA.orthographicSize;
                     sizeX = sizeY * aspectRatio;
-
-                    //baseCamPosition.x = Mathf.Clamp(baseCamPosition.x, minX + sizeX, maxX - sizeX);
 
                     if (FinalTarget.x < minX + sizeX)
                     {
