@@ -10,7 +10,7 @@ Teletransporte (Electricidad)
 
 # Casos de uso
 
-## Agua
+## Dash lateral
 
 ### Caso 1
 
@@ -19,11 +19,11 @@ Avanzar más rápido por el nivel.
 Evitar caidas en zonas estrechas o donde el personaje no puede saltar.
 ### Caso 3
 
-## Fuego
+## Dash hacia abajo
 
-## Aire
+## Flotar
 
-## Electricidad
+## Teletransporte
 
 
 

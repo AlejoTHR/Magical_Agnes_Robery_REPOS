@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mecánicas/Lista de mecánicas.md",
+                "file": "Magias/Fuego (Pol_Provisional).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lista de mecánicas"
+              "title": "Fuego (Pol_Provisional)"
             }
           }
         ]
@@ -44,7 +44,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Explorador de archivos"
+              "title": "Files"
             }
           },
           {
@@ -174,27 +174,25 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Abrir selector rápido": false,
-      "graph:Abrir vista gráfica": false,
-      "canvas:Crear nuevo lienzo": false,
-      "daily-notes:Abrir la nota de hoy": false,
-      "templates:Insertar plantilla": false,
-      "command-palette:Abrir paleta de comandos": false,
-      "bases:Crear nueva base": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
     }
   },
   "active": "42ad77d010996eed",
   "lastOpenFiles": [
-    "Magias/Fuego.md",
+    "Magias/Viento (Pol_Provisional).md",
+    "Magias/Fuego (Pol_Provisional).md",
+    "Mecánicas/Camara.md",
+    "Mecánicas/Lista de mecánicas.md",
+    "Mecánicas/Detectar Enemigos (Pol_Provisional).md",
+    "Sin título.canvas",
     "Mecánicas/Movimiento Enemigos.md",
     "Mecánicas/Movimiento Básico.md",
-    "Mecánicas/Detectar Enemigos (Pol_Provisional).md",
-    "Mecánicas/Camara.md",
-    "Magias/Agua.md",
-    "Magias/Viento.md",
-    "Magias/Electricidad.md",
-    "Mecánicas/Lista de mecánicas.md",
-    "Sin título.canvas",
     "IMAGENES/Cono_Detección.png",
     "IMAGENES/Celeste_Gameplay_CameraExample.gif",
     "Historia/Prueba.md",
