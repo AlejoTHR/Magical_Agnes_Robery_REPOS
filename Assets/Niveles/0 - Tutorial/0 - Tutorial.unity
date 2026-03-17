@@ -74124,20 +74124,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1396250586}
     - target: {fileID: 2645166354753235955, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
+      propertyPath: lines.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2645166354753235955, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: 'lines.Array.data[0]'
       value: "\xA1Agnes! \xBFMe recibes?"
       objectReference: {fileID: 0}
     - target: {fileID: 2645166354753235955, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: 'lines.Array.data[1]'
-      value: He logrado conectarme a la red.
+      value: He conseguido conectarme a la red.
       objectReference: {fileID: 0}
     - target: {fileID: 2645166354753235955, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: 'lines.Array.data[2]'
-      value: Segun el mapa, esta zona es susceptible a la magia.
+      value: "Seg\xFAn los datos, esta zona es muy sensible a la magia."
       objectReference: {fileID: 0}
     - target: {fileID: 2645166354753235955, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: 'lines.Array.data[3]'
-      value: "\xA1Prueba a usar tu magia de agua con la 'V'!"
+      value: Prueba a usar la magia de agua con la 'V'
       objectReference: {fileID: 0}
     - target: {fileID: 7495680312688452479, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: m_Name

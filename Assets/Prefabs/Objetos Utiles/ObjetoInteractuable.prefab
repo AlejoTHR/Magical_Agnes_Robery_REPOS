@@ -177,8 +177,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialoguePanel: {fileID: 0}
   dialogueText: {fileID: 0}
-  lines:
-  - 
-  - 
-  - 'Segun el mapa, '
-  - 
+  lines: []
