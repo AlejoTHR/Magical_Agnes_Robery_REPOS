@@ -3,6 +3,7 @@ using UnityEngine;
 public class MenuPausa : MonoBehaviour
 {
     public GameObject panelPausa;
+    public GameObject controlsMenu;
     private bool juegoPausado = false;
 
     void Update()
@@ -28,6 +29,19 @@ public class MenuPausa : MonoBehaviour
         juegoPausado = false;
     }
 
+    public void OpenControls()
+    {
+        panelPausa.SetActive(false);
+        controlsMenu.SetActive(true);
+    }
+
+    public void BackToPause()
+    {
+        controlsMenu.SetActive(false);
+        panelPausa.SetActive(true);
+    }
+
+    //Modificar en el futuro para que no salga de la build sino que lleve al menu principal
     public void Salir()
     {
         Application.Quit();
