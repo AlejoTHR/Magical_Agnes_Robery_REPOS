@@ -1,44 +1,9 @@
 /* * =================================================================================================
- * DIALOGUE CONTROLLER: THE MASTER GUIDE
+ * DIALOGUE CONTROLLER: THE ULTIMATE DDLC-STYLE SYSTEM (V5.1 - VISIBILITY FIX)
  * =================================================================================================
- * * --- PART 1: HIERARCHY SETUP (Canvas) ---
- * 1. Create a UI Canvas.
- * 2. Create a child Panel named 'DialoguePanel'. Attach your Dialogue Box sprite here.
- * 3. Inside 'DialoguePanel', create the following UI elements:
- * - TextMeshProUGUI (NameText): For the character's name.
- * - TextMeshProUGUI (DialogueText): For the main message.
- * - Image (PortraitImage): Position this where the character's face should appear.
- * - Image (BackgroundImage): Set to "Stretch/Fill" the whole screen. Move it to the TOP 
- * of the list so it stays BEHIND the text box.
- * 
- * * --- PART 2: SCRIPT ATTACHMENT ---
- * 1. Create an Empty GameObject in your scene (e.g., "Signpost" or "NPC_Yuri").
- * 2. Add a 'BoxCollider2D' or 'CircleCollider2D'. Check the [X] IS TRIGGER box.
- * 3. Attach this 'DialogueController' script to that GameObject.
- * 4. Drag your UI elements from the Hierarchy into the corresponding slots in the Inspector.
- * 
- * * --- PART 3: MODE 1 - CHARACTER MODE (DDLC Style) ---
- * 1. Ensure 'Is Sign Mode' is UNCHECKED.
- * 2. In 'Dialogue Sequence', add an element:
- * - Character Name: Type the name (e.g., "Agnes").
- * - Text: Type what they say.
- * - Character Portrait: Drag in an expression sprite (e.g., 'Agnes_Happy').
- * - Background Override: (Optional) Drag a room sprite to change the scene mid-chat.
- * - Line Speed: Set to 0.08 for natural talking.
- * 
- * * --- PART 4: MODE 2 - SIGN MODE (World Interaction) ---
- * 1. Ensure 'Is Sign Mode' is CHECKED.
- * 2. In 'Dialogue Sequence', add an element:
- * - Character Name: (Optional) Type the object name like "Stone Tablet". 
- * - Leave empty if you want NO name tag at all.
- * - Text: Type the sign's message.
- * - Character Portrait: (Ignored) Even if you put a sprite here, it won't show.
- * - Line Speed: Set to 0 if you want the text to appear instantly like a real sign.
- * 
- * * --- PART 5: LEVEL TRANSITIONS ---
- * 1. Make sure your 'LevelManager' is in the scene.
- * 2. On the VERY LAST line of your dialogue, check the [X] TRIGGERS LEVEL TRANSITION box.
- * 3. When that line finishes, the script will call LevelManager.Instance.LoadNextRoom().
+ * * --- THE FIX ---
+ * Added logic to explicitly SetActive(false) on the Background Image and Portrait 
+ * whenever 'isSignMode' is checked, ensuring signs remain "clean."
  * =================================================================================================
  */
 
@@ -47,6 +12,7 @@ using TMPro;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class DialogueLine
@@ -57,15 +23,26 @@ public class DialogueLine
     public Sprite characterPortrait;
     public Sprite backgroundOverride;
     public bool triggersLevelTransition;
-
-    [Tooltip("How fast letters appear for THIS line. 0.05 is standard, 0 is instant.")]
-    public float lineSpeed = 0.05f;
+    public float lineSpeed = 0.08f;
 }
 
 public class DialogueController : MonoBehaviour
 {
-    [Header("Mode Settings")]
+    public enum TransitionType { LoadNextRoomPrefab, LoadSpecificScene }
+
+    [Header("Mode & Trigger Settings")]
     public bool isSignMode = false;
+    public bool playOnEnter = false;
+
+    [Header("Input Locking")]
+    public MonoBehaviour playerMovementScript;
+    public string pauseButtonInput = "Cancel";
+
+    [Header("Transition Settings")]
+    public TransitionType transitionType;
+    public string sceneToLoad;
+    public Image fadeOverlay;
+    public float fadeDuration = 1.0f;
 
     [Header("UI References")]
     public GameObject dialoguePanel;
@@ -77,54 +54,68 @@ public class DialogueController : MonoBehaviour
     [Header("Sequence")]
     public List<DialogueLine> dialogueSequence = new List<DialogueLine>();
 
-    private int index;
+    private int index = 0;
     private bool isPlayerInRange;
     private bool isTyping;
-    private Coroutine typingCoroutine;
+    private bool isDialogueActive = false;
+    private Coroutine currentTypewriter;
 
     void Start()
     {
         if (dialoguePanel != null) dialoguePanel.SetActive(false);
+
+        if (playerMovementScript == null)
+        {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            if (player != null) playerMovementScript = player.GetComponent<MonoBehaviour>();
+        }
+
+        if (fadeOverlay != null)
+            fadeOverlay.color = new Color(fadeOverlay.color.r, fadeOverlay.color.g, fadeOverlay.color.b, 0);
     }
 
     void Update()
     {
-        if (isPlayerInRange && Input.GetKeyDown(KeyCode.E))
+        if (isDialogueActive)
         {
-            if (!dialoguePanel.activeInHierarchy)
+            if (!string.IsNullOrEmpty(pauseButtonInput) && Input.GetButtonDown(pauseButtonInput)) return;
+
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                dialoguePanel.SetActive(true);
-                StartDialogue();
+                if (isTyping) FinishLineInstantly();
+                else AdvanceOrEnd();
             }
-            else if (!isTyping)
-            {
-                NextLine();
-            }
-            else
-            {
-                FinishLineInstantly();
-            }
+            return;
+        }
+
+        if (isPlayerInRange && Input.GetKeyDown(KeyCode.E) && !playOnEnter)
+        {
+            StartDialogueSequence();
         }
     }
 
-    void StartDialogue()
+    private void StartDialogueSequence()
     {
+        StopAllCoroutines();
         index = 0;
-        if (typingCoroutine != null) StopCoroutine(typingCoroutine);
-        typingCoroutine = StartCoroutine(DisplayLine());
+        isDialogueActive = true;
+        dialoguePanel.SetActive(true);
+
+        if (!isSignMode) TogglePlayerControls(false);
+
+        StartCoroutine(DisplayLine());
     }
 
-    void NextLine()
+    void AdvanceOrEnd()
     {
         if (index < dialogueSequence.Count - 1)
         {
             index++;
-            if (typingCoroutine != null) StopCoroutine(typingCoroutine);
-            typingCoroutine = StartCoroutine(DisplayLine());
+            StartCoroutine(DisplayLine());
         }
         else
         {
-            EndDialogue();
+            StartCoroutine(EndDialogueSequence());
         }
     }
 
@@ -133,18 +124,37 @@ public class DialogueController : MonoBehaviour
         isTyping = true;
         DialogueLine currentLine = dialogueSequence[index];
 
-        // --- UI Setup ---
-        if (portraitImage != null)
+        // --- SIGN MODE VISIBILITY LOGIC ---
+        if (isSignMode)
         {
-            if (isSignMode) portraitImage.gameObject.SetActive(false);
-            else
+            // Hide everything except the text box
+            if (portraitImage != null) portraitImage.gameObject.SetActive(false);
+            if (backgroundImage != null) backgroundImage.gameObject.SetActive(false);
+        }
+        else
+        {
+            // Show Portraits if they exist
+            if (portraitImage != null)
             {
                 bool hasPortrait = currentLine.characterPortrait != null;
                 portraitImage.gameObject.SetActive(hasPortrait);
                 if (hasPortrait) portraitImage.sprite = currentLine.characterPortrait;
             }
+
+            // Show Background if a swap is requested
+            if (backgroundImage != null)
+            {
+                if (currentLine.backgroundOverride != null)
+                {
+                    backgroundImage.gameObject.SetActive(true);
+                    backgroundImage.sprite = currentLine.backgroundOverride;
+                }
+                // Note: We don't hide the background here if it's null 
+                // because we want the previous background to stay visible
+            }
         }
 
+        // Name Text handling
         if (nameText != null)
         {
             bool hasName = !string.IsNullOrEmpty(currentLine.characterName);
@@ -152,52 +162,98 @@ public class DialogueController : MonoBehaviour
             if (hasName) nameText.text = currentLine.characterName;
         }
 
-        if (!isSignMode && backgroundImage != null && currentLine.backgroundOverride != null)
-        {
-            backgroundImage.sprite = currentLine.backgroundOverride;
-        }
-
-        // --- Typewriter Effect with INDEPENDENT SPEED ---
         dialogueText.text = "";
 
-        // If speed is 0, just show the whole text immediately
         if (currentLine.lineSpeed <= 0)
         {
             dialogueText.text = currentLine.text;
         }
         else
         {
-            foreach (char letter in currentLine.text.ToCharArray())
-            {
-                dialogueText.text += letter;
-                yield return new WaitForSeconds(currentLine.lineSpeed);
-            }
+            currentTypewriter = StartCoroutine(TypeEffect(currentLine));
+            yield return currentTypewriter;
         }
 
         isTyping = false;
+    }
+
+    IEnumerator TypeEffect(DialogueLine line)
+    {
+        foreach (char letter in line.text.ToCharArray())
+        {
+            dialogueText.text += letter;
+            yield return new WaitForSeconds(line.lineSpeed);
+        }
+        currentTypewriter = null;
     }
 
     void FinishLineInstantly()
     {
-        if (typingCoroutine != null) StopCoroutine(typingCoroutine);
+        if (currentTypewriter != null) StopCoroutine(currentTypewriter);
         dialogueText.text = dialogueSequence[index].text;
         isTyping = false;
     }
 
-    void EndDialogue()
+    IEnumerator EndDialogueSequence()
     {
         bool shouldTransition = dialogueSequence[index].triggersLevelTransition;
+
+        isDialogueActive = false;
         dialoguePanel.SetActive(false);
 
-        if (shouldTransition && LevelManager.Instance != null)
+        // Ensure UI is cleaned up for the next interaction
+        if (backgroundImage != null) backgroundImage.gameObject.SetActive(false);
+        if (portraitImage != null) portraitImage.gameObject.SetActive(false);
+
+        if (!shouldTransition)
         {
-            LevelManager.Instance.LoadNextRoom();
+            TogglePlayerControls(true);
+        }
+        else
+        {
+            if (fadeOverlay != null) yield return StartCoroutine(Fade(1));
+
+            if (transitionType == TransitionType.LoadNextRoomPrefab && LevelManager.Instance != null)
+                LevelManager.Instance.LoadNextRoom();
+            else if (transitionType == TransitionType.LoadSpecificScene)
+                SceneManager.LoadScene(sceneToLoad);
+
+            TogglePlayerControls(true);
         }
     }
 
+    void TogglePlayerControls(bool state)
+    {
+        if (playerMovementScript != null)
+        {
+            playerMovementScript.enabled = state;
+        }
+    }
+
+    IEnumerator Fade(float targetAlpha)
+    {
+        if (fadeOverlay == null) yield break;
+        float startAlpha = fadeOverlay.color.a;
+        float timer = 0;
+        while (timer < fadeDuration)
+        {
+            timer += Time.deltaTime;
+            float newAlpha = Mathf.Lerp(startAlpha, targetAlpha, timer / fadeDuration);
+            fadeOverlay.color = new Color(fadeOverlay.color.r, fadeOverlay.color.g, fadeOverlay.color.b, newAlpha);
+            yield return null;
+        }
+    }
+
+    private void OnDisable() { TogglePlayerControls(true); }
+    private void OnDestroy() { TogglePlayerControls(true); }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player")) isPlayerInRange = true;
+        if (other.CompareTag("Player"))
+        {
+            isPlayerInRange = true;
+            if (playOnEnter && !isDialogueActive) StartDialogueSequence();
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -205,9 +261,14 @@ public class DialogueController : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerInRange = false;
-            if (typingCoroutine != null) StopCoroutine(typingCoroutine);
-            isTyping = false;
-            if (dialoguePanel != null) dialoguePanel.SetActive(false);
+            if (isSignMode && isDialogueActive)
+            {
+                isDialogueActive = false;
+                dialoguePanel.SetActive(false);
+                // Ensure UI elements are hidden when walking away
+                if (backgroundImage != null) backgroundImage.gameObject.SetActive(false);
+                TogglePlayerControls(true);
+            }
         }
     }
 }

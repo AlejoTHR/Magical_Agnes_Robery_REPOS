@@ -72903,6 +72903,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8384207704001625570}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
+      propertyPath: portraitImage
+      value: 
+      objectReference: {fileID: 289385944849626625}
+    - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
+      propertyPath: backgroundImage
+      value: 
+      objectReference: {fileID: 678485759808187160}
+    - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -73038,6 +73046,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8384207704001625570}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
+      propertyPath: portraitImage
+      value: 
+      objectReference: {fileID: 289385944849626625}
+    - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
+      propertyPath: backgroundImage
+      value: 
+      objectReference: {fileID: 678485759808187160}
+    - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -73164,12 +73180,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 4918856418530175407}
     m_Modifications:
     - target: {fileID: 2319399061472292506, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10.2171
+      objectReference: {fileID: 0}
+    - target: {fileID: 2319399061472292506, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6.424992
+      objectReference: {fileID: 0}
+    - target: {fileID: 2319399061472292506, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 414.32
+      value: 418.9285
       objectReference: {fileID: 0}
     - target: {fileID: 2319399061472292506, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -48.4
+      value: -47.1753
       objectReference: {fileID: 0}
     - target: {fileID: 2319399061472292506, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -73212,6 +73236,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2047283502846002178}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
+      propertyPath: fadeOverlay
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
+      propertyPath: playOnEnter
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
+      propertyPath: sceneToLoad
+      value: 1 - Factory
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 7432114801609249922}
@@ -73224,20 +73260,105 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 289385944849626625}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
+      propertyPath: transitionType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: backgroundImage
       value: 
       objectReference: {fileID: 678485759808187160}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
+      propertyPath: playerMovementScript
+      value: 
+      objectReference: {fileID: 7843887853153354806, guid: 5ecf988ada556364594d39a3b43bdeeb, type: 3}
+    - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.size
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[0].text
-      value: Agnes this weed is mad good trust meeeeeee
+      value: Hoc ludum nondum perfectum est, gemini, hoc est pro nunc.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
+      propertyPath: dialogueSequence.Array.data[1].text
+      value: What in the actual-
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
+      propertyPath: dialogueSequence.Array.data[2].text
+      value: ah ah, we're pg16 we only have one f bomb. Not using it here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
+      propertyPath: dialogueSequence.Array.data[3].text
+      value: ????? NOW you speak english?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
+      propertyPath: dialogueSequence.Array.data[4].text
+      value: Ah yeah, force of habit my bad. Game aint done yet, so this will be
+        finished at a later date.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
+      propertyPath: dialogueSequence.Array.data[0].lineSpeed
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
+      propertyPath: dialogueSequence.Array.data[1].lineSpeed
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
+      propertyPath: dialogueSequence.Array.data[2].lineSpeed
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
+      propertyPath: dialogueSequence.Array.data[3].lineSpeed
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
+      propertyPath: dialogueSequence.Array.data[4].lineSpeed
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[0].characterName
       value: Woman In the Woods
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
+      propertyPath: dialogueSequence.Array.data[1].characterName
+      value: Agnes
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
+      propertyPath: dialogueSequence.Array.data[2].characterName
+      value: Woman in The Woods
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
+      propertyPath: dialogueSequence.Array.data[3].characterName
+      value: Agnes
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
+      propertyPath: dialogueSequence.Array.data[4].characterName
+      value: Woman in The Woods
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
+      propertyPath: dialogueSequence.Array.data[0].backgroundOverride
+      value: 
+      objectReference: {fileID: 1896853201512566059, guid: ce0398bb6e540d54294413b39bd4a4d6, type: 3}
+    - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
+      propertyPath: dialogueSequence.Array.data[1].backgroundOverride
+      value: 
+      objectReference: {fileID: 1896853201512566059, guid: ce0398bb6e540d54294413b39bd4a4d6, type: 3}
+    - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
+      propertyPath: dialogueSequence.Array.data[2].backgroundOverride
+      value: 
+      objectReference: {fileID: 1896853201512566059, guid: ce0398bb6e540d54294413b39bd4a4d6, type: 3}
+    - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
+      propertyPath: dialogueSequence.Array.data[3].backgroundOverride
+      value: 
+      objectReference: {fileID: 1896853201512566059, guid: ce0398bb6e540d54294413b39bd4a4d6, type: 3}
+    - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
+      propertyPath: dialogueSequence.Array.data[4].backgroundOverride
+      value: 
+      objectReference: {fileID: 1896853201512566059, guid: ce0398bb6e540d54294413b39bd4a4d6, type: 3}
+    - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
+      propertyPath: dialogueSequence.Array.data[4].triggersLevelTransition
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
