@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 //requires the character to have a rigidbody2d to execute
@@ -16,6 +17,7 @@ public class Movement : MonoBehaviour, IPlayerController
     private Vector2 _frameVelocity;
     private bool _cachedQueryStartInColliders;
 
+    //private that prevents agens to rotate
     private Quaternion noRotate = new Quaternion(0, 0, 0, 0);
 
     //state check
