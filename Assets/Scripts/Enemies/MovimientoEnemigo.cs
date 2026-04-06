@@ -1,11 +1,3 @@
-/*
- * INSTRUCTIONS FOR USE:
- * 1. Attach this to the Camera GameObject.
- * 2. PIVOT: Ensure the Sprite Pivot is at the base of the camera (the wall mount).
- * 3. SYNC: If the camera is 90 degrees off (pointing at the floor while cone is at the wall),
- * this script adds a +90 correction to match the visual lens to the FOV mesh.
- */
-
 using UnityEngine;
 
 public class MovimientoEnemigo : MonoBehaviour
@@ -42,12 +34,13 @@ public class MovimientoEnemigo : MonoBehaviour
     public void Start()
     {
         enemyScript = GetComponent<EnemyScript>();
+        sr = GetComponent<SpriteRenderer>(); // Initialize SpriteRenderer
+
         if (!isCameraMode)
         {
             if (pointB != null) currentTarget = pointB;
             UpdateFacing();
         }
-        sr = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -93,8 +86,6 @@ public class MovimientoEnemigo : MonoBehaviour
 
     void SyncSpriteRotation()
     {
-        // Based on your image, the sprite is 90 degrees offset from the cone logic.
-        // We subtract 90 to align the 'Lens' of your sprite with the FOV mesh.
         float correctedRotation = -enemyScript.fovRotation - 110f;
         transform.eulerAngles = new Vector3(0, 0, correctedRotation);
     }
@@ -111,7 +102,12 @@ public class MovimientoEnemigo : MonoBehaviour
         if (isWaiting)
         {
             waitTimer -= Time.deltaTime;
-            if (waitTimer <= 0) { isWaiting = false; currentTarget = (currentTarget == pointB) ? pointA : pointB; UpdateFacing(); }
+            if (waitTimer <= 0)
+            {
+                isWaiting = false;
+                currentTarget = (currentTarget == pointB) ? pointA : pointB;
+                UpdateFacing();
+            }
         }
         else
         {
@@ -122,8 +118,23 @@ public class MovimientoEnemigo : MonoBehaviour
 
     public void UpdateFacing()
     {
-        if (currentTarget == null || enemyScript == null) return;
+        if (currentTarget == null || enemyScript == null || sr == null) return;
+
         Vector2 dir = (currentTarget.position - transform.position).normalized;
+
+        // Update the FOV logic
         enemyScript.fovRotation = Mathf.Atan2(dir.x, dir.y) * Mathf.Rad2Deg;
+
+        // --- SPRITE FLIP LOGIC ---
+        // If moving right (positive x), don't flip. If moving left (negative x), flip.
+        // Note: Depending on your original sprite orientation, you might need to swap true/false.
+        if (dir.x > 0.01f)
+        {
+            sr.flipX = false;
+        }
+        else if (dir.x < -0.01f)
+        {
+            sr.flipX = true;
+        }
     }
 }
