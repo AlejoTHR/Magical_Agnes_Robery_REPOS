@@ -1,27 +1,35 @@
 using UnityEngine;
 
-/* * HOW TO USE:
- * 1. Attach to an object the player can interact with (Chest, NPC, Door).
- * 2. Assign a World-Space Canvas or Sprite (like an "E" key icon) to 'Popup UI'.
- * 3. Ensure the GameObject has a Collider2D set to 'Is Trigger'.
- * 4. The UI will automatically enable/disable when the Player enters/exits the trigger.
- */
-
 public class InteractPopup : MonoBehaviour
 {
     [Header("Popup")]
     public GameObject popupUI;
 
+    private PuzzleTrigger puzzleTrigger;
+    private PuzzleReceiver puzzleReceiver;
+
     private void Start()
     {
         if (popupUI != null)
             popupUI.SetActive(false);
+
+        // Detectamos si este objeto tiene alguno de los dos scripts
+        puzzleTrigger = GetComponent<PuzzleTrigger>();
+        puzzleReceiver = GetComponent<PuzzleReceiver>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
+            // Caso palanca: ya activada  no mostrar popup
+            if (puzzleTrigger != null && puzzleTrigger.IsActivated())
+                return;
+
+            // Caso puerta: bloqueada  no mostrar popup
+            if (puzzleReceiver != null && !puzzleReceiver.IsUnlocked())
+                return;
+
             if (popupUI != null)
                 popupUI.SetActive(true);
         }

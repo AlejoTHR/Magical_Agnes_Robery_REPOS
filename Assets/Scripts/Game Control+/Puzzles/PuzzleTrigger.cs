@@ -59,7 +59,6 @@ public class PuzzleTrigger : MonoBehaviour
         isPulled = true;
         SendSignals();
         animator.SetBool("IsPulled", true);
-        
 
         // Visual feedback
         if (TryGetComponent<SpriteRenderer>(out var sr))
@@ -83,5 +82,10 @@ public class PuzzleTrigger : MonoBehaviour
         {
             light.ActivateLight(specificLeverID);
         }
+    }
+
+    public bool IsActivated()
+    {
+        return isPulled;
     }
 }

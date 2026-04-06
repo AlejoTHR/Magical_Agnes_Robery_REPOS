@@ -77,4 +77,9 @@ public class PuzzleReceiver : MonoBehaviour
             LevelManager.Instance.LoadNextRoom();
         }
     }
+
+    public bool IsUnlocked()
+    {
+        return !isLocked;
+    }
 }
