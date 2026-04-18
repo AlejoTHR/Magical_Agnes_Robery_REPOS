@@ -89,7 +89,7 @@ MonoBehaviour:
   startAngle: 120
   endAngle: 240
   rotationSpeed: 2
-  pauseTime: 4
+  pauseTime: 1
   rotateClockwise: 1
 --- !u!114 &7685925969028723055
 MonoBehaviour:
@@ -435,7 +435,7 @@ MonoBehaviour:
   startAngle: 120
   endAngle: 240
   rotationSpeed: 2
-  pauseTime: 6
+  pauseTime: 4
   rotateClockwise: 1
 --- !u!114 &3159123394219909604
 MonoBehaviour:
@@ -868,7 +868,7 @@ MonoBehaviour:
   startAngle: 120
   endAngle: 240
   rotationSpeed: 2
-  pauseTime: 6
+  pauseTime: 5
   rotateClockwise: 1
 --- !u!114 &9000725376953934879
 MonoBehaviour:
@@ -1082,7 +1082,7 @@ MonoBehaviour:
   startAngle: 240
   endAngle: 120
   rotationSpeed: 2
-  pauseTime: 6
+  pauseTime: 2
   rotateClockwise: 1
 --- !u!114 &6429214056761034753
 MonoBehaviour:
