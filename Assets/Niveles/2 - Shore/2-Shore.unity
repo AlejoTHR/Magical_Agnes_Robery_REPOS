@@ -164,7 +164,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomPrefabs:
+  - {fileID: 7019620404360389633, guid: d45325de9a23e1640a3cdb8c03dfcee2, type: 3}
   - {fileID: 7019620404360389633, guid: 9c5f0f493d6bf5a4fb00e56653db6f88, type: 3}
+  - {fileID: 7019620404360389633, guid: 5128d5cf38c7241438dbc51eb0a0f5bb, type: 3}
 --- !u!1001 &552648879
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -177,6 +179,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CinemachineCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 3671093090209462829, guid: 9eb2baf0d1ae76945a542a364c092c15, type: 3}
+      propertyPath: Target.TrackingTarget
+      value: 
+      objectReference: {fileID: 1679843311}
     - target: {fileID: 4606523720582334385, guid: 9eb2baf0d1ae76945a542a364c092c15, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.999996
@@ -336,6 +342,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa2c2f9b79096a44da9c4ac9abd1c54d, type: 3}
+--- !u!4 &1679843311 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2647604283110112621, guid: 7edaab90908dde641882d2487fa112fa, type: 3}
+  m_PrefabInstance: {fileID: 1360311029}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
