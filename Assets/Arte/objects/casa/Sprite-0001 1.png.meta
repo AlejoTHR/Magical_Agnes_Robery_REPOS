@@ -63,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 155
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -141,17 +141,17 @@ TextureImporter:
       name: Sprite-0001 1_0
       rect:
         serializedVersion: 2
-        x: 65
-        y: 260
-        width: 175
-        height: 200
+        x: 13
+        y: 452
+        width: 35
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: f1226597386017a40800000000000000
       internalID: 5364075792921141791
@@ -163,17 +163,17 @@ TextureImporter:
       name: Sprite-0001 1_1
       rect:
         serializedVersion: 2
-        x: 385
-        y: 255
-        width: 175
-        height: 200
+        x: 77
+        y: 451
+        width: 35
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: c8a89d4583f5c4750800000000000000
       internalID: 6290507475076090508
@@ -185,17 +185,17 @@ TextureImporter:
       name: Sprite-0001 1_2
       rect:
         serializedVersion: 2
-        x: 640
-        y: 260
-        width: 305
-        height: 200
+        x: 128
+        y: 452
+        width: 61
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 690faaed8c98a9a60800000000000000
       internalID: 7681603610256011414
@@ -207,17 +207,17 @@ TextureImporter:
       name: Sprite-0001 1_3
       rect:
         serializedVersion: 2
-        x: 5
-        y: 15
-        width: 315
-        height: 165
+        x: 1
+        y: 403
+        width: 63
+        height: 33
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 032ae5c44edcbb610800000000000000
       internalID: 1638129269896815152
@@ -229,17 +229,17 @@ TextureImporter:
       name: Sprite-0001 1_4
       rect:
         serializedVersion: 2
-        x: 395
-        y: 15
-        width: 110
-        height: 240
+        x: 79
+        y: 403
+        width: 22
+        height: 48
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 1672b6bb507577680800000000000000
       internalID: -8757435268267825311
