@@ -358,18 +358,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5308384231254436062, guid: 9eb2baf0d1ae76945a542a364c092c15, type: 3}
-      propertyPath: Damping.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5308384231254436062, guid: 9eb2baf0d1ae76945a542a364c092c15, type: 3}
-      propertyPath: Damping.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5308384231254436062, guid: 9eb2baf0d1ae76945a542a364c092c15, type: 3}
-      propertyPath: CameraDistance
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5308384231254436062, guid: 9eb2baf0d1ae76945a542a364c092c15, type: 3}
       propertyPath: Composition.DeadZone.Size.x
       value: 0.2
       objectReference: {fileID: 0}
