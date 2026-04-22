@@ -86,6 +86,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stats: {fileID: 11400000, guid: 94db11c9bf88a66478a24044ea3ab134, type: 2}
+  _groundLayer:
+    serializedVersion: 2
+    m_Bits: 128
   _walkClip: {fileID: 8300000, guid: 794ce2a6b32933a4cb7dc6e91feb9ce7, type: 3}
   _windGlideClip: {fileID: 8300000, guid: fe2c68cc691631b4bb5505ff9957c9a2, type: 3}
   _fireCannonballClip: {fileID: 8300000, guid: 459cab39cf8f22844914b3741b607686, type: 3}
