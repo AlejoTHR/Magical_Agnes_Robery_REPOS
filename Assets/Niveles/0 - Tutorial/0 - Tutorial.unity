@@ -246,11 +246,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2685286554317653042, guid: fa2c2f9b79096a44da9c4ac9abd1c54d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.330002
+      value: -8.330003
       objectReference: {fileID: 0}
     - target: {fileID: 2685286554317653042, guid: fa2c2f9b79096a44da9c4ac9abd1c54d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 2685286554317653042, guid: fa2c2f9b79096a44da9c4ac9abd1c54d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -323,11 +323,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4606523720582334385, guid: 9eb2baf0d1ae76945a542a364c092c15, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.330002
+      value: -8.330003
       objectReference: {fileID: 0}
     - target: {fileID: 4606523720582334385, guid: 9eb2baf0d1ae76945a542a364c092c15, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 4606523720582334385, guid: 9eb2baf0d1ae76945a542a364c092c15, type: 3}
       propertyPath: m_LocalRotation.w
@@ -358,12 +358,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5308384231254436062, guid: 9eb2baf0d1ae76945a542a364c092c15, type: 3}
-      propertyPath: Composition.DeadZone.Size.x
+      propertyPath: Damping.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5308384231254436062, guid: 9eb2baf0d1ae76945a542a364c092c15, type: 3}
-      propertyPath: Composition.DeadZone.Size.y
-      value: 0.1
+      propertyPath: Damping.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308384231254436062, guid: 9eb2baf0d1ae76945a542a364c092c15, type: 3}
+      propertyPath: CameraDistance
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308384231254436062, guid: 9eb2baf0d1ae76945a542a364c092c15, type: 3}
+      propertyPath: Composition.DeadZone.Size.x
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
