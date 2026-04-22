@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomPrefabs:
+  - {fileID: 7019620404360389633, guid: b0e075d00b127c94ba11b88bafad2fef, type: 3}
   - {fileID: 2061160245380871917, guid: be42e8dfbbfab034290b020e84b2ae8d, type: 3}
 --- !u!4 &849639434
 Transform:
@@ -357,16 +358,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5308384231254436062, guid: 9eb2baf0d1ae76945a542a364c092c15, type: 3}
-      propertyPath: Damping.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5308384231254436062, guid: 9eb2baf0d1ae76945a542a364c092c15, type: 3}
-      propertyPath: Damping.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5308384231254436062, guid: 9eb2baf0d1ae76945a542a364c092c15, type: 3}
       propertyPath: Composition.DeadZone.Size.x
-      value: 0.2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308384231254436062, guid: 9eb2baf0d1ae76945a542a364c092c15, type: 3}
+      propertyPath: Composition.DeadZone.Size.y
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

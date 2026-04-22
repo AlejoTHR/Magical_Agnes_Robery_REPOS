@@ -92,10 +92,10 @@ MonoBehaviour:
   CameraDistance: 10
   DeadZoneDepth: 0
   Composition:
-    ScreenPosition: {x: -0.000000074505806, y: -0.00000016391277}
+    ScreenPosition: {x: 0, y: 0}
     DeadZone:
       Enabled: 1
-      Size: {x: 0.123333246, y: 0.21555552}
+      Size: {x: 0, y: 0.3}
     HardLimits:
       Enabled: 0
       Size: {x: 0.8, y: 0.8}
@@ -107,7 +107,7 @@ MonoBehaviour:
     Enabled: 1
     Time: 0.2
     Smoothing: 20
-    IgnoreY: 1
+    IgnoreY: 0
 --- !u!114 &8348269497300913316
 MonoBehaviour:
   m_ObjectHideFlags: 0
