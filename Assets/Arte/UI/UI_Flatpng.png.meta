@@ -306,7 +306,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -456,7 +456,7 @@ TextureImporter:
         height: 592
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 81, y: 25, z: 90, w: 102}
       customData: 
       outline: []
       physicsShape: []
@@ -588,7 +588,7 @@ TextureImporter:
         height: 97
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 105, y: 39, z: 89, w: 24}
       customData: 
       outline: []
       physicsShape: []
@@ -803,12 +803,12 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 824
-        y: 959
+        y: 958
         width: 367
-        height: 97
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 12, y: 24, z: 16, w: 8}
       customData: 
       outline: []
       physicsShape: []
@@ -852,7 +852,7 @@ TextureImporter:
         height: 97
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 130, y: 34, z: 120, w: 25}
       customData: 
       outline: []
       physicsShape: []
@@ -2034,13 +2034,13 @@ TextureImporter:
       name: UI_Flatpng 1_84
       rect:
         serializedVersion: 2
-        x: 2779
-        y: 114
-        width: 337
+        x: 2780
+        y: 113
+        width: 335
         height: 107
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 10, y: 13, z: 10, w: 12}
       customData: 
       outline: []
       physicsShape: []
@@ -2083,7 +2083,7 @@ TextureImporter:
         width: 174
         height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
