@@ -24096,7 +24096,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 10
-      m_TileSpriteIndex: 13
+      m_TileSpriteIndex: 18
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -51569,8 +51569,8 @@ Tilemap:
     m_Data: {fileID: 1931000537, guid: 2f4e98811368c3441ba9d41688c3a3e2, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 538607898, guid: 2f4e98811368c3441ba9d41688c3a3e2, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -165169755364367678, guid: 2f4e98811368c3441ba9d41688c3a3e2, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 3
     m_Data: {fileID: -170585978, guid: 2f4e98811368c3441ba9d41688c3a3e2, type: 3}
   - m_RefCount: 0
@@ -51579,8 +51579,8 @@ Tilemap:
     m_Data: {fileID: 2093988146, guid: 2f4e98811368c3441ba9d41688c3a3e2, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -165169755364367678, guid: 2f4e98811368c3441ba9d41688c3a3e2, type: 3}
   - m_RefCount: 75
     m_Data: {fileID: 354536325, guid: 2f4e98811368c3441ba9d41688c3a3e2, type: 3}
   - m_RefCount: 3
@@ -52605,6 +52605,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8400896014656003243, guid: 39d0fbeaf67103d43b92fcb4bfb70fa2, type: 3}
+      propertyPath: hidespot
+      value: 
+      objectReference: {fileID: 2888270307141833362}
     - target: {fileID: 8762456439118865862, guid: 39d0fbeaf67103d43b92fcb4bfb70fa2, type: 3}
       propertyPath: m_Name
       value: Hide
@@ -52614,6 +52618,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39d0fbeaf67103d43b92fcb4bfb70fa2, type: 3}
+--- !u!50 &2888270307141833362 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 5685890114734502352, guid: 39d0fbeaf67103d43b92fcb4bfb70fa2, type: 3}
+  m_PrefabInstance: {fileID: 7421198148092617538}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6111120065803893400 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3617071338438023642, guid: 39d0fbeaf67103d43b92fcb4bfb70fa2, type: 3}

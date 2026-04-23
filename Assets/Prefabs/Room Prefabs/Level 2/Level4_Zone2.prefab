@@ -54,7 +54,7 @@ GameObject:
   - component: {fileID: 3771833185573936045}
   - component: {fileID: 932679031852590435}
   - component: {fileID: 4240306798514739988}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tileset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15304,6 +15304,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 4824004345570291101}
     m_Modifications:
     - target: {fileID: 1267500544434518074, guid: bacac946b0a7c534ca65b16ce9558f01, type: 3}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1267500544434518074, guid: bacac946b0a7c534ca65b16ce9558f01, type: 3}
       propertyPath: pointA
       value: 
       objectReference: {fileID: 5512284010841574114}
@@ -15321,7 +15325,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8354963312616030659, guid: bacac946b0a7c534ca65b16ce9558f01, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.22
+      value: -9.03
       objectReference: {fileID: 0}
     - target: {fileID: 8354963312616030659, guid: bacac946b0a7c534ca65b16ce9558f01, type: 3}
       propertyPath: m_LocalPosition.y
@@ -15502,6 +15506,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8400896014656003243, guid: 39d0fbeaf67103d43b92fcb4bfb70fa2, type: 3}
+      propertyPath: hidespot
+      value: 
+      objectReference: {fileID: 4014018984075204844}
     - target: {fileID: 8762456439118865862, guid: 39d0fbeaf67103d43b92fcb4bfb70fa2, type: 3}
       propertyPath: m_Name
       value: Hide
@@ -15511,6 +15519,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39d0fbeaf67103d43b92fcb4bfb70fa2, type: 3}
+--- !u!50 &4014018984075204844 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 5685890114734502352, guid: 39d0fbeaf67103d43b92fcb4bfb70fa2, type: 3}
+  m_PrefabInstance: {fileID: 8745143923734587708}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5435445796177047782 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3617071338438023642, guid: 39d0fbeaf67103d43b92fcb4bfb70fa2, type: 3}
