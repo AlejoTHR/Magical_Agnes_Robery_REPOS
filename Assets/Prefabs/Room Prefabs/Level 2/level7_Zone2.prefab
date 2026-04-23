@@ -44709,7 +44709,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6304450348460986780, guid: 47f8935fd830d224cb358d856afb45f7, type: 3}
       propertyPath: fovRotation
-      value: 267
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 8522548298428759372, guid: 47f8935fd830d224cb358d856afb45f7, type: 3}
       propertyPath: endAngle
@@ -44717,11 +44717,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8522548298428759372, guid: 47f8935fd830d224cb358d856afb45f7, type: 3}
       propertyPath: pauseTime
-      value: 0.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8522548298428759372, guid: 47f8935fd830d224cb358d856afb45f7, type: 3}
       propertyPath: startAngle
-      value: 90
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8522548298428759372, guid: 47f8935fd830d224cb358d856afb45f7, type: 3}
       propertyPath: rotateSpriteWithCone
@@ -44807,7 +44807,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6304450348460986780, guid: 47f8935fd830d224cb358d856afb45f7, type: 3}
       propertyPath: fovRotation
-      value: 267
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 6304450348460986780, guid: 47f8935fd830d224cb358d856afb45f7, type: 3}
       propertyPath: obstacleMask.m_Bits
@@ -44819,7 +44819,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8522548298428759372, guid: 47f8935fd830d224cb358d856afb45f7, type: 3}
       propertyPath: pauseTime
-      value: 0.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8522548298428759372, guid: 47f8935fd830d224cb358d856afb45f7, type: 3}
       propertyPath: startAngle

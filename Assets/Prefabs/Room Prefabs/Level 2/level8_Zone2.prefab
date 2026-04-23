@@ -36409,16 +36409,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 53, y: -5, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 12
-      m_TileSpriteIndex: 12
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: 66, y: -5, z: 0}
     second:
       serializedVersion: 2
@@ -67615,7 +67605,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 25
+  - m_RefCount: 24
     m_Data: {fileID: 11400000, guid: d5329899052ad9846ac785a14df3383f, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 00e5b75dfdd18294cbe38133ed9959be, type: 2}
@@ -67664,7 +67654,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 25
+  - m_RefCount: 24
     m_Data: {fileID: 1407180480, guid: b1a88d7dde23bf04d8e59b513af8df09, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 1923022906, guid: 2f4e98811368c3441ba9d41688c3a3e2, type: 3}
@@ -67689,7 +67679,7 @@ Tilemap:
   - m_RefCount: 3914
     m_Data: {fileID: 1931000537, guid: 2f4e98811368c3441ba9d41688c3a3e2, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 4375
+  - m_RefCount: 4374
     m_Data:
       e00: 1
       e01: 0
@@ -67708,7 +67698,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 4375
+  - m_RefCount: 4374
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -67980,14 +67970,6 @@ CompositeCollider2D:
         Y: 44375000
       - X: 420000000
         Y: 44375000
-    - - X: 540000000
-        Y: -40000000
-      - X: 530000000
-        Y: -40000000
-      - X: 530000000
-        Y: -45625000
-      - X: 540000000
-        Y: -45625000
   m_CompositePaths:
     m_Paths:
     - - {x: 85.01279, y: -25.012821}
@@ -68034,10 +68016,6 @@ CompositeCollider2D:
       - {x: 41.999973, y: 5}
       - {x: 13, y: 4.999971}
       - {x: 13.00003, y: 4.4375}
-    - - {x: 53.99997, y: -4.5625}
-      - {x: 53.99997, y: -4}
-      - {x: 53, y: -4.000029}
-      - {x: 53.00003, y: -4.5625}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
@@ -75300,13 +75278,13 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1925600575829441602}
+  - {fileID: 566768346511370642}
   - {fileID: 9101798887048233250}
   - {fileID: 2872043172869436197}
   - {fileID: 3361473230633521856}
-  - {fileID: 566768346511370642}
-  - {fileID: 1925600575829441602}
-  - {fileID: 4682591888869973092}
   - {fileID: 2129197321295234453}
+  - {fileID: 4682591888869973092}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7020070134900942116
