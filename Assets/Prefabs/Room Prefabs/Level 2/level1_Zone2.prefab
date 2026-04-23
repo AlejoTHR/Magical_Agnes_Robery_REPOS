@@ -52082,7 +52082,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: -6928413472243396691, guid: 75f17c4582b6fb94fa0e08d132221c42, type: 3}
+  m_Sprite: {fileID: -8827396569498514016, guid: 75f17c4582b6fb94fa0e08d132221c42, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -52565,6 +52565,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 654697550275509841}
     m_Modifications:
+    - target: {fileID: -380112934050124976, guid: 39d0fbeaf67103d43b92fcb4bfb70fa2, type: 3}
+      propertyPath: popupUI
+      value: 
+      objectReference: {fileID: 6976994021558587076}
     - target: {fileID: 3617071338438023642, guid: 39d0fbeaf67103d43b92fcb4bfb70fa2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 35.31
