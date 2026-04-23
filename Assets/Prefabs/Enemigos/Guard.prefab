@@ -81,12 +81,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2182212105098143008, guid: 4adfbf1797e95db45baa2a07fe285118, type: 3}
+  m_Sprite: {fileID: 4723107735738678597, guid: 32080d59c5d664c4e9e97a636e26b075, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.4601585, y: 2.4199998}
+  m_Size: {x: 0.5, y: 0.25}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -104,10 +104,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11dc3ec95ea63494f867b6ad198d22b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isCameraMode: 0
+  rotateSpriteWithCone: 1
   speed: 0
   waitTime: 1
   pointA: {fileID: 0}
   pointB: {fileID: 0}
+  startAngle: 45
+  endAngle: 135
+  rotationSpeed: 0.5
+  pauseTime: 1.5
+  rotateClockwise: 1
 --- !u!114 &4246126910366373305
 MonoBehaviour:
   m_ObjectHideFlags: 0
