@@ -94,20 +94,20 @@ MonoBehaviour:
   Composition:
     ScreenPosition: {x: 0, y: 0}
     DeadZone:
-      Enabled: 0
-      Size: {x: 0.123333246, y: 0.21555552}
+      Enabled: 1
+      Size: {x: 0.1541663, y: 0.0585187}
     HardLimits:
       Enabled: 0
       Size: {x: 0.8, y: 0.8}
       Offset: {x: 0, y: 0}
   CenterOnActivate: 1
   TargetOffset: {x: 0, y: 0, z: 0}
-  Damping: {x: 1, y: 5, z: 1}
+  Damping: {x: 1, y: 0.5, z: 1}
   Lookahead:
     Enabled: 1
-    Time: 0.3
+    Time: 0.5
     Smoothing: 15
-    IgnoreY: 1
+    IgnoreY: 0
 --- !u!114 &8348269497300913316
 MonoBehaviour:
   m_ObjectHideFlags: 0
