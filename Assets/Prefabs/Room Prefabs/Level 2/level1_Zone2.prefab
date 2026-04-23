@@ -48647,6 +48647,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: -2, y: 10, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 23
+      m_TileSpriteIndex: 23
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: -1, y: 10, z: 0}
     second:
       serializedVersion: 2
@@ -52465,7 +52475,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: c966230114b2a1d4d8db429a6aa16f60, type: 2}
   - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: 4aa14918ba0591442b5eca982f9f87fb, type: 2}
-  - m_RefCount: 4749
+  - m_RefCount: 4750
     m_Data: {fileID: 11400000, guid: 148d1620ed5f5254ebac1d59b8beea57, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
@@ -52514,10 +52524,10 @@ Tilemap:
     m_Data: {fileID: 354536325, guid: 2f4e98811368c3441ba9d41688c3a3e2, type: 3}
   - m_RefCount: 4
     m_Data: {fileID: 255660823, guid: 2f4e98811368c3441ba9d41688c3a3e2, type: 3}
-  - m_RefCount: 4749
+  - m_RefCount: 4750
     m_Data: {fileID: 1931000537, guid: 2f4e98811368c3441ba9d41688c3a3e2, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 4993
+  - m_RefCount: 4994
     m_Data:
       e00: 1
       e01: 0
@@ -52536,7 +52546,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 4993
+  - m_RefCount: 4994
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -52728,14 +52738,6 @@ CompositeCollider2D:
         Y: -440128224
       - X: 760128192
         Y: -440128224
-    - - X: -19871796
-        Y: 100128200
-      - X: -19871796
-        Y: 109871800
-      - X: -10128205
-        Y: 109871800
-      - X: -10128205
-        Y: 100128200
     - - X: 250192304
         Y: -290000000
       - X: 250192304
@@ -52790,10 +52792,6 @@ CompositeCollider2D:
       - {x: 76.01279, y: 14.012821}
       - {x: -24.012821, y: 14.012793}
       - {x: -24.012793, y: -44.01282}
-    - - {x: -1.0128205, y: 10.01285}
-      - {x: -1.9871796, y: 10.01285}
-      - {x: -1.9871502, y: 10.98718}
-      - {x: -1.0128205, y: 10.98715}
     - - {x: 59.987183, y: -28.999971}
       - {x: 25.01923, y: -28.999971}
       - {x: 25.01926, y: -27.01923}
