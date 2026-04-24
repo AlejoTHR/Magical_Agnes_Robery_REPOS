@@ -22,13 +22,13 @@ public class WindMagic : MonoBehaviour
 
     void Update()
     {
+        if (!plymov.usingWindMagic)
+        {
+            _wasFireActiveBeforeWind = fireExtinguisher.enabled;
+        }
+
         if (!plymov._grounded && _input.actions["Wind"].IsPressed())
         {
-            if (!plymov.usingWindMagic)
-            {
-                _wasFireActiveBeforeWind = fireExtinguisher.enabled;
-            }
-
             _stats.MaxFallSpeed = fallspeed;
             _stats.MaxSpeed = slowmo;
 
