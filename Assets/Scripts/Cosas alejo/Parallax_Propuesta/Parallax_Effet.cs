@@ -59,7 +59,7 @@ public class Parallax_Effet : MonoBehaviour
     private void LateUpdate()
     {
         distance = cam.position.x - camStartpos.x; // DISTANCE TO INITiAL POSITION AND AMERA ACTUAL POSITION
-        transform.position = new Vector3(cam.position.x, transform.position.y, 0); // PARALLAX POSITION IS THE CAM X AXIS AND THIS Y AXIS
+        transform.position = new Vector3(cam.position.x, cam.position.y, 0); // PARALLAX POSITION IS THE CAM X AXIS AND THIS Y AXIS
 
         for (int i = 0; i < Backgrounds.Length; i++)
         {
