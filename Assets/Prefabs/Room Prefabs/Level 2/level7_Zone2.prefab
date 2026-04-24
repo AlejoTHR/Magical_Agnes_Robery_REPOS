@@ -44725,7 +44725,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8522548298428759372, guid: 47f8935fd830d224cb358d856afb45f7, type: 3}
       propertyPath: rotateSpriteWithCone
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -44827,7 +44827,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8522548298428759372, guid: 47f8935fd830d224cb358d856afb45f7, type: 3}
       propertyPath: rotateSpriteWithCone
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

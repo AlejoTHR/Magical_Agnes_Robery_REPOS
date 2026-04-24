@@ -378,7 +378,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomPrefabs:
   - {fileID: 7019620404360389633, guid: b0e075d00b127c94ba11b88bafad2fef, type: 3}
-  - {fileID: 2061160245380871917, guid: be42e8dfbbfab034290b020e84b2ae8d, type: 3}
 --- !u!4 &849639434
 Transform:
   m_ObjectHideFlags: 0
