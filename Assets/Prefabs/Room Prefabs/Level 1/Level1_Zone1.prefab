@@ -10840,6 +10840,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4823883828757574387}
     m_Modifications:
+    - target: {fileID: 770523841003063717, guid: bacac946b0a7c534ca65b16ce9558f01, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f6174fd794d2c3342b4df78ed69452e2, type: 2}
     - target: {fileID: 1267500544434518074, guid: bacac946b0a7c534ca65b16ce9558f01, type: 3}
       propertyPath: speed
       value: 4
@@ -10880,6 +10884,10 @@ PrefabInstance:
       propertyPath: m_FlipX
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5329652284440704711, guid: bacac946b0a7c534ca65b16ce9558f01, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4723107735738678597, guid: 32080d59c5d664c4e9e97a636e26b075, type: 3}
     - target: {fileID: 8354963312616030659, guid: bacac946b0a7c534ca65b16ce9558f01, type: 3}
       propertyPath: m_LocalPosition.x
       value: 23.35
@@ -11131,6 +11139,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4823883828757574387}
     m_Modifications:
+    - target: {fileID: 770523841003063717, guid: bacac946b0a7c534ca65b16ce9558f01, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f6174fd794d2c3342b4df78ed69452e2, type: 2}
     - target: {fileID: 1267500544434518074, guid: bacac946b0a7c534ca65b16ce9558f01, type: 3}
       propertyPath: speed
       value: 4
@@ -11163,6 +11175,10 @@ PrefabInstance:
       propertyPath: obstacleMask.m_Bits
       value: 128
       objectReference: {fileID: 0}
+    - target: {fileID: 5329652284440704711, guid: bacac946b0a7c534ca65b16ce9558f01, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4723107735738678597, guid: 32080d59c5d664c4e9e97a636e26b075, type: 3}
     - target: {fileID: 8354963312616030659, guid: bacac946b0a7c534ca65b16ce9558f01, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.97
@@ -11221,6 +11237,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4823883828757574387}
     m_Modifications:
+    - target: {fileID: 770523841003063717, guid: bacac946b0a7c534ca65b16ce9558f01, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f6174fd794d2c3342b4df78ed69452e2, type: 2}
     - target: {fileID: 1267500544434518074, guid: bacac946b0a7c534ca65b16ce9558f01, type: 3}
       propertyPath: speed
       value: 4
@@ -11257,6 +11277,10 @@ PrefabInstance:
       propertyPath: obstacleMask.m_Bits
       value: 128
       objectReference: {fileID: 0}
+    - target: {fileID: 5329652284440704711, guid: bacac946b0a7c534ca65b16ce9558f01, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4723107735738678597, guid: 32080d59c5d664c4e9e97a636e26b075, type: 3}
     - target: {fileID: 8354963312616030659, guid: bacac946b0a7c534ca65b16ce9558f01, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.033905
