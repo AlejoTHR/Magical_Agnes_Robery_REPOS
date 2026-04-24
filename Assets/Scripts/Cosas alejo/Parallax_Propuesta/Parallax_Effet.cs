@@ -23,7 +23,7 @@ public class Parallax_Effet : MonoBehaviour
 
     private void Start()
     {
-        camStartpos = cam.position; // ALL BACKGROUNDS FOLLOWS TH CAMERA
+        camStartpos = cam.position; // ALL BACKGROUNDS FOLLOWS THE CAMERA
 
         int bgCount = transform.childCount; // COUNTS ALL CHILDREN GAMEOBJECTS OF THE BACKGROUNDS FATHER
         mat = new Material[bgCount]; // MATERIAL FOR BACKGROUN LOOPER

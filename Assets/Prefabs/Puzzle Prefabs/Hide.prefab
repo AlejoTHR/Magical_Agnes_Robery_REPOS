@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9032655001403584293}
   - component: {fileID: 4201049002950719913}
   - component: {fileID: 5685890114734502352}
+  - component: {fileID: -380112934050124976}
   m_Layer: 0
   m_Name: Hide
   m_TagString: HideSpot
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 8762456439118865862}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.7292, y: -4.6, z: 0}
+  m_LocalPosition: {x: -1.7292, y: -4.6, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -179,3 +180,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-380112934050124976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8762456439118865862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4277dffee27c64e4e88de17aaf55bc55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popupUI: {fileID: 0}

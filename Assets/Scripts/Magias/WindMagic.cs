@@ -11,6 +11,8 @@ public class WindMagic : MonoBehaviour
     public float fallspeed;
     public float slowmo;
 
+    private bool _wasFireActiveBeforeWind;
+
     void Start()
     {
         plymov = GetComponent<Movement>();
@@ -22,6 +24,11 @@ public class WindMagic : MonoBehaviour
     {
         if (!plymov._grounded && _input.actions["Wind"].IsPressed())
         {
+            if (!plymov.usingWindMagic)
+            {
+                _wasFireActiveBeforeWind = fireExtinguisher.enabled;
+            }
+
             _stats.MaxFallSpeed = fallspeed;
             _stats.MaxSpeed = slowmo;
 
@@ -39,7 +46,11 @@ public class WindMagic : MonoBehaviour
     {
         if (plymov.usingWindMagic)
         {
-            fireExtinguisher.enabled = true;
+            if (fireExtinguisher != null && _wasFireActiveBeforeWind)
+            {
+                fireExtinguisher.enabled = true;
+            }
+
             plymov.usingWindMagic = false;
             _stats.MaxFallSpeed = 40;
             _stats.MaxSpeed = 14;

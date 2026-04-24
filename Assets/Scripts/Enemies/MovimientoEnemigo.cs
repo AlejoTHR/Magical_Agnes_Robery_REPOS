@@ -29,13 +29,14 @@ public class MovimientoEnemigo : MonoBehaviour
     private float lerpFactor = 0f;
     private bool movingForward = true;
     private SpriteRenderer sr;
+    private Animator animator;
     #endregion
 
     public void Start()
     {
         enemyScript = GetComponent<EnemyScript>();
         sr = GetComponent<SpriteRenderer>(); // Initialize SpriteRenderer
-
+        animator = GetComponent<Animator>(); // INITIALIZE ANMTOR CONTROLLER
         if (!isCameraMode)
         {
             if (pointB != null) currentTarget = pointB;
@@ -104,6 +105,8 @@ public class MovimientoEnemigo : MonoBehaviour
             waitTimer -= Time.deltaTime;
             if (waitTimer <= 0)
             {
+                animator.SetBool("IsMoving", true); // ANIMATION SETTER
+
                 isWaiting = false;
                 currentTarget = (currentTarget == pointB) ? pointA : pointB;
                 UpdateFacing();
