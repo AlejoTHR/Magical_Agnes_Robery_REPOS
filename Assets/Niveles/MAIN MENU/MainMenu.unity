@@ -1598,6 +1598,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 126814143}
     - target: {fileID: 1025436354968444552, guid: 3ef41c7f5febdd34eb367d7262afe7f5, type: 3}
+      propertyPath: m_text
+      value: Electric Magic
+      objectReference: {fileID: 0}
+    - target: {fileID: 1025436354968444552, guid: 3ef41c7f5febdd34eb367d7262afe7f5, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 602d49322e2a68f4089a8177e84f9955, type: 2}
@@ -1807,7 +1811,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4532206229491145377, guid: 3ef41c7f5febdd34eb367d7262afe7f5, type: 3}
       propertyPath: m_text
-      value: WATER DASH
+      value: Water Magic
       objectReference: {fileID: 0}
     - target: {fileID: 4532206229491145377, guid: 3ef41c7f5febdd34eb367d7262afe7f5, type: 3}
       propertyPath: m_colorMode
@@ -1927,7 +1931,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7254379001062517293, guid: 3ef41c7f5febdd34eb367d7262afe7f5, type: 3}
       propertyPath: m_text
-      value: FIRE STOMP
+      value: Fire Magic
       objectReference: {fileID: 0}
     - target: {fileID: 7254379001062517293, guid: 3ef41c7f5febdd34eb367d7262afe7f5, type: 3}
       propertyPath: m_colorMode
@@ -2020,6 +2024,10 @@ PrefabInstance:
     - target: {fileID: 7254379001062517293, guid: 3ef41c7f5febdd34eb367d7262afe7f5, type: 3}
       propertyPath: m_fontColorGradient.bottomRight.r
       value: 0.91073143
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903357879092273809, guid: 3ef41c7f5febdd34eb367d7262afe7f5, type: 3}
+      propertyPath: m_text
+      value: Wind Magic
       objectReference: {fileID: 0}
     - target: {fileID: 8903357879092273809, guid: 3ef41c7f5febdd34eb367d7262afe7f5, type: 3}
       propertyPath: m_colorMode
