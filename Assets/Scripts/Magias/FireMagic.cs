@@ -6,8 +6,7 @@ public class FireMagic : MonoBehaviour
     [SerializeField] private ScriptableStats _stats;
     private Movement plymov;
     private PlayerInput _input;
-    private AudioSource _impactSource; // For the explosion only
-
+    private AudioSource _impactSource;
     public float CannonSpeed;
     public float CannonAcceleration;
     [SerializeField] private AudioClip _impactClip;
