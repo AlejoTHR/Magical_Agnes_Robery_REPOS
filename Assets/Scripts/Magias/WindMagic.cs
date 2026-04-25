@@ -7,6 +7,7 @@ public class WindMagic : MonoBehaviour
     private PlayerInput _input;
     private Movement plymov;
     private FireMagic fireExtinguisher;
+    private WaterMagic waterMagic;
 
     public float fallspeed;
     public float slowmo;
@@ -18,6 +19,7 @@ public class WindMagic : MonoBehaviour
         plymov = GetComponent<Movement>();
         fireExtinguisher = GetComponent<FireMagic>();
         _input = GetComponent<PlayerInput>();
+        waterMagic = GetComponent<WaterMagic>();
     }
 
     void Update()
@@ -36,7 +38,7 @@ public class WindMagic : MonoBehaviour
             plymov.usingFireMagic = false;
             plymov.usingWindMagic = true;
         }
-        else
+        else if(plymov.usingWindMagic && !_input.actions["Wind"].IsPressed()) 
         {
             StopGliding();
         }
@@ -54,6 +56,7 @@ public class WindMagic : MonoBehaviour
             plymov.usingWindMagic = false;
             _stats.MaxFallSpeed = 40;
             _stats.MaxSpeed = 14;
+            waterMagic.DashUsed = false;
         }
     }
 }
