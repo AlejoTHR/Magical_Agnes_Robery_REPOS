@@ -1814,13 +1814,13 @@ TextureImporter:
       name: UI_Flatpng 1_74
       rect:
         serializedVersion: 2
-        x: 2054
+        x: 2053
         y: 334
-        width: 572
+        width: 573
         height: 102
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 35, y: 20, z: 35, w: 7}
       customData: 
       outline: []
       physicsShape: []
