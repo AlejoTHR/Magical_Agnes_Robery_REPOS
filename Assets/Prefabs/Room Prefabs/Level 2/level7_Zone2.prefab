@@ -50636,7 +50636,7 @@ GameObject:
   m_Component:
   - component: {fileID: 654697550275509841}
   m_Layer: 7
-  m_Name: level7_Zone2
+  m_Name: Level7_Zone2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
