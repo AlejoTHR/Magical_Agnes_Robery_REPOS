@@ -165,15 +165,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomPrefabs:
   - {fileID: 7019620404360389633, guid: b47d724dd95622842a1080af140820a0, type: 3}
-  - {fileID: 7019620404360389633, guid: d45325de9a23e1640a3cdb8c03dfcee2, type: 3}
-  - {fileID: 5259594729563029984, guid: 0c2b05fadfe3a7f49b46a09d8e4ceddd, type: 3}
-  - {fileID: 34476716691350687, guid: f7cd78825bd790d4a980e96bdf52ba50, type: 3}
-  - {fileID: 3941502451297745638, guid: 9278d936c4929b545bca4b135fec0f4e, type: 3}
-  - {fileID: 1921611792972373304, guid: fb1d2289f6c8e7a4f814bb7f1990b98e, type: 3}
-  - {fileID: 7019620404360389633, guid: b8c3b05eb34397b45950247132c01169, type: 3}
-  - {fileID: 7019620404360389633, guid: e34d7092f36ea144ca851a04286c35ab, type: 3}
-  - {fileID: 5259594729563029984, guid: b8338c79ab26960418a0c45abe848228, type: 3}
-  - {fileID: 1921611792972373304, guid: bfe8c63ed1574814999c98e4b5aa4ef5, type: 3}
 --- !u!1001 &552648879
 PrefabInstance:
   m_ObjectHideFlags: 0
