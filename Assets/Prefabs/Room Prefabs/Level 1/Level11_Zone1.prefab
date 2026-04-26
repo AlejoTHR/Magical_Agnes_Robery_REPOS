@@ -28636,8 +28636,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 844381513201595990}
     m_Modifications:
     - target: {fileID: 213541784253137716, guid: 7c6c7ae604c08e641ae02187ff523123, type: 3}
+      propertyPath: isLocked
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 213541784253137716, guid: 7c6c7ae604c08e641ae02187ff523123, type: 3}
       propertyPath: puzzleID
       value: Lvl_ABRIL
+      objectReference: {fileID: 0}
+    - target: {fileID: 213541784253137716, guid: 7c6c7ae604c08e641ae02187ff523123, type: 3}
+      propertyPath: leversNeeded
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 236298352012960317, guid: 7c6c7ae604c08e641ae02187ff523123, type: 3}
       propertyPath: m_Name

@@ -6,6 +6,7 @@
  */
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -45,7 +46,7 @@ public class LevelManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("End of stages in this scene reached!");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 

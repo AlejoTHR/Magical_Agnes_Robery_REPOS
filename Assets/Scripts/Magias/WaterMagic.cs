@@ -9,7 +9,11 @@ public class WaterMagic : MonoBehaviour
 
     [Header("Dash Settings")]
     public float dashPower = 40f;
+    public float dashDuration = 0.2f;
+    [SerializeField] private float dashCooldown = 0.5f;
+
     public bool DashUsed = false;
+    private float _cooldownTimer = 0f;
 
     void Start()
     {
@@ -19,30 +23,53 @@ public class WaterMagic : MonoBehaviour
 
     void Update()
     {
-        // Dash triggers if button pressed AND (on ground OR hasn't used air dash yet)
-        if (_input.actions["Water"].WasPressedThisFrame() && !DashUsed)
+        // 1. Always tick the timer down
+        if (_cooldownTimer > 0)
         {
-            DashUsed = true;
-            plymov.PlayDashSound(); // Triggers the Movement script sound
-            StartCoroutine(DashRoutine());
+            _cooldownTimer -= Time.deltaTime;
         }
 
-        // Reset dash when touching ground
-        if (plymov.isGrounded()) DashUsed = false;
+        // 2. Dash triggers only if cooldown is finished
+        if (_input.actions["Water"].WasPressedThisFrame() && _cooldownTimer <= 0)
+        {
+            // If we are on ground, or we are in air and haven't used the air-dash yet
+            if (plymov.isGrounded() || !DashUsed)
+            {
+                StartCoroutine(DashRoutine());
+            }
+        }
+
+        // 3. Reset DashUsed only when grounded AND cooldown is finished
+        // This prevents the "ground spam" while keeping the air-dash limit
+        if (plymov.isGrounded() && _cooldownTimer <= 0)
+        {
+            DashUsed = false;
+        }
     }
 
     IEnumerator DashRoutine()
     {
-        float dir = plymov.ReturnDirection();
+        DashUsed = true;
+        _cooldownTimer = dashCooldown; // Start cooldown immediately
+
         plymov.usingWaterMagic = true;
+        plymov.PlayDashSound();
 
-        // Freeze Y to make the dash "tight"
-        plymov._rb.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
-        plymov.SetFrameVelocity(new Vector2(dashPower * dir, 0));
+        float dir = plymov.ReturnDirection();
+        if (Mathf.Approximately(dir, 0))
+            dir = transform.localScale.x > 0 ? 1f : -1f;
 
-        yield return new WaitForSeconds(0.2f);
+        float elapsed = 0f;
+        while (elapsed < dashDuration)
+        {
+            // Force velocity every physics frame to beat the Movement script
+            plymov._rb.linearVelocity = new Vector2(dashPower * dir, 0f);
+            plymov.SetFrameVelocity(new Vector2(dashPower * dir, 0f));
 
-        plymov._rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+            elapsed += Time.fixedDeltaTime;
+            yield return new WaitForFixedUpdate();
+        }
+
         plymov.usingWaterMagic = false;
     }
 }
