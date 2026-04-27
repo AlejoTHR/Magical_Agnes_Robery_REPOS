@@ -165,6 +165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomPrefabs:
   - {fileID: 7019620404360389633, guid: 56ac3b2dde40851419a3559b6539f7d4, type: 3}
+  - {fileID: 7019620404360389633, guid: 0b4b0496f266a2e45beaf82faca5ad71, type: 3}
 --- !u!1001 &552648879
 PrefabInstance:
   m_ObjectHideFlags: 0
