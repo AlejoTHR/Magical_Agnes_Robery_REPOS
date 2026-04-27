@@ -77,6 +77,7 @@ public class FireMagic : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision == null) return;
+
         if (plymov.usingFireMagic && collision.gameObject.CompareTag("Destroyable"))
         {
             if (_impactClip != null) _impactSource.PlayOneShot(_impactClip);
