@@ -165,6 +165,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomPrefabs:
   - {fileID: 7019620404360389633, guid: 56ac3b2dde40851419a3559b6539f7d4, type: 3}
+  - {fileID: 7019620404360389633, guid: 09cd6cf8ce25d2447bfce5dc2e857d86, type: 3}
+  - {fileID: 7019620404360389633, guid: 958580fcd7244ea49ae35c28a3bb3a0d, type: 3}
   - {fileID: 7019620404360389633, guid: 0b4b0496f266a2e45beaf82faca5ad71, type: 3}
 --- !u!1001 &552648879
 PrefabInstance:
@@ -340,6 +342,10 @@ PrefabInstance:
     - target: {fileID: 2647604283110112621, guid: 916325cf48566cc4e81496a3f5cb3f58, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4311021707632148132, guid: 916325cf48566cc4e81496a3f5cb3f58, type: 3}
+      propertyPath: groundedSize
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6131330060222661740, guid: 916325cf48566cc4e81496a3f5cb3f58, type: 3}
       propertyPath: m_Enabled

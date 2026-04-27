@@ -80,13 +80,13 @@ public class Movement : MonoBehaviour, IPlayerController
         // 2. Aplicamos la velocidad calculada al Rigidbody
         _rb.linearVelocity = _frameVelocity;
     }
-
+    public float groundedSize;
     private void CheckCollisions()
     {
         Physics2D.queriesStartInColliders = false;
 
         // Reducimos el ancho para que las paredes no activen el estado grounded
-        Vector2 castSize = new Vector2(_col.size.x * 0.85f, _col.size.y);
+        Vector2 castSize = new Vector2(_col.size.x * groundedSize, _col.size.y);
 
         RaycastHit2D hit = Physics2D.CapsuleCast(
             _col.bounds.center,
