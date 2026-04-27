@@ -21,7 +21,7 @@ public class FireMagic : MonoBehaviour
         _col = GetComponent<CapsuleCollider2D>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         // 1. Check if we are currently "Cannonballing" and hitting a destroyable object
         // We do this BEFORE the grounded check shuts us down.

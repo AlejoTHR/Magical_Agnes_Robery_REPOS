@@ -37,7 +37,7 @@ public class EnemyScript : MonoBehaviour
         viewMesh.name = "View Mesh";
         if (viewMeshFilter != null) viewMeshFilter.mesh = viewMesh;
 
-        StartCoroutine("FindTargetsWithDelay", 0.1f);
+        StartCoroutine("FindTargetsWithDelay", 0f);
     }
 
     IEnumerator FindTargetsWithDelay(float delay)
@@ -49,7 +49,7 @@ public class EnemyScript : MonoBehaviour
         }
     }
 
-    void LateUpdate() { DrawFieldOfView(); }
+    void FixedUpdate() { DrawFieldOfView(); }
 
     // --- NEW FUNCTION: CATCH ON TOUCH ---
     private void OnCollisionEnter2D(Collision2D collision)

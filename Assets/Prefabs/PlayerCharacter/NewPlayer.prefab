@@ -101,6 +101,7 @@ MonoBehaviour:
   isHiding: 0
   _grounded: 0
   _groundedGracePeriod: 0.05
+  groundedSize: 0.1
 --- !u!114 &6568777844015200686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,7 +124,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919005749354704414}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6e0267c4fbcb3894e9cb255b9bab2c6a, type: 3}
   m_Name: 
@@ -139,12 +140,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919005749354704414}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce338e73365c3aa419e7af67d55040e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dashPower: 40
+  dashDuration: 0.2
+  dashCooldown: 0.5
   DashUsed: 0
 --- !u!114 &3812209699909262866
 MonoBehaviour:
