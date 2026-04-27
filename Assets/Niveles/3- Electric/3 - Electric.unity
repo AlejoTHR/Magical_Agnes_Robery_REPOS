@@ -277,7 +277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 626f0eb4d72e8ba4ba80740c46c84a13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
+  cam: {fileID: 743159709}
   camStartpos: {x: 0, y: 0, z: 0}
   distance: 0
   farthestBg: 0
@@ -353,6 +353,7 @@ MonoBehaviour:
   - {fileID: 7019620404360389633, guid: 56ac3b2dde40851419a3559b6539f7d4, type: 3}
   - {fileID: 7019620404360389633, guid: 09cd6cf8ce25d2447bfce5dc2e857d86, type: 3}
   - {fileID: 7019620404360389633, guid: 958580fcd7244ea49ae35c28a3bb3a0d, type: 3}
+  - {fileID: 7019620404360389633, guid: 992057862600afd488b22c22f026b3e8, type: 3}
   - {fileID: 7019620404360389633, guid: 0b4b0496f266a2e45beaf82faca5ad71, type: 3}
 --- !u!1001 &552648879
 PrefabInstance:
@@ -415,6 +416,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9eb2baf0d1ae76945a542a364c092c15, type: 3}
+--- !u!4 &743159709 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2685286554317653042, guid: fa2c2f9b79096a44da9c4ac9abd1c54d, type: 3}
+  m_PrefabInstance: {fileID: 1498034747}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &761965794 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2647604283110112621, guid: 916325cf48566cc4e81496a3f5cb3f58, type: 3}
