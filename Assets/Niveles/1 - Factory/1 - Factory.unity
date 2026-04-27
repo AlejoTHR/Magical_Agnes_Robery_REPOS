@@ -688,7 +688,7 @@ GameObject:
   - component: {fileID: 1385510004}
   - component: {fileID: 1385510003}
   m_Layer: 0
-  m_Name: BG_Fabrica
+  m_Name: BG_Level1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
