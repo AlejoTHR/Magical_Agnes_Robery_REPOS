@@ -36,9 +36,9 @@ public class MovimientoEnemigo : MonoBehaviour
     {
         enemyScript = GetComponent<EnemyScript>();
         sr = GetComponent<SpriteRenderer>(); // Initialize SpriteRenderer
-        animator = GetComponent<Animator>(); // INITIALIZE ANMTOR CONTROLLER
         if (!isCameraMode)
         {
+            animator = GetComponent<Animator>(); // INITIALIZE ANMTOR CONTROLLER
             if (pointB != null) currentTarget = pointB;
             UpdateFacing();
         }
@@ -93,6 +93,7 @@ public class MovimientoEnemigo : MonoBehaviour
 
     void StartWait(float time)
     {
+        if(!isCameraMode) animator.SetBool("Moving", false);
         isWaiting = true;
         waitTimer = time;
     }
@@ -105,7 +106,7 @@ public class MovimientoEnemigo : MonoBehaviour
             waitTimer -= Time.deltaTime;
             if (waitTimer <= 0)
             {
-                animator.SetBool("IsMoving", true); // ANIMATION SETTER
+                animator.SetBool("Moving", true); // ANIMATION SETTER
 
                 isWaiting = false;
                 currentTarget = (currentTarget == pointB) ? pointA : pointB;

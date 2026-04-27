@@ -136,7 +136,7 @@ MonoBehaviour:
     m_Bits: 64
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 136
   viewMeshFilter: {fileID: 1001217114220889263}
   meshResolution: 20
   edgeResolveIterations: 0
@@ -216,7 +216,7 @@ Animator:
   m_GameObject: {fileID: 3005296514162203561}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: be7363134145ad44bb3285507c0fa220, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2dcaf17f3eec5004a913db9ae121a45d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
