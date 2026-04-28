@@ -28303,9 +28303,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4823883828757574387}
     m_Modifications:
+    - target: {fileID: 596418979295086195, guid: 27160331c98569047943c7e2e1647f2d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1343194310064247136, guid: 27160331c98569047943c7e2e1647f2d, type: 3}
       propertyPath: m_Name
       value: Canva Pop Up E
+      objectReference: {fileID: 0}
+    - target: {fileID: 1343194310064247136, guid: 27160331c98569047943c7e2e1647f2d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3426352741440488531, guid: 27160331c98569047943c7e2e1647f2d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3642100932948968384, guid: 27160331c98569047943c7e2e1647f2d, type: 3}
       propertyPath: m_Pivot.x
@@ -28337,6 +28349,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3642100932948968384, guid: 27160331c98569047943c7e2e1647f2d, type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642100932948968384, guid: 27160331c98569047943c7e2e1647f2d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642100932948968384, guid: 27160331c98569047943c7e2e1647f2d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642100932948968384, guid: 27160331c98569047943c7e2e1647f2d, type: 3}
+      propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3642100932948968384, guid: 27160331c98569047943c7e2e1647f2d, type: 3}
@@ -28387,9 +28411,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5360568080126513401, guid: 27160331c98569047943c7e2e1647f2d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5486047823373345128, guid: 27160331c98569047943c7e2e1647f2d, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6719156678204279418, guid: 27160331c98569047943c7e2e1647f2d, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 216
+      objectReference: {fileID: 0}
+    - target: {fileID: 6978218334430600888, guid: 27160331c98569047943c7e2e1647f2d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7185796574889416173, guid: 27160331c98569047943c7e2e1647f2d, type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7185796574889416173, guid: 27160331c98569047943c7e2e1647f2d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8636334901969227855, guid: 27160331c98569047943c7e2e1647f2d, type: 3}
       propertyPath: m_text

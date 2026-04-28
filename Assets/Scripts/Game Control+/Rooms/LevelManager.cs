@@ -75,15 +75,19 @@ public class LevelManager : MonoBehaviour
         isTransitioning = true;
         TogglePlayerControl(false);
 
-        // Close Curtain
+        // 1. MUTE THE UI
+        SetGlobalUIAlpha(0);
+
         _transitionAnimator.Play(_hideScreenAnim);
         yield return new WaitForSeconds(_animDuration);
 
         LoadRoom(currentRoomIndex);
 
-        // Open Curtain
         _transitionAnimator.Play(_showScreenAnim);
         yield return new WaitForSeconds(_animDuration);
+
+        // 2. RESTORE THE UI
+        SetGlobalUIAlpha(1);
 
         TogglePlayerControl(true);
         isTransitioning = false;
@@ -135,6 +139,23 @@ public class LevelManager : MonoBehaviour
         {
             Movement moveScript = player.GetComponent<Movement>();
             if (moveScript != null) moveScript.enabled = state;
+        }
+    }
+
+    private void SetGlobalUIAlpha(float alpha)
+    {
+        // Find all objects with the tag you assigned to your Interaction UI
+        GameObject[] interactionUIs = GameObject.FindGameObjectsWithTag("InteractionUI");
+
+        foreach (GameObject ui in interactionUIs)
+        {
+            CanvasGroup group = ui.GetComponent<CanvasGroup>();
+            if (group != null)
+            {
+                group.alpha = alpha;
+                // Optional: Block interaction while invisible
+                group.blocksRaycasts = (alpha > 0);
+            }
         }
     }
 }

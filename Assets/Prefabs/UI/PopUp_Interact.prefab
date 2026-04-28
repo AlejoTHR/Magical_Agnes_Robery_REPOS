@@ -87,9 +87,10 @@ GameObject:
   - component: {fileID: 7185796574889416173}
   - component: {fileID: 5486047823373345128}
   - component: {fileID: 7568860209971529201}
+  - component: {fileID: 4954697791973084262}
   m_Layer: 5
   m_Name: PopUp_Interact
-  m_TagString: Untagged
+  m_TagString: InteractionUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,7 +137,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!114 &5486047823373345128
 MonoBehaviour:
@@ -178,6 +179,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!225 &4954697791973084262
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343194310064247136}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &5360568080126513401
 GameObject:
   m_ObjectHideFlags: 0
