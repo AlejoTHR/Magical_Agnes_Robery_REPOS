@@ -89,7 +89,7 @@ public class Movement : MonoBehaviour, IPlayerController
     {
         Physics2D.queriesStartInColliders = false;
 
-        // Reducimos el ancho para que las paredes no activen el estado grounded
+        // Keep the cast slightly thinner than the player to avoid catching walls
         Vector2 castSize = new Vector2(_col.size.x * groundedSize, _col.size.y);
 
         RaycastHit2D hit = Physics2D.CapsuleCast(
@@ -102,7 +102,9 @@ public class Movement : MonoBehaviour, IPlayerController
             _groundLayer
         );
 
-        bool groundHit = hit.collider != null;
+        // FIX: Only count as ground if the surface is facing UP (y > 0)
+        // hit.normal.y > 0.7f means the surface is flatter than a 45-degree angle
+        bool groundHit = hit.collider != null && hit.normal.y > 0.7f;
 
         if (groundHit)
         {

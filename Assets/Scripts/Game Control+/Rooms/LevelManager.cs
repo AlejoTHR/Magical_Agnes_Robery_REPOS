@@ -1,91 +1,140 @@
-/* * HOW TO USE:
- * 1. Create one 'LevelManager' GameObject in your scene.
- * 2. Drag your Room Prefabs into the 'Room Prefabs' array in order.
- * 3. IMPORTANT: Every Room Prefab must have a child named "EntranceSpawnPoint".
- * 4. Handles room transitions and player teleportation automatically.
- */
-
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance;
 
+    // Static handshake to tell the NEXT scene to play the "Open" animation
+    public static bool _shouldFadeOutOnArrival = false;
+
     [Header("Room List")]
-    [Tooltip("The order of room prefabs for THIS specific scene.")]
     public GameObject[] roomPrefabs;
+
+    [Header("Transitions")]
+    [SerializeField] private Animator _transitionAnimator;
+    [SerializeField] private string _hideScreenAnim = "FadeIn";  // Close curtain
+    [SerializeField] private string _showScreenAnim = "FadeOut"; // Open curtain
+    [SerializeField] private float _animDuration = 1.0f;
 
     private GameObject currentRoomInstance;
     private int currentRoomIndex = 0;
+    private bool isTransitioning = false;
 
     private void Awake()
     {
-        // Simple instance reference for the current scene
         Instance = this;
     }
 
     private void Start()
     {
+        // 1. Setup initial room
         if (roomPrefabs.Length > 0)
         {
             LoadRoom(0);
         }
-        else
+
+        // 2. ONLY play the "Open" animation if we just arrived or reset
+        // If it's the very first time opening the game, you might want this true by default
+        if (_shouldFadeOutOnArrival && _transitionAnimator != null)
         {
-            Debug.LogError("No room prefabs assigned to LevelManager in this scene!");
+            StartCoroutine(EntrySequence());
         }
     }
 
     public void LoadNextRoom()
     {
+        if (isTransitioning) return;
+
         currentRoomIndex++;
+
         if (currentRoomIndex < roomPrefabs.Length)
         {
-            LoadRoom(currentRoomIndex);
+            // Room swap in same scene
+            StartCoroutine(InternalRoomTransition());
         }
         else
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            // Moving to next scene
+            StartCoroutine(SceneTransitionSequence());
         }
+    }
+
+    private IEnumerator EntrySequence()
+    {
+        _shouldFadeOutOnArrival = false; // Reset flag
+        _transitionAnimator.Play(_showScreenAnim);
+        yield return new WaitForSeconds(_animDuration);
+        TogglePlayerControl(true);
+    }
+
+    // Sequence for internal room swap: Fade In -> Swap -> Fade Out
+    private IEnumerator InternalRoomTransition()
+    {
+        isTransitioning = true;
+        TogglePlayerControl(false);
+
+        // Close Curtain
+        _transitionAnimator.Play(_hideScreenAnim);
+        yield return new WaitForSeconds(_animDuration);
+
+        LoadRoom(currentRoomIndex);
+
+        // Open Curtain
+        _transitionAnimator.Play(_showScreenAnim);
+        yield return new WaitForSeconds(_animDuration);
+
+        TogglePlayerControl(true);
+        isTransitioning = false;
+    }
+
+    // Sequence for scene jump: Fade In -> Load Scene
+    private IEnumerator SceneTransitionSequence()
+    {
+        isTransitioning = true;
+        TogglePlayerControl(false);
+
+        // Close Curtain
+        _transitionAnimator.Play(_hideScreenAnim);
+        yield return new WaitForSeconds(_animDuration);
+
+        _shouldFadeOutOnArrival = true; // Tell next scene to "Open"
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void ResetCurrentRoom()
     {
-        LoadRoom(currentRoomIndex);
+        if (isTransitioning) return;
+        StartCoroutine(InternalRoomTransition()); // Reuse the Close -> Swap -> Open logic
     }
 
     private void LoadRoom(int index)
     {
-        // 1. Cleanup old room
-        if (currentRoomInstance != null)
-        {
-            Destroy(currentRoomInstance);
-        }
-
-        // 2. Spawn new room
+        if (currentRoomInstance != null) Destroy(currentRoomInstance);
         currentRoomInstance = Instantiate(roomPrefabs[index], Vector3.zero, Quaternion.identity);
 
-        // 3. Teleport Player
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
         {
-            // Reset velocity to prevent carrying momentum between stages
             Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
             if (rb != null) rb.linearVelocity = Vector2.zero;
 
             Transform spawnPoint = currentRoomInstance.transform.Find("EntranceSpawnPoint");
-            if (spawnPoint != null)
-            {
-                player.transform.position = spawnPoint.position;
-            }
+            if (spawnPoint != null) player.transform.position = spawnPoint.position;
         }
 
-        // 4. Update Camera through RoomController
         RoomController rc = currentRoomInstance.GetComponent<RoomController>();
-        if (rc != null)
+        if (rc != null) rc.ActivateRoom();
+    }
+
+    private void TogglePlayerControl(bool state)
+    {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
         {
-            rc.ActivateRoom();
+            Movement moveScript = player.GetComponent<Movement>();
+            if (moveScript != null) moveScript.enabled = state;
         }
     }
 }
