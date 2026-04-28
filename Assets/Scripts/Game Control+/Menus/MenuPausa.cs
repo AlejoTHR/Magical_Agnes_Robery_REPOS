@@ -1,21 +1,67 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
+using UnityEngine.Audio;
+using UnityEngine.UI;
 
-/* * HOW TO USE:
- * 1. Attach to a 'UI Manager' or 'Canvas' object.
- * 2. Assign your Pause Panel and Controls Panel GameObjects to the slots.
- * 3. Press 'Escape' in-game to toggle the menu.
- * 4. Ensure UI Buttons are linked to the 'Reanudar', 'OpenControls', and 'Salir' methods.
- */
 public class MenuPausa : MonoBehaviour
 {
     public GameObject panelPausa;
     public GameObject controlsMenu;
+    public AudioMixer mainMixer;
+    public Slider musicSlider;
+
+    [Header("Controller Setup")]
+    public GameObject firstButtonPause;    // Assign the 'Resume' button here
+    public GameObject firstButtonControls; // Assign the 'Music Slider' or 'Back' button here
+
     public bool juegoPausado;
 
-    void Update()
+    void Start()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        float currentVol;
+        // Using "music" to match your Mixer's exposed parameter
+        if (mainMixer.GetFloat("music", out currentVol))
+        {
+            musicSlider.value = Mathf.Pow(10, currentVol / 20);
+        }
+    }
+
+    public void SetMusicVolume(float sliderValue)
+    {
+        // Converts linear slider 0.0001-1 into logarithmic -80dB to 0dB
+        float dB = Mathf.Log10(Mathf.Clamp(sliderValue, 0.0001f, 1f)) * 20;
+        mainMixer.SetFloat("music", dB);
+    }
+
+    // --- NEW FUNCTIONS FOR NAVIGATION ---
+
+    public void OpenOptions()
+    {
+        panelPausa.SetActive(false);
+        controlsMenu.SetActive(true);
+
+        // Tell the controller to focus on the first item in the Options menu
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(firstButtonControls);
+    }
+
+    public void BackToPause()
+    {
+        controlsMenu.SetActive(false);
+        panelPausa.SetActive(true);
+
+        // Tell the controller to focus back on the main pause buttons
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(firstButtonPause);
+    }
+
+    // --- EXISTING LOGIC ---
+
+    public void OnTogglePause(InputAction.CallbackContext context)
+    {
+        if (context.performed)
         {
             if (juegoPausado) Reanudar();
             else Pausar();
@@ -27,32 +73,23 @@ public class MenuPausa : MonoBehaviour
         Time.timeScale = 0f;
         juegoPausado = true;
         panelPausa.SetActive(true);
+        controlsMenu.SetActive(false);
+
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(firstButtonPause);
     }
 
     public void Reanudar()
     {
         Time.timeScale = 1f;
         panelPausa.SetActive(false);
+        controlsMenu.SetActive(false);
         juegoPausado = false;
     }
 
-    public void OpenControls()
+    public void Salir(string nombreEscena)
     {
-        panelPausa.SetActive(false);
-        controlsMenu.SetActive(true);
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(nombreEscena);
     }
-
-    public void BackToPause()
-    {
-        controlsMenu.SetActive(false);
-        panelPausa.SetActive(true);
-    }
-
-    //Modificar en el futuro para que no salga de la build sino que lleve al menu principal
-    public void Salir(string MainMenu)
-    {
-        SceneManager.LoadScene(MainMenu);
-    }
-
 }
-

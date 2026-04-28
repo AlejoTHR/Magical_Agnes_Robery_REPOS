@@ -1,4 +1,5 @@
 using System;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,6 +10,9 @@ public class Movement : MonoBehaviour, IPlayerController
     [Header("Settings")]
     [SerializeField] private ScriptableStats _stats;
     [SerializeField] private LayerMask _groundLayer;
+
+    [Header("Menu Reference")]
+    [SerializeField] private MenuPausa _pauseMenu;
 
     [Header("Master Audio Clips")]
     [SerializeField] private AudioClip _walkClip;
@@ -162,12 +166,25 @@ public class Movement : MonoBehaviour, IPlayerController
 
     private void GatherInput()
     {
+        // 1. Gather movement and jump
         _frameInput = new FrameInput
         {
             JumpDown = _input.actions["Jump"].WasPressedThisFrame(),
             Move = _input.actions["Move"].ReadValue<Vector2>()
         };
+
         if (_frameInput.JumpDown) _jumpToConsume = true;
+
+        // 2. Handle Pause Action
+        // Check if the "Pause" action was pressed this frame
+        if (_input.actions["Pause"].WasPressedThisFrame())
+        {
+            if (_pauseMenu != null)
+            {
+                if (_pauseMenu.juegoPausado) _pauseMenu.Reanudar();
+                else _pauseMenu.Pausar();
+            }
+        }
     }
 
     private void HandleMasterAudio()
