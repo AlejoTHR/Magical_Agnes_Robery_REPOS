@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 1620717734655064122}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 4, z: 225}
+  m_LocalPosition: {x: 0, y: 4, z: 0}
   m_LocalScale: {x: 120, y: 90, z: 32.142857}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -235,13 +235,21 @@ PrefabInstance:
       propertyPath: m_Direction
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2306856374010320440, guid: 3ef41c7f5febdd34eb367d7262afe7f5, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2306856374010320440, guid: 3ef41c7f5febdd34eb367d7262afe7f5, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MenuPausa, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 2315507547683410061, guid: 3ef41c7f5febdd34eb367d7262afe7f5, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2315507547683410061, guid: 3ef41c7f5febdd34eb367d7262afe7f5, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 0.6239624
       objectReference: {fileID: 0}
     - target: {fileID: 2315507547683410061, guid: 3ef41c7f5febdd34eb367d7262afe7f5, type: 3}
       propertyPath: m_AnchorMin.x
@@ -249,7 +257,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2315507547683410061, guid: 3ef41c7f5febdd34eb367d7262afe7f5, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 0.6239624
       objectReference: {fileID: 0}
     - target: {fileID: 2315507547683410061, guid: 3ef41c7f5febdd34eb367d7262afe7f5, type: 3}
       propertyPath: m_SizeDelta.x
@@ -293,11 +301,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3749149172007032595, guid: 3ef41c7f5febdd34eb367d7262afe7f5, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3749149172007032595, guid: 3ef41c7f5febdd34eb367d7262afe7f5, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 0.6239624
       objectReference: {fileID: 0}
     - target: {fileID: 3749149172007032595, guid: 3ef41c7f5febdd34eb367d7262afe7f5, type: 3}
       propertyPath: m_SizeDelta.x
@@ -325,7 +333,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5787394085957393967, guid: 3ef41c7f5febdd34eb367d7262afe7f5, type: 3}
       propertyPath: m_Name
-      value: Options Variant
+      value: Game options
       objectReference: {fileID: 0}
     - target: {fileID: 5787394085957393967, guid: 3ef41c7f5febdd34eb367d7262afe7f5, type: 3}
       propertyPath: m_Layer
@@ -333,7 +341,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5787394085957393967, guid: 3ef41c7f5febdd34eb367d7262afe7f5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5978025459433991103, guid: 3ef41c7f5febdd34eb367d7262afe7f5, type: 3}
       propertyPath: m_Layer

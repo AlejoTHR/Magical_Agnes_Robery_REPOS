@@ -996,15 +996,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3103503886552105317, guid: 607888b65d1b3e744a8c4cbe3a090e1a, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3103503886552105317, guid: 607888b65d1b3e744a8c4cbe3a090e1a, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.6239624
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3103503886552105317, guid: 607888b65d1b3e744a8c4cbe3a090e1a, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.6239624
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3112005113647417296, guid: 607888b65d1b3e744a8c4cbe3a090e1a, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -1015,20 +1015,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 849639435}
     - target: {fileID: 3112005113647417296, guid: 607888b65d1b3e744a8c4cbe3a090e1a, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetMusicVolume
-      objectReference: {fileID: 0}
-    - target: {fileID: 3112005113647417296, guid: 607888b65d1b3e744a8c4cbe3a090e1a, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: MenuPausa, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4554316530010130171, guid: 607888b65d1b3e744a8c4cbe3a090e1a, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4554316530010130171, guid: 607888b65d1b3e744a8c4cbe3a090e1a, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.6239624
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5475415341994805174, guid: 607888b65d1b3e744a8c4cbe3a090e1a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6585245403161268167, guid: 607888b65d1b3e744a8c4cbe3a090e1a, type: 3}
       propertyPath: m_Name
@@ -1142,6 +1142,10 @@ PrefabInstance:
     - target: {fileID: 2322185673441872239, guid: 7a72a0941836a6340aadef3618a263b9, type: 3}
       propertyPath: m_Name
       value: PauseMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2322185673441872239, guid: 7a72a0941836a6340aadef3618a263b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4768565429514234789, guid: 7a72a0941836a6340aadef3618a263b9, type: 3}
       propertyPath: m_Camera
