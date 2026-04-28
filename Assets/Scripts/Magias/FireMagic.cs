@@ -4,7 +4,8 @@ using UnityEngine.InputSystem;
 public class FireMagic : MonoBehaviour
 {
     [SerializeField] private ScriptableStats _stats;
-    [SerializeField] private float _detectionPadding = 0.2f; // How much "extra" reach the hitbox has
+    [SerializeField] private Vector2 _detectionSize;
+
 
     private Movement plymov;
     private PlayerInput _input;
@@ -14,6 +15,9 @@ public class FireMagic : MonoBehaviour
     public float CannonSpeed;
     public float CannonAcceleration;
     [SerializeField] private AudioClip _impactClip;
+
+
+    public Transform _detectTrasnform;
 
     void Start()
     {
@@ -55,14 +59,8 @@ public class FireMagic : MonoBehaviour
 
     private void CheckForBreakables()
     {
-        // 1. Calculate the new size: slightly wider and taller than the collider
-        Vector2 boxSize = new Vector2(_col.size.x + _detectionPadding, 0.6f);
-
-        // 2. Offset the center so it reaches slightly further down
-        Vector2 checkPos = (Vector2)transform.position + Vector2.down * ((_col.size.y / 2f) + (_detectionPadding / 2f));
-
         // 3. Use the expanded box
-        Collider2D[] hitObjects = Physics2D.OverlapBoxAll(checkPos, boxSize, 0f);
+        Collider2D[] hitObjects = Physics2D.OverlapBoxAll(_detectTrasnform.position, _detectionSize, 0f);
 
         foreach (var obj in hitObjects)
         {
@@ -80,12 +78,7 @@ public class FireMagic : MonoBehaviour
     // Visual debugging so you can see the detection area in the Scene View
     private void OnDrawGizmosSelected()
     {
-        if (_col == null) _col = GetComponent<CapsuleCollider2D>();
-        if (_col == null) return;
-
         Gizmos.color = Color.red;
-        Vector2 boxSize = new Vector2(_col.size.x + _detectionPadding, 0.6f);
-        Vector2 checkPos = (Vector2)transform.position + Vector2.down * ((_col.size.y / 2f) + (_detectionPadding / 2f));
-        Gizmos.DrawWireCube(checkPos, boxSize);
+        Gizmos.DrawWireCube(_detectTrasnform.position, _detectionSize);
     }
 }

@@ -42,7 +42,8 @@ Transform:
   m_LocalPosition: {x: -10, y: -8.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1954514249905291402}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7739948011782452760
@@ -89,6 +90,7 @@ MonoBehaviour:
   _groundLayer:
     serializedVersion: 2
     m_Bits: 128
+  _pauseMenu: {fileID: 0}
   _walkClip: {fileID: 8300000, guid: 794ce2a6b32933a4cb7dc6e91feb9ce7, type: 3}
   _windGlideClip: {fileID: 8300000, guid: fe2c68cc691631b4bb5505ff9957c9a2, type: 3}
   _fireCannonballClip: {fileID: 8300000, guid: 459cab39cf8f22844914b3741b607686, type: 3}
@@ -130,9 +132,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stats: {fileID: 11400000, guid: 94db11c9bf88a66478a24044ea3ab134, type: 2}
+  _detectionSize: {x: 2, y: 0.5}
   CannonSpeed: 60
   CannonAcceleration: 420
   _impactClip: {fileID: 8300000, guid: 459cab39cf8f22844914b3741b607686, type: 3}
+  _detectTrasnform: {fileID: 1954514249905291402}
 --- !u!114 &9002151512141668640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,8 +283,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.25723648, y: -0.55925465}
-  m_Size: {x: 1.1186657, y: 1.670969}
+  m_Offset: {x: 0.25723648, y: 0.7835486}
+  m_Size: {x: 1.1186657, y: 1.931952}
   m_Direction: 0
 --- !u!95 &6968409263320777830
 Animator:
@@ -368,17 +372,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.2549448, y: -0.48328018}
+  m_Offset: {x: 0.2549448, y: 0.7711258}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.2}
     oldSize: {x: 4, y: 4}
     newSize: {x: 1.2666667, y: 2.5333333}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.3264923, y: 1.6080132}
+  m_Size: {x: 1.3264923, y: 1.9784412}
   m_EdgeRadius: 0
 --- !u!82 &5444448013393030222
 AudioSource:
@@ -477,3 +481,34 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &7222520245507725308
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1954514249905291402}
+  m_Layer: 0
+  m_Name: FireDetect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1954514249905291402
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7222520245507725308}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.3, y: -0.2, z: 0.00077275326}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2647604283110112621}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
