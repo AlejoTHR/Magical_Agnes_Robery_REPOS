@@ -45872,7 +45872,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleID: Lvl_01
-  leversNeeded: 2
+  leversNeeded: 0
   isLocked: 0
 --- !u!61 &4901935724752044604
 BoxCollider2D:

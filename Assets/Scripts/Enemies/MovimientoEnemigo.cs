@@ -93,7 +93,7 @@ public class MovimientoEnemigo : MonoBehaviour
 
     void StartWait(float time)
     {
-        if(!isCameraMode) animator.SetBool("Moving", false);
+        if(!isCameraMode) animator.SetBool("IsMoving", false);
         isWaiting = true;
         waitTimer = time;
     }
@@ -106,7 +106,7 @@ public class MovimientoEnemigo : MonoBehaviour
             waitTimer -= Time.deltaTime;
             if (waitTimer <= 0)
             {
-                animator.SetBool("Moving", true); // ANIMATION SETTER
+                animator.SetBool("IsMoving", true); // ANIMATION SETTER
 
                 isWaiting = false;
                 currentTarget = (currentTarget == pointB) ? pointA : pointB;

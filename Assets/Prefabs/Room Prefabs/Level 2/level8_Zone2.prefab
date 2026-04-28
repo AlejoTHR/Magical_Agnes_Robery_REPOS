@@ -66660,7 +66660,8 @@ PrefabInstance:
       propertyPath: popupUI
       value: 
       objectReference: {fileID: 6976994021558587076}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 78746146525105989, guid: 7c6c7ae604c08e641ae02187ff523123, type: 3}
     m_RemovedGameObjects:
     - {fileID: 9188059830725935136, guid: 7c6c7ae604c08e641ae02187ff523123, type: 3}
     - {fileID: 4725687177687005647, guid: 7c6c7ae604c08e641ae02187ff523123, type: 3}

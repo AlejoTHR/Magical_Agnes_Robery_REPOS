@@ -1,13 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-/* * HOW TO USE:
- * 1. Attach to a Door or Level Exit.
- * 2. Set 'Puzzle ID' to match the levers required to open it.
- * 3. Set 'Levers Needed' (e.g., 3 levers to unlock).
- * 4. The door remains 'Locked' until all signals are received; then the player can press 'Interact' to exit.
- */
-
 public class PuzzleReceiver : MonoBehaviour
 {
     [Header("Puzzle Logic")]
@@ -24,6 +17,17 @@ public class PuzzleReceiver : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
+
+        // --- NEW LOGIC FOR 0 LEVER DOORS ---
+        if (leversNeeded <= 0)
+        {
+            isLocked = false;
+            // Ensure the animator exists before setting the parameter
+            if (animator != null)
+            {
+                animator.SetBool("abir", true);
+            }
+        }
     }
 
     public void RegisterLeverActivation(string incomingID)
@@ -33,16 +37,21 @@ public class PuzzleReceiver : MonoBehaviour
             currentLeversActivated++;
             if (currentLeversActivated >= leversNeeded)
             {
-                isLocked = false;
-                Debug.Log("Door fully unlocked!");
-                animator.SetBool("abir", true);
+                UnlockDoor();
             }
         }
     }
 
+    // Extracted to a method to keep code DRY (Don't Repeat Yourself)
+    private void UnlockDoor()
+    {
+        isLocked = false;
+        Debug.Log("Door fully unlocked!");
+        if (animator != null) animator.SetBool("abir", true);
+    }
+
     private void Update()
     {
-        // Check for the "Interact" press every frame if the player is standing at the door
         if (playerInZone && !isLocked && _playerInput != null)
         {
             if (_playerInput.actions["Interact"].WasPressedThisFrame())
@@ -57,7 +66,6 @@ public class PuzzleReceiver : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInZone = true;
-            // Cache reference once
             if (_playerInput == null) _playerInput = other.GetComponent<PlayerInput>();
         }
     }

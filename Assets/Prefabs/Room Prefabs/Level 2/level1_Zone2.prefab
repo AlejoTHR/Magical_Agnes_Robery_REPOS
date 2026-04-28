@@ -63627,7 +63627,6 @@ GameObject:
   - component: {fileID: 7819506573261422891}
   - component: {fileID: 4901935724752044604}
   - component: {fileID: 7699619723423461593}
-  - component: {fileID: 2411713058142502529}
   - component: {fileID: 2381244919762446107}
   m_Layer: 0
   m_Name: Puerta
@@ -63719,7 +63718,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleID: Lvl_01
-  leversNeeded: 2
+  leversNeeded: 0
   isLocked: 0
 --- !u!61 &4901935724752044604
 BoxCollider2D:
@@ -63794,28 +63793,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!95 &2411713058142502529
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7869284756535828514}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 19fd47fd73b079b4781a3ba5c68e4b80, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &2381244919762446107
 MonoBehaviour:
   m_ObjectHideFlags: 0
