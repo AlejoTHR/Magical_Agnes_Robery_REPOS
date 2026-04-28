@@ -39,7 +39,7 @@ Transform:
   m_GameObject: {fileID: 919005749354704414}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10, y: -8.4, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -103,7 +103,7 @@ MonoBehaviour:
   isHiding: 0
   _grounded: 0
   _groundedGracePeriod: 0.05
-  groundedSize: 0.1
+  groundedSize: 0.2
 --- !u!114 &6568777844015200686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,8 +283,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.25723648, y: 0.7835486}
-  m_Size: {x: 1.1186657, y: 1.931952}
+  m_Offset: {x: -0.19361019, y: 0.373352}
+  m_Size: {x: 1.0595386, y: 1.8949975}
   m_Direction: 0
 --- !u!95 &6968409263320777830
 Animator:
@@ -372,17 +372,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.2549448, y: 0.7711258}
+  m_Offset: {x: -0.18851101, y: 0.38310188}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.2}
+    pivot: {x: 0.6, y: 0.3}
     oldSize: {x: 4, y: 4}
     newSize: {x: 1.2666667, y: 2.5333333}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.3264923, y: 1.9784412}
+  m_Size: {x: 0.85347295, y: 1.7936684}
   m_EdgeRadius: 0
 --- !u!82 &5444448013393030222
 AudioSource:
@@ -506,7 +506,7 @@ Transform:
   m_GameObject: {fileID: 7222520245507725308}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.3, y: -0.2, z: 0.00077275326}
+  m_LocalPosition: {x: -0.2, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

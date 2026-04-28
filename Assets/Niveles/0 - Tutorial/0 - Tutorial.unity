@@ -699,6 +699,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 849639435}
     - target: {fileID: 4311021707632148132, guid: 916325cf48566cc4e81496a3f5cb3f58, type: 3}
+      propertyPath: groundedSize
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4311021707632148132, guid: 916325cf48566cc4e81496a3f5cb3f58, type: 3}
       propertyPath: _groundLayer.m_Bits
       value: 128
       objectReference: {fileID: 0}
