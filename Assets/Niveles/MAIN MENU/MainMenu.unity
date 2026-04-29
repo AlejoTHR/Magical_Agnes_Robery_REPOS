@@ -1655,7 +1655,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Magical Agnes \nRobery"
+  m_text: "Magical Agnes \nRobbery"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3cc5c92ab30a5384995198d71a00448a, type: 2}
   m_sharedMaterial: {fileID: -6756587227330909947, guid: 3cc5c92ab30a5384995198d71a00448a, type: 2}
