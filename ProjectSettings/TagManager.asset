@@ -10,6 +10,7 @@ TagManager:
   - Floor
   - HideSpot
   - Destroyable
+  - InteractionUI
   layers:
   - Default
   - TransparentFX

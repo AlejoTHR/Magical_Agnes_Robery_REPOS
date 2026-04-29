@@ -138,6 +138,8 @@ public class LevelManager : MonoBehaviour
         if (player != null)
         {
             Movement moveScript = player.GetComponent<Movement>();
+            player.GetComponent<Rigidbody2D>().linearVelocity = Vector3.zero;
+            player.GetComponent<Movement>()._grounded = true;
             if (moveScript != null) moveScript.enabled = state;
         }
     }
