@@ -699,6 +699,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4311021707632148132, guid: 916325cf48566cc4e81496a3f5cb3f58, type: 3}
+      propertyPath: _col
+      value: 
+      objectReference: {fileID: 1794291892}
+    - target: {fileID: 4311021707632148132, guid: 916325cf48566cc4e81496a3f5cb3f58, type: 3}
       propertyPath: _pauseMenu
       value: 
       objectReference: {fileID: 849639435}
@@ -718,6 +722,14 @@ PrefabInstance:
       propertyPath: m_Offset.x
       value: -0.19947514
       objectReference: {fileID: 0}
+    - target: {fileID: 4995635072813110937, guid: 916325cf48566cc4e81496a3f5cb3f58, type: 3}
+      propertyPath: m_Size.y
+      value: 1.7974329
+      objectReference: {fileID: 0}
+    - target: {fileID: 4995635072813110937, guid: 916325cf48566cc4e81496a3f5cb3f58, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.38121966
+      objectReference: {fileID: 0}
     - target: {fileID: 6131330060222661740, guid: 916325cf48566cc4e81496a3f5cb3f58, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -726,7 +738,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4537000167359287821, guid: 916325cf48566cc4e81496a3f5cb3f58, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -857,6 +870,11 @@ GameObject:
 --- !u!4 &1794291889 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2647604283110112621, guid: 916325cf48566cc4e81496a3f5cb3f58, type: 3}
+  m_PrefabInstance: {fileID: 1596803336}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &1794291892 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 4995635072813110937, guid: 916325cf48566cc4e81496a3f5cb3f58, type: 3}
   m_PrefabInstance: {fileID: 1596803336}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1801430961 stripped
@@ -1128,42 +1146,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3103503886552105317, guid: 607888b65d1b3e744a8c4cbe3a090e1a, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3103503886552105317, guid: 607888b65d1b3e744a8c4cbe3a090e1a, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3103503886552105317, guid: 607888b65d1b3e744a8c4cbe3a090e1a, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3112005113647417296, guid: 607888b65d1b3e744a8c4cbe3a090e1a, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3112005113647417296, guid: 607888b65d1b3e744a8c4cbe3a090e1a, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 849639435}
-    - target: {fileID: 3112005113647417296, guid: 607888b65d1b3e744a8c4cbe3a090e1a, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MenuPausa, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4554316530010130171, guid: 607888b65d1b3e744a8c4cbe3a090e1a, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4554316530010130171, guid: 607888b65d1b3e744a8c4cbe3a090e1a, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5475415341994805174, guid: 607888b65d1b3e744a8c4cbe3a090e1a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6585245403161268167, guid: 607888b65d1b3e744a8c4cbe3a090e1a, type: 3}
       propertyPath: m_Name
       value: Options
@@ -1176,6 +1162,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 7149728332408215274}
+    - target: {fileID: 6890423665063401899, guid: 607888b65d1b3e744a8c4cbe3a090e1a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 32767
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1277,14 +1267,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseMenu
       objectReference: {fileID: 0}
-    - target: {fileID: 2322185673441872239, guid: 7a72a0941836a6340aadef3618a263b9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4768565429514234789, guid: 7a72a0941836a6340aadef3618a263b9, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 7149728332408215274}
+    - target: {fileID: 4768565429514234789, guid: 7a72a0941836a6340aadef3618a263b9, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3242
+      objectReference: {fileID: 0}
     - target: {fileID: 6881597392326341514, guid: 7a72a0941836a6340aadef3618a263b9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
