@@ -21513,6 +21513,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Palanca1
       objectReference: {fileID: 0}
+    - target: {fileID: 2751334550128965002, guid: 934a45641f522124db88d60ffd676bc9, type: 3}
+      propertyPath: puzzleID
+      value: Lvl_05
+      objectReference: {fileID: 0}
     - target: {fileID: 4147456065447743645, guid: 934a45641f522124db88d60ffd676bc9, type: 3}
       propertyPath: popupUI
       value: 
@@ -21702,6 +21706,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Puerta
       objectReference: {fileID: 0}
+    - target: {fileID: 1500121752486548831, guid: 7c6c7ae604c08e641ae02187ff523123, type: 3}
+      propertyPath: lightID
+      value: L1
+      objectReference: {fileID: 0}
     - target: {fileID: 3746831647762387686, guid: 7c6c7ae604c08e641ae02187ff523123, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.9499998
@@ -21758,6 +21766,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8870841212318386750, guid: 7c6c7ae604c08e641ae02187ff523123, type: 3}
+      propertyPath: popupUI
+      value: 
+      objectReference: {fileID: 7474243743007741490}
     - target: {fileID: 8932716277644973223, guid: 7c6c7ae604c08e641ae02187ff523123, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.4499998
