@@ -21,15 +21,13 @@ public class FireMagic : MonoBehaviour
 
     void Start()
     {
-        // Now these are guaranteed to exist
         plymov = GetComponent<Movement>();
         _input = GetComponent<PlayerInput>();
         _impactSource = GetComponent<AudioSource>();
         _col = GetComponent<CapsuleCollider2D>();
 
-        // Ensure AudioSource is configured for 2D
         _impactSource.playOnAwake = false;
-        _impactSource.spatialBlend = 0f; // 0 is 2D, 1 is 3D
+        _impactSource.spatialBlend = 0f;
     }
 
 
@@ -49,17 +47,17 @@ public class FireMagic : MonoBehaviour
             plymov.usingFireMagic = true;
             plymov.usingWindMagic = false;
         }
-        else if (plymov._grounded)
+        else
         {
             plymov.usingFireMagic = false;
             _stats.MaxFallSpeed = 40;
             _stats.FallAcceleration = 80;
+            
         }
     }
 
     private void CheckForBreakables()
     {
-        // 3. Use the expanded box
         Collider2D[] hitObjects = Physics2D.OverlapBoxAll(_detectTrasnform.position, _detectionSize, 0f);
 
         foreach (var obj in hitObjects)
@@ -74,8 +72,6 @@ public class FireMagic : MonoBehaviour
             }
         }
     }
-
-    // Visual debugging so you can see the detection area in the Scene View
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;

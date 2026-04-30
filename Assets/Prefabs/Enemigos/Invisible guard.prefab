@@ -104,10 +104,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11dc3ec95ea63494f867b6ad198d22b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isCameraMode: 0
+  rotateSpriteWithCone: 1
   speed: 0
   waitTime: 1
   pointA: {fileID: 0}
   pointB: {fileID: 0}
+  startAngle: 45
+  endAngle: 135
+  rotationSpeed: 0.5
+  pauseTime: 1.5
+  rotateClockwise: 1
 --- !u!114 &4034407556843209585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,7 +135,7 @@ MonoBehaviour:
     m_Bits: 64
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 128
   viewMeshFilter: {fileID: 69053765037740647}
   meshResolution: 20
   edgeResolveIterations: 0

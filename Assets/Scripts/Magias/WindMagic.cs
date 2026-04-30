@@ -37,6 +37,7 @@ public class WindMagic : MonoBehaviour
             fireExtinguisher.enabled = false;
             plymov.usingFireMagic = false;
             plymov.usingWindMagic = true;
+            plymov._rb.linearVelocity = new Vector2(plymov._rb.linearVelocityX, 0);
         }
         else if(plymov.usingWindMagic && !_input.actions["Wind"].IsPressed()) 
         {

@@ -6,6 +6,7 @@ public class WaterMagic : MonoBehaviour
 {
     private PlayerInput _input;
     private Movement plymov;
+    private FireMagic fire;
 
     [Header("Dash Settings")]
     public float dashPower = 40f;
@@ -19,6 +20,7 @@ public class WaterMagic : MonoBehaviour
     {
         plymov = GetComponent<Movement>();
         _input = GetComponent<PlayerInput>();
+        fire = GetComponent<FireMagic>();
     }
 
     void Update()
@@ -49,6 +51,8 @@ public class WaterMagic : MonoBehaviour
 
     IEnumerator DashRoutine()
     {
+        plymov._rb.linearVelocity = Vector2.zero;
+        fire.enabled = false;
         DashUsed = true;
         _cooldownTimer = dashCooldown; // Start cooldown immediately
 
@@ -70,7 +74,8 @@ public class WaterMagic : MonoBehaviour
             yield return new WaitForFixedUpdate();
         }
 
-        plymov._rb.linearVelocity = Vector2.zero;
+        fire.enabled = true;
+        plymov.usingFireMagic = false;
         plymov.usingWaterMagic = false;
     }
 }

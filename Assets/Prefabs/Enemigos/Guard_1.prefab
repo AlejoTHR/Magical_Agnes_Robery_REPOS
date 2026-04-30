@@ -136,7 +136,7 @@ MonoBehaviour:
     m_Bits: 64
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 128
   viewMeshFilter: {fileID: 1001217114220889263}
   meshResolution: 20
   edgeResolveIterations: 0
