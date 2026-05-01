@@ -378,6 +378,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomPrefabs:
+  - {fileID: 7019620404360389633, guid: ff3b4eeb9fa055746843fedcc105220d, type: 3}
+  - {fileID: 7019620404360389633, guid: 9978e50662dbbda49ab6b99f1ea7e717, type: 3}
+  - {fileID: 7019620404360389633, guid: 6a4afe7a81f23e141bdea756441f65a8, type: 3}
   - {fileID: 7019620404360389633, guid: b0e075d00b127c94ba11b88bafad2fef, type: 3}
   _transitionAnimator: {fileID: 1726325206}
   _hideScreenAnim: Exit
