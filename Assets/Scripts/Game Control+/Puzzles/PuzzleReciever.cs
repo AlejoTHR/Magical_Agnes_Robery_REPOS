@@ -11,6 +11,7 @@ public class PuzzleReceiver : MonoBehaviour
 
     private bool playerInZone = false;
     private PlayerInput _playerInput;
+    private Movement _playerMovement;
 
     private Animator animator;
 
@@ -57,6 +58,8 @@ public class PuzzleReceiver : MonoBehaviour
             if (_playerInput.actions["Interact"].WasPressedThisFrame())
             {
                 TransitionToNextRoom();
+                _playerMovement._rb.linearVelocity = Vector2.zero;
+
             }
         }
     }
@@ -67,6 +70,7 @@ public class PuzzleReceiver : MonoBehaviour
         {
             playerInZone = true;
             if (_playerInput == null) _playerInput = other.GetComponent<PlayerInput>();
+            if (_playerMovement == null) _playerMovement = other.GetComponent<Movement>();
         }
     }
 
