@@ -99,6 +99,7 @@ public class EnemyScript : MonoBehaviour
                         if (charMovement == null || !charMovement.isHiding)
                         {
                             visibleTargets.Add(target);
+                            target.GetComponent<Movement>()._rb.linearVelocity = Vector3.zero;
                             if (LevelManager.Instance != null)
                             {
                                 LevelManager.Instance.ResetOnDeath();

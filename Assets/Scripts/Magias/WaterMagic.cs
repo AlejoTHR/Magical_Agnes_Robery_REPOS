@@ -74,6 +74,8 @@ public class WaterMagic : MonoBehaviour
             yield return new WaitForFixedUpdate();
         }
 
+        plymov._rb.linearVelocity = Vector2.zero;
+
         fire.enabled = true;
         plymov.usingFireMagic = false;
         plymov.usingWaterMagic = false;
