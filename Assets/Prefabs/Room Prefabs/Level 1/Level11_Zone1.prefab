@@ -87832,28 +87832,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[0].text
-      value: Yo thats a cool rock, did you interact with it?
+      value: Th4t G3m 1s Pr3tty
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[1].text
-      value: yea i did larp bot
+      value: Pretty powerful mind you
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[2].text
-      value: Neat, you can now press C or R trigger to perform a fast fall! it'll
-        break brown blocks!
+      value: "\"Did you know you can Fire Stomp pressing C | R button in the air\"
+        %/$%\xB7$%$"
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[3].text
-      value: ...why brown blocks in spec-
+      value: Your speech is hard to understand, you.. um..  "iron thingy"
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[4].text
-      value: Shut. The fuck. Up.
+      value: '--. .. - / --. ..- - .-.-. '
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[0].characterName
-      value: Larp Bot
+      value: Broken Bot
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[1].characterName
@@ -87861,7 +87861,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[2].characterName
-      value: Larp Bot
+      value: Broken Bot
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[3].characterName
@@ -87869,7 +87869,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[4].characterName
-      value: Larp Bot
+      value: Iron Thingy
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[0].characterPortrait

@@ -28473,7 +28473,7 @@ PrefabInstance:
     - target: {fileID: 557345507196955034, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -2048800907179887802, guid: 8155b1345bc5c8d44ac9f3eef29d6b02, type: 3}
+      objectReference: {fileID: 3156895337291164288, guid: 2e93a4c95955b5648bd5ef00874a1756, type: 3}
     - target: {fileID: 2319399061472292506, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.41
@@ -28516,7 +28516,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5018075800276276941, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2
+      value: 2.0625
       objectReference: {fileID: 0}
     - target: {fileID: 5018075800276276941, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
@@ -28548,19 +28548,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[0].text
-      value: Did you know? You can interrupt the fire magic using the wind magic!
+      value: "\"Did you know your abillities can Interrupt each other\" !\"\xB7!/&$%\xB7$"
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[1].text
-      value: Sick nasty
+      value: Whats that supposed to mean?
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[2].text
-      value: Is that like a catchphrase or something
+      value: B3w4r3 d3f3ctuous fl0ur und3rn3ath
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[0].characterName
-      value: Larp bot
+      value: Iron Thingy
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[1].characterName
@@ -28568,12 +28568,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[2].characterName
-      value: Larp bot
+      value: Iron Thingy
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[0].characterPortrait
       value: 
-      objectReference: {fileID: -7008412969330441016, guid: 605532c99c3aea1418b9ae47877c3f90, type: 3}
+      objectReference: {fileID: 3156895337291164288, guid: 2e93a4c95955b5648bd5ef00874a1756, type: 3}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[1].characterPortrait
       value: 
@@ -28581,7 +28581,7 @@ PrefabInstance:
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[2].characterPortrait
       value: 
-      objectReference: {fileID: -7008412969330441016, guid: 605532c99c3aea1418b9ae47877c3f90, type: 3}
+      objectReference: {fileID: 3156895337291164288, guid: 2e93a4c95955b5648bd5ef00874a1756, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -13419,15 +13419,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[0].text
-      value: Larp bot you make my days happy
+      value: What are you doing here?
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[1].text
-      value: HI there! you can jump using space or the B button!
+      value: '"Did you know you can Jump using Space Bar | b Button ??" -... ---
+        -- -... --- -.-. .-.. .- - .-.-. '
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[2].text
-      value: Larp bot i want to talk to you 6 to 7 more times
+      value: What are you talking about?
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[3].text
@@ -13439,7 +13440,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[1].characterName
-      value: Larp bot
+      value: Broken Bot
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[2].characterName

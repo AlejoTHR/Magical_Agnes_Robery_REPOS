@@ -30,6 +30,9 @@ public class MagicObtaining : MonoBehaviour
                 case magicToGrant.Water:
                     player.GetComponent<WaterMagic>().enabled = true;
                     this.gameObject.SetActive(false);
+                    break;                
+                case magicToGrant.Electric:
+                    this.gameObject.SetActive(false);
                     break;
             }
         }

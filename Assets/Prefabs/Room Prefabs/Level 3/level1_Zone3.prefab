@@ -149871,7 +149871,7 @@ PrefabInstance:
     - target: {fileID: 557345507196955034, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 4723107735738678597, guid: 32080d59c5d664c4e9e97a636e26b075, type: 3}
+      objectReference: {fileID: 3156895337291164288, guid: 2e93a4c95955b5648bd5ef00874a1756, type: 3}
     - target: {fileID: 2319399061472292506, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 55.27
@@ -149914,7 +149914,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5018075800276276941, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2
+      value: 2.0625
       objectReference: {fileID: 0}
     - target: {fileID: 5018075800276276941, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
@@ -149946,23 +149946,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[0].text
-      value: Larp bot dashing is so fun
+      value: Why are you helping me?
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[1].text
-      value: Cough Cough yeah did you know like
+      value: 1 don't w4nt the f0rest destroyed, 1 like trees
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[2].text
-      value: You can use it to interrupt your fire magic
+      value: "\"Did you know you can Dash Cancel too ?\" %$%!$!\xB7!\xB7\""
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[3].text
-      value: And if you use it during your wind magic, it extends the dash duration
+      value: My r4d4r 1s g3tt1ng 1mpr3c1s3
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[4].text
-      value: Sick nasty
+      value: Lay down a bit Iron Thingy, I will take down this "corpo" once and for
+        all
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[0].characterName
@@ -149970,15 +149971,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[1].characterName
-      value: Larp bot
+      value: Iron Thingy
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[2].characterName
-      value: Larp bot
+      value: Iron Thingy
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[3].characterName
-      value: Larp bot
+      value: Iron Thingy
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[4].characterName
@@ -149991,15 +149992,15 @@ PrefabInstance:
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[1].characterPortrait
       value: 
-      objectReference: {fileID: -2048800907179887802, guid: 8155b1345bc5c8d44ac9f3eef29d6b02, type: 3}
+      objectReference: {fileID: 3156895337291164288, guid: 2e93a4c95955b5648bd5ef00874a1756, type: 3}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[2].characterPortrait
       value: 
-      objectReference: {fileID: -2048800907179887802, guid: 8155b1345bc5c8d44ac9f3eef29d6b02, type: 3}
+      objectReference: {fileID: 3156895337291164288, guid: 2e93a4c95955b5648bd5ef00874a1756, type: 3}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[3].characterPortrait
       value: 
-      objectReference: {fileID: 4035959289877228764, guid: 12076a03a7c4b5e4da55597785d614bb, type: 3}
+      objectReference: {fileID: 3156895337291164288, guid: 2e93a4c95955b5648bd5ef00874a1756, type: 3}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[4].characterPortrait
       value: 

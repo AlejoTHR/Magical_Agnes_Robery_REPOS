@@ -10951,15 +10951,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[1].text
-      value: Hi there! im the only friendly bot, Larp Bot!
+      value: "\" You can use Left / Right  Arrows | left Stick to move Around \" 
+        $!\xB7!\"\xB7!\"\xB7"
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[2].text
-      value: Hi larp bot i love you larp bot
+      value: What are you supposed to be?
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[3].text
-      value: You can move with the arrow keys and joystick!
+      value: "\"$!!$\"\xB7!\xB7!.... This F0rest Is B34UT1FULL !\xB7!$!\xB7$!\xB7!
+        Mov3 !, 1 Can't S33 the 3's"
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[0].characterName
@@ -10967,7 +10969,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[1].characterName
-      value: Larp Bot
+      value: Broken Bot
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[2].characterName
@@ -10975,7 +10977,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[3].characterName
-      value: Larp Bot
+      value: Broken Bot
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[1].characterPortrait
@@ -10989,6 +10991,10 @@ PrefabInstance:
       propertyPath: dialogueSequence.Array.data[3].characterPortrait
       value: 
       objectReference: {fileID: -7008412969330441016, guid: 605532c99c3aea1418b9ae47877c3f90, type: 3}
+    - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
+      propertyPath: dialogueSequence.Array.data[1].triggersLevelTransition
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
