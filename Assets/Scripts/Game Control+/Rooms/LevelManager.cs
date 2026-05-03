@@ -5,18 +5,25 @@ using System.Collections;
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance;
-
-    // Static handshake to tell the NEXT scene to play the "Open" animation
     public static bool _shouldFadeOutOnArrival = false;
 
     [Header("Room List")]
     public GameObject[] roomPrefabs;
 
-    [Header("Transitions")]
-    [SerializeField] private Animator _transitionAnimator;
-    [SerializeField] private string _hideScreenAnim = "FadeIn";  // Close curtain
-    [SerializeField] private string _showScreenAnim = "FadeOut"; // Open curtain
+    [Header("Standard Animator")]
+    [SerializeField] private Animator _standardAnimator;
+    [SerializeField] private string _hideScreenAnim = "FadeIn";
+    [SerializeField] private string _showScreenAnim = "FadeOut";
+
+    [Header("Death Animator")]
+    [SerializeField] private Animator _deathAnimator;
+    [SerializeField] private string _deathHideAnim = "DeathEntry";
+    [SerializeField] private string _deathShowAnim = "DeathExit";
+
+    [Header("Settings")]
     [SerializeField] private float _animDuration = 1.0f;
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip _deathSfx;
 
     private GameObject currentRoomInstance;
     private int currentRoomIndex = 0;
@@ -24,105 +31,151 @@ public class LevelManager : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
+
+        if (_audioSource == null) _audioSource = GetComponent<AudioSource>();
+
+        // Initialization: Standard ON, Death OFF
+        if (_deathAnimator != null) _deathAnimator.gameObject.SetActive(false);
+        if (_standardAnimator != null) _standardAnimator.gameObject.SetActive(true);
     }
 
     private void Start()
     {
-        // 1. Setup initial room
-        if (roomPrefabs.Length > 0)
-        {
-            LoadRoom(0);
-        }
+        if (roomPrefabs.Length > 0) LoadRoom(0);
 
-        // 2. ONLY play the "Open" animation if we just arrived or reset
-        // If it's the very first time opening the game, you might want this true by default
-        if (_shouldFadeOutOnArrival && _transitionAnimator != null)
+        if (_shouldFadeOutOnArrival)
         {
             StartCoroutine(EntrySequence());
         }
     }
 
-    public void LoadNextRoom()
+    // --- PUBLIC TRIGGERS ---
+
+    public void ResetOnDeath()
     {
         if (isTransitioning) return;
-
-        currentRoomIndex++;
-
-        if (currentRoomIndex < roomPrefabs.Length)
-        {
-            // Room swap in same scene
-            StartCoroutine(InternalRoomTransition());
-        }
-        else
-        {
-            // Moving to next scene
-            StartCoroutine(SceneTransitionSequence());
-        }
-    }
-
-    private IEnumerator EntrySequence()
-    {
-        _shouldFadeOutOnArrival = false; // Reset flag
-        _transitionAnimator.Play(_showScreenAnim);
-        yield return new WaitForSeconds(_animDuration);
-        TogglePlayerControl(true);
-    }
-
-    // Sequence for internal room swap: Fade In -> Swap -> Fade Out
-    private IEnumerator InternalRoomTransition()
-    {
-        isTransitioning = true;
-        TogglePlayerControl(false);
-
-        // 1. MUTE THE UI
-        SetGlobalUIAlpha(0);
-
-        _transitionAnimator.Play(_hideScreenAnim);
-        yield return new WaitForSeconds(_animDuration);
-
-        LoadRoom(currentRoomIndex);
-
-        _transitionAnimator.Play(_showScreenAnim);
-        yield return new WaitForSeconds(_animDuration);
-
-        // 2. RESTORE THE UI
-        SetGlobalUIAlpha(1);
-
-        TogglePlayerControl(true);
-        isTransitioning = false;
-    }
-
-    // Sequence for scene jump: Fade In -> Load Scene
-    private IEnumerator SceneTransitionSequence()
-    {
-        isTransitioning = true;
-        TogglePlayerControl(false);
-
-        // Close Curtain
-        _transitionAnimator.Play(_hideScreenAnim);
-        yield return new WaitForSeconds(_animDuration);
-
-        _shouldFadeOutOnArrival = true; // Tell next scene to "Open"
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Debug.Log("Death Sequence Started");
+        StartCoroutine(DeathSequence());
     }
 
     public void ResetCurrentRoom()
     {
         if (isTransitioning) return;
-        StartCoroutine(InternalRoomTransition()); // Reuse the Close -> Swap -> Open logic
+        Debug.Log("Standard Room Reset Started");
+        StartCoroutine(InternalRoomTransition());
+    }
+
+    // --- TRANSITION LOGIC ---
+
+    private IEnumerator InternalRoomTransition()
+    {
+        isTransitioning = true;
+        TogglePlayerControl(false);
+        SetGlobalUIAlpha(0);
+
+        // Ensure we are using the Standard Animator
+        _deathAnimator.gameObject.SetActive(false);
+        _standardAnimator.gameObject.SetActive(true);
+
+        _standardAnimator.Play(_hideScreenAnim);
+        yield return new WaitForSeconds(_animDuration);
+
+        LoadRoom(currentRoomIndex);
+
+        _standardAnimator.Play(_showScreenAnim);
+        yield return new WaitForSeconds(_animDuration);
+
+        SetGlobalUIAlpha(1);
+        TogglePlayerControl(true);
+        isTransitioning = false;
+    }
+
+    private IEnumerator DeathSequence()
+    {
+        isTransitioning = true;
+        TogglePlayerControl(false);
+        SetGlobalUIAlpha(0);
+
+        _standardAnimator.gameObject.SetActive(false);
+        _deathAnimator.gameObject.SetActive(true);
+
+        // 1. Start the animation
+        _deathAnimator.Play(_deathHideAnim);
+
+        // 2. Define your "Early Trigger" offset
+        float soundLeadTime = 0.2f; // Trigger sound 0.2s before the end
+        float firstWait = Mathf.Max(0, _animDuration - soundLeadTime);
+
+        // 3. Wait for the majority of the animation
+        yield return new WaitForSeconds(firstWait);
+
+        // 4. Fire the gunshot slightly early
+        if (_deathSfx != null && _audioSource != null)
+        {
+            _audioSource.PlayOneShot(_deathSfx);
+        }
+
+        // 5. Wait for the remaining fraction of the animation
+        yield return new WaitForSeconds(soundLeadTime);
+
+        // 6. Proceed to load the room once screen is fully obscured
+        LoadRoom(currentRoomIndex);
+
+        _deathAnimator.Play(_deathShowAnim);
+        yield return new WaitForSeconds(_animDuration);
+
+        _deathAnimator.gameObject.SetActive(false);
+        _standardAnimator.gameObject.SetActive(true);
+
+        SetGlobalUIAlpha(1);
+        TogglePlayerControl(true);
+        isTransitioning = false;
+    }
+
+    private IEnumerator EntrySequence()
+    {
+        _shouldFadeOutOnArrival = false;
+        _standardAnimator.gameObject.SetActive(true);
+        _standardAnimator.Play(_showScreenAnim);
+        yield return new WaitForSeconds(_animDuration);
+        TogglePlayerControl(true);
+    }
+
+    // --- HELPER METHODS ---
+
+    public void LoadNextRoom()
+    {
+        if (isTransitioning) return;
+        currentRoomIndex++;
+        if (currentRoomIndex < roomPrefabs.Length)
+            StartCoroutine(InternalRoomTransition());
+        else
+            StartCoroutine(SceneTransitionSequence());
+    }
+
+    private IEnumerator SceneTransitionSequence()
+    {
+        isTransitioning = true;
+        TogglePlayerControl(false);
+        _standardAnimator.Play(_hideScreenAnim);
+        yield return new WaitForSeconds(_animDuration);
+        _shouldFadeOutOnArrival = true;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     private void LoadRoom(int index)
     {
         if (currentRoomInstance != null) Destroy(currentRoomInstance);
+
         currentRoomInstance = Instantiate(roomPrefabs[index], Vector3.zero, Quaternion.identity);
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
         {
             Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
-            if (rb != null) rb.linearVelocity = Vector2.zero;
+            if (rb != null) rb.linearVelocity = Vector2.zero; // Fixed: Use .velocity in modern Unity
 
             Transform spawnPoint = currentRoomInstance.transform.Find("EntranceSpawnPoint");
             if (spawnPoint != null) player.transform.position = spawnPoint.position;
@@ -138,24 +191,19 @@ public class LevelManager : MonoBehaviour
         if (player != null)
         {
             Movement moveScript = player.GetComponent<Movement>();
-            player.GetComponent<Rigidbody2D>().linearVelocity = Vector3.zero;
-            player.GetComponent<Movement>()._grounded = true;
             if (moveScript != null) moveScript.enabled = state;
         }
     }
 
     private void SetGlobalUIAlpha(float alpha)
     {
-        // Find all objects with the tag you assigned to your Interaction UI
         GameObject[] interactionUIs = GameObject.FindGameObjectsWithTag("InteractionUI");
-
         foreach (GameObject ui in interactionUIs)
         {
             CanvasGroup group = ui.GetComponent<CanvasGroup>();
             if (group != null)
             {
                 group.alpha = alpha;
-                // Optional: Block interaction while invisible
                 group.blocksRaycasts = (alpha > 0);
             }
         }

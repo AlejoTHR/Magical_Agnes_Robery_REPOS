@@ -59,7 +59,7 @@ public class EnemyScript : MonoBehaviour
         {
             if (LevelManager.Instance != null)
             {
-                LevelManager.Instance.ResetCurrentRoom();
+                LevelManager.Instance.ResetOnDeath();
             }
         }
     }
@@ -101,7 +101,7 @@ public class EnemyScript : MonoBehaviour
                             visibleTargets.Add(target);
                             if (LevelManager.Instance != null)
                             {
-                                LevelManager.Instance.ResetCurrentRoom();
+                                LevelManager.Instance.ResetOnDeath();
                             }
                         }
                         break; // Found the player, no need to check further hits for this ray
