@@ -98,39 +98,45 @@ public class LevelManager : MonoBehaviour
         TogglePlayerControl(false);
         SetGlobalUIAlpha(0);
 
-        _standardAnimator.gameObject.SetActive(false);
-        _deathAnimator.gameObject.SetActive(true);
+        // Swap Animators
+        if (_standardAnimator != null) _standardAnimator.gameObject.SetActive(false);
+        if (_deathAnimator != null) _deathAnimator.gameObject.SetActive(true);
 
-        // 1. Start the animation
+        // 1. Play Death Entry
         _deathAnimator.Play(_deathHideAnim);
 
-        // 2. Define your "Early Trigger" offset
-        float soundLeadTime = 0.2f; // Trigger sound 0.2s before the end
+        // Timing logic for the gunshot
+        float soundLeadTime = 0.25f;
         float firstWait = Mathf.Max(0, _animDuration - soundLeadTime);
 
-        // 3. Wait for the majority of the animation
         yield return new WaitForSeconds(firstWait);
 
-        // 4. Fire the gunshot slightly early
         if (_deathSfx != null && _audioSource != null)
-        {
             _audioSource.PlayOneShot(_deathSfx);
-        }
 
-        // 5. Wait for the remaining fraction of the animation
         yield return new WaitForSeconds(soundLeadTime);
 
-        // 6. Proceed to load the room once screen is fully obscured
+        // 2. Perform the actual room reload
         LoadRoom(currentRoomIndex);
 
+        // 3. Play Death Exit (Screen clears up)
         _deathAnimator.Play(_deathShowAnim);
         yield return new WaitForSeconds(_animDuration);
 
-        _deathAnimator.gameObject.SetActive(false);
-        _standardAnimator.gameObject.SetActive(true);
+        // --- CRITICAL CLEANUP ---
+        // Ensure we switch back to standard animator so regular transitions work again
+        if (_deathAnimator != null) _deathAnimator.gameObject.SetActive(false);
+        if (_standardAnimator != null)
+        {
+            _standardAnimator.gameObject.SetActive(true);
+            // Force the standard animator back to its "Idle" or "Visible" state
+            _standardAnimator.Play(_showScreenAnim, 0, 1f);
+        }
 
         SetGlobalUIAlpha(1);
         TogglePlayerControl(true);
+
+        // Release the lock so other transitions can fire
         isTransitioning = false;
     }
 
