@@ -21,12 +21,15 @@ public class MagicObtaining : MonoBehaviour
             {
                 case magicToGrant.Wind:
                     player.GetComponent<WindMagic>().enabled = true;
+                    this.gameObject.SetActive(false);
                     break;
                 case magicToGrant.Fire:
                     player.GetComponent<FireMagic>().enabled = true;
+                    this.gameObject.SetActive(false);
                     break;
                 case magicToGrant.Water:
                     player.GetComponent<WaterMagic>().enabled = true;
+                    this.gameObject.SetActive(false);
                     break;
             }
         }

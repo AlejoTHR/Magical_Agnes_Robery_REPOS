@@ -62609,7 +62609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4277dffee27c64e4e88de17aaf55bc55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  popupUI: {fileID: 0}
+  popupUI: {fileID: 6976994021558587076}
 --- !u!1001 &8246300937534218148
 PrefabInstance:
   m_ObjectHideFlags: 0
