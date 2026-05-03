@@ -87213,7 +87213,7 @@ Transform:
   - {fileID: 9100514675263099492}
   - {fileID: 16446095426155554}
   - {fileID: 6927216865740332211}
-  - {fileID: 7453814796167556448}
+  - {fileID: 1164467865214542279}
   - {fileID: 850586341761935873}
   - {fileID: 7423586979631771085}
   - {fileID: 6733080679760782657}
@@ -87232,6 +87232,7 @@ GameObject:
   - component: {fileID: 1367478153536595783}
   - component: {fileID: 8582338831033588995}
   - component: {fileID: 4606078564783974338}
+  - component: {fileID: 1019135354037175534}
   m_Layer: 0
   m_Name: FIRE_unlock
   m_TagString: Untagged
@@ -87248,11 +87249,11 @@ Transform:
   m_GameObject: {fileID: 5791265222552128569}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 55.2, y: 8.11, z: 0.118565105}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 844381513201595990}
+  m_Father: {fileID: 1164467865214542279}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1030537025694588099
 SpriteRenderer:
@@ -87381,6 +87382,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   givenMagic: 1
+--- !u!111 &1019135354037175534
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5791265222552128569}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: b4fee894a3478404683df7409fcba143, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: b4fee894a3478404683df7409fcba143, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
+--- !u!1 &5880536334355437550
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1164467865214542279}
+  m_Layer: 0
+  m_Name: Gem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1164467865214542279
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5880536334355437550}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 55, y: 8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7453814796167556448}
+  m_Father: {fileID: 844381513201595990}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &683528443432316720
 PrefabInstance:
   m_ObjectHideFlags: 0
