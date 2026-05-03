@@ -1038,7 +1038,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Water Magic
+  m_text: Watery Dash
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1047,15 +1047,15 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4290539776
-  m_fontColor: {r: 0, g: 0.4424042, b: 0.7372549, a: 1}
+    rgba: 4294942736
+  m_fontColor: {r: 0.06289297, g: 0.626154, b: 1, a: 1}
   m_enableVertexGradient: 1
-  m_colorMode: 1
+  m_colorMode: 3
   m_fontColorGradient:
-    topLeft: {r: 0, g: 0.021061897, b: 1, a: 1}
+    topLeft: {r: 0.011043062, g: 0.021259475, b: 0.5320754, a: 1}
     topRight: {r: 0, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 0, g: 0.021061897, b: 1, a: 1}
-    bottomRight: {r: 0, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 0, g: 0.013318656, b: 0.6792453, a: 1}
+    bottomRight: {r: 0, g: 0.6603774, b: 0.6603774, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
@@ -1251,7 +1251,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Fire Magic
+  m_text: Fire Stomp
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1260,15 +1260,15 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278248959
-  m_fontColor: {r: 1, g: 0.8992628, b: 0, a: 1}
+    rgba: 4278203903
+  m_fontColor: {r: 1, g: 0.20618045, b: 0, a: 1}
   m_enableVertexGradient: 1
-  m_colorMode: 3
+  m_colorMode: 2
   m_fontColorGradient:
     topLeft: {r: 1, g: 0, b: 0.013404846, a: 1}
-    topRight: {r: 1, g: 0.0147450445, b: 0, a: 1}
-    bottomLeft: {r: 0, g: 0.021061897, b: 1, a: 1}
-    bottomRight: {r: 0, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 0, b: 0.013404846, a: 1}
+    bottomLeft: {r: 0.8944535, g: 1, b: 0, a: 1}
+    bottomRight: {r: 0.8944535, g: 1, b: 0, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
@@ -1923,7 +1923,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Wind Magic
+  m_text: Windy Fall
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1932,15 +1932,15 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278253924
+  m_fontColor: {r: 0.39060655, g: 0.9748427, b: 0, a: 1}
   m_enableVertexGradient: 1
   m_colorMode: 1
   m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 0.34117648}
-    topRight: {r: 0, g: 1, b: 0.9638114, a: 0}
-    bottomLeft: {r: 0, g: 0.021061897, b: 1, a: 1}
-    bottomRight: {r: 0, g: 1, b: 1, a: 1}
+    topLeft: {r: 0.06359577, g: 1, b: 0, a: 0.34117648}
+    topRight: {r: 0.72327036, g: 0.72327036, b: 0.72327036, a: 0.34117648}
+    bottomLeft: {r: 0.06359577, g: 1, b: 0, a: 0.34117648}
+    bottomRight: {r: 0.72327036, g: 0.72327036, b: 0.72327036, a: 0.34117648}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
@@ -1956,7 +1956,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 17
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
