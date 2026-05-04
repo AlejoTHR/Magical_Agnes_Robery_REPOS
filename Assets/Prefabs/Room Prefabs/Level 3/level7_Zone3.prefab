@@ -108705,8 +108705,16 @@ PrefabInstance:
       value: 0.265
       objectReference: {fileID: 0}
     - target: {fileID: 3473978934600587737, guid: b04f95a8e7b253a40b1860fdbc237280, type: 3}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473978934600587737, guid: b04f95a8e7b253a40b1860fdbc237280, type: 3}
       propertyPath: endAngle
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473978934600587737, guid: b04f95a8e7b253a40b1860fdbc237280, type: 3}
+      propertyPath: waitTime
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3473978934600587737, guid: b04f95a8e7b253a40b1860fdbc237280, type: 3}
       propertyPath: startAngle
@@ -108715,6 +108723,10 @@ PrefabInstance:
     - target: {fileID: 3473978934600587737, guid: b04f95a8e7b253a40b1860fdbc237280, type: 3}
       propertyPath: rotationSpeed
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402545662133949124, guid: b04f95a8e7b253a40b1860fdbc237280, type: 3}
+      propertyPath: viewRadius
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5402545662133949124, guid: b04f95a8e7b253a40b1860fdbc237280, type: 3}
       propertyPath: fovRotation
