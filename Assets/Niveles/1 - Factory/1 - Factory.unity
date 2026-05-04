@@ -174,7 +174,6 @@ MonoBehaviour:
   - {fileID: 6730597476152541686, guid: b892a2303bf5e6d449f441899155953c, type: 3}
   - {fileID: 7019620404360389633, guid: 9548090b4a7286e458696f91bb6a82d2, type: 3}
   - {fileID: 5621910543864440478, guid: 79e793f8072e8b745973c3b0b77e4909, type: 3}
-  - {fileID: 7019620404360389633, guid: 5128d5cf38c7241438dbc51eb0a0f5bb, type: 3}
   - {fileID: 3315999691991285671, guid: e2b21cbb64f2d0e47ac171ec8afb1da3, type: 3}
   _standardAnimator: {fileID: 680476335}
   _hideScreenAnim: Exit
