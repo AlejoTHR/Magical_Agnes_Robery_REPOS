@@ -1520,18 +1520,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: NewPlayer
       objectReference: {fileID: 0}
-    - target: {fileID: 2247683423720491492, guid: 916325cf48566cc4e81496a3f5cb3f58, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.4792453
-      objectReference: {fileID: 0}
-    - target: {fileID: 2247683423720491492, guid: 916325cf48566cc4e81496a3f5cb3f58, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.4792453
-      objectReference: {fileID: 0}
-    - target: {fileID: 2247683423720491492, guid: 916325cf48566cc4e81496a3f5cb3f58, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.4792453
-      objectReference: {fileID: 0}
     - target: {fileID: 2647604283110112621, guid: 916325cf48566cc4e81496a3f5cb3f58, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1580,6 +1568,10 @@ PrefabInstance:
       propertyPath: _pauseMenu
       value: 
       objectReference: {fileID: 201371924}
+    - target: {fileID: 8865357003082221086, guid: 916325cf48566cc4e81496a3f5cb3f58, type: 3}
+      propertyPath: m_Name
+      value: Particles
+      objectReference: {fileID: 0}
     - target: {fileID: 9002151512141668640, guid: 916325cf48566cc4e81496a3f5cb3f58, type: 3}
       propertyPath: m_Enabled
       value: 0

@@ -48,7 +48,7 @@ public class Movement : MonoBehaviour, IPlayerController
 
     ///////
     private ParticleSystem _JumpParticle;
-    private void ShowJumpParticle() { _JumpParticle.Play(); }
+    public void ShowJumpParticle() { _JumpParticle.Play(); }
     
 
     private void Awake()
