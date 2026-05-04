@@ -6,7 +6,6 @@ public class FireMagic : MonoBehaviour
     [SerializeField] private ScriptableStats _stats;
     [SerializeField] private Vector2 _detectionSize;
 
-
     private Movement plymov;
     private PlayerInput _input;
     private AudioSource _impactSource;
@@ -16,8 +15,10 @@ public class FireMagic : MonoBehaviour
     public float CannonAcceleration;
     [SerializeField] private AudioClip _impactClip;
 
-
     public Transform _detectTrasnform;
+
+    // Track the toggle state internally
+    private bool _isFireMagicToggled = false;
 
     void Start()
     {
@@ -30,30 +31,51 @@ public class FireMagic : MonoBehaviour
         _impactSource.spatialBlend = 0f;
     }
 
+    void Update()
+    {
+        // Check for toggle input in Update for better responsiveness
+        if (_input.actions["Fire"].WasPressedThisFrame())
+        {
+            // Only allow toggling ON if in the air; can always toggle OFF
+            if (!plymov._grounded || _isFireMagicToggled)
+            {
+                _isFireMagicToggled = !_isFireMagicToggled;
+            }
+        }
+
+        // Auto-disable toggle if we hit the ground
+        if (plymov._grounded)
+        {
+            _isFireMagicToggled = false;
+        }
+    }
 
     void FixedUpdate()
     {
-        if (plymov.usingFireMagic)
+        if (_isFireMagicToggled)
         {
+            ApplyFireMagicStats();
             CheckForBreakables();
-        }
-
-        bool firePressed = _input.actions["Fire"].IsPressed();
-
-        if (!plymov._grounded && firePressed)
-        {
-            _stats.MaxFallSpeed = CannonSpeed;
-            _stats.FallAcceleration = CannonAcceleration;
-            plymov.usingFireMagic = true;
-            plymov.usingWindMagic = false;
         }
         else
         {
-            plymov.usingFireMagic = false;
-            _stats.MaxFallSpeed = 40;
-            _stats.FallAcceleration = 80;
-            
+            ResetStats();
         }
+    }
+
+    private void ApplyFireMagicStats()
+    {
+        _stats.MaxFallSpeed = CannonSpeed;
+        _stats.FallAcceleration = CannonAcceleration;
+        plymov.usingFireMagic = true;
+        plymov.usingWindMagic = false;
+    }
+
+    private void ResetStats()
+    {
+        plymov.usingFireMagic = false;
+        _stats.MaxFallSpeed = 40; // You might want to pull these from ScriptableStats defaults instead of hardcoding
+        _stats.FallAcceleration = 80;
     }
 
     private void CheckForBreakables()
@@ -67,13 +89,16 @@ public class FireMagic : MonoBehaviour
                 if (_impactClip != null) _impactSource.PlayOneShot(_impactClip);
                 Destroy(obj.gameObject);
 
+                // Note: If this is a downward "Cannon," we keep the downward velocity
                 plymov._rb.linearVelocity = new Vector2(plymov._rb.linearVelocity.x, -CannonSpeed);
                 plymov._grounded = false;
             }
         }
     }
+
     private void OnDrawGizmosSelected()
     {
+        if (_detectTrasnform == null) return;
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(_detectTrasnform.position, _detectionSize);
     }

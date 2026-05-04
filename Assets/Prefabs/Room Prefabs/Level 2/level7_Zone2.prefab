@@ -51034,7 +51034,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 236298352012960317, guid: 7c6c7ae604c08e641ae02187ff523123, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3059628883888062499, guid: 7c6c7ae604c08e641ae02187ff523123, type: 3}
+      propertyPath: m_Size.x
+      value: 2.0372696
+      objectReference: {fileID: 0}
+    - target: {fileID: 3059628883888062499, guid: 7c6c7ae604c08e641ae02187ff523123, type: 3}
+      propertyPath: m_Size.y
+      value: 2.1128292
+      objectReference: {fileID: 0}
+    - target: {fileID: 3059628883888062499, guid: 7c6c7ae604c08e641ae02187ff523123, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.016206741
+      objectReference: {fileID: 0}
+    - target: {fileID: 3059628883888062499, guid: 7c6c7ae604c08e641ae02187ff523123, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.076312065
       objectReference: {fileID: 0}
     - target: {fileID: 6641151525913976693, guid: 7c6c7ae604c08e641ae02187ff523123, type: 3}
       propertyPath: m_Sprite
