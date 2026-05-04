@@ -1,5 +1,4 @@
 using System;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -47,12 +46,19 @@ public class Movement : MonoBehaviour, IPlayerController
 
     private bool _jumpToConsume;
 
+    ///////
+    private ParticleSystem _JumpParticle;
+    private void ShowJumpParticle() { _JumpParticle.Play(); }
+    
+
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
         _col = GetComponent<CapsuleCollider2D>();
         _input = GetComponent<PlayerInput>();
         _audioSource = GetComponent<AudioSource>();
+
+        _JumpParticle = GetComponentInChildren<ParticleSystem>();
 
         _audioSource.playOnAwake = false;
         _audioSource.volume = _masterVolume;
@@ -131,6 +137,7 @@ public class Movement : MonoBehaviour, IPlayerController
             _frameVelocity.y = _stats.JumpPower;
             _jumpToConsume = false;
             Jumped?.Invoke();
+            ShowJumpParticle();
         }
         _jumpToConsume = false;
     }

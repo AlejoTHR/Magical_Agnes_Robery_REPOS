@@ -10,6 +10,7 @@ public class AnimationController : MonoBehaviour
     private Movement _plymov;
     private Rigidbody2D _rb;
 
+
     // Track the current facing direction to avoid unnecessary scale updates
     private bool _facingRight = true;
 
