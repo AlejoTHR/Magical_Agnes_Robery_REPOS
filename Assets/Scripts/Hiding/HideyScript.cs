@@ -94,8 +94,6 @@ public class HideyScript : MonoBehaviour
         // Update Appearance
         if (spotSpriteRenderer != null && emptySprite != null)
             spotSpriteRenderer.sprite = emptySprite;
-
-        PlayInteractionSound();
     }
 
     private void PlayInteractionSound()
