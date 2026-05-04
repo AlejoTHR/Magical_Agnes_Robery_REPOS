@@ -87799,7 +87799,7 @@ PrefabInstance:
     - target: {fileID: 557345507196955034, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 4035959289877228764, guid: 12076a03a7c4b5e4da55597785d614bb, type: 3}
+      objectReference: {fileID: 3156895337291164288, guid: 2e93a4c95955b5648bd5ef00874a1756, type: 3}
     - target: {fileID: 557345507196955034, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: m_SortingOrder
       value: -1
@@ -87845,8 +87845,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5018075800276276941, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
+      propertyPath: m_Size.x
+      value: 3.0200348
+      objectReference: {fileID: 0}
+    - target: {fileID: 5018075800276276941, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
+      propertyPath: m_Size.y
+      value: 2.279353
+      objectReference: {fileID: 0}
+    - target: {fileID: 5018075800276276941, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
+      propertyPath: m_Offset.x
+      value: -1.0100174
+      objectReference: {fileID: 0}
+    - target: {fileID: 5018075800276276941, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.033667445
+      objectReference: {fileID: 0}
+    - target: {fileID: 5018075800276276941, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2
+      value: 2.0625
       objectReference: {fileID: 0}
     - target: {fileID: 5018075800276276941, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
@@ -87924,7 +87940,7 @@ PrefabInstance:
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[0].characterPortrait
       value: 
-      objectReference: {fileID: -7008412969330441016, guid: 605532c99c3aea1418b9ae47877c3f90, type: 3}
+      objectReference: {fileID: 3156895337291164288, guid: 2e93a4c95955b5648bd5ef00874a1756, type: 3}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[1].characterPortrait
       value: 
@@ -87932,7 +87948,7 @@ PrefabInstance:
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[2].characterPortrait
       value: 
-      objectReference: {fileID: -7008412969330441016, guid: 605532c99c3aea1418b9ae47877c3f90, type: 3}
+      objectReference: {fileID: 3156895337291164288, guid: 2e93a4c95955b5648bd5ef00874a1756, type: 3}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[3].characterPortrait
       value: 
@@ -87940,7 +87956,7 @@ PrefabInstance:
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[4].characterPortrait
       value: 
-      objectReference: {fileID: -7008412969330441016, guid: 605532c99c3aea1418b9ae47877c3f90, type: 3}
+      objectReference: {fileID: 3156895337291164288, guid: 2e93a4c95955b5648bd5ef00874a1756, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
