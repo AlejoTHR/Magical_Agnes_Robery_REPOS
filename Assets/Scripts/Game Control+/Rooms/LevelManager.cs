@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using System.Reflection; // Added for resetting private variables
 
 public class LevelManager : MonoBehaviour
 {
@@ -36,7 +37,6 @@ public class LevelManager : MonoBehaviour
 
         if (_audioSource == null) _audioSource = GetComponent<AudioSource>();
 
-        // Initialization: Standard ON, Death OFF
         if (_deathAnimator != null) _deathAnimator.gameObject.SetActive(false);
         if (_standardAnimator != null) _standardAnimator.gameObject.SetActive(true);
     }
@@ -44,30 +44,20 @@ public class LevelManager : MonoBehaviour
     private void Start()
     {
         if (roomPrefabs.Length > 0) LoadRoom(0);
-
-        if (_shouldFadeOutOnArrival)
-        {
-            StartCoroutine(EntrySequence());
-        }
+        if (_shouldFadeOutOnArrival) StartCoroutine(EntrySequence());
     }
-
-    // --- PUBLIC TRIGGERS ---
 
     public void ResetOnDeath()
     {
         if (isTransitioning) return;
-        Debug.Log("Death Sequence Started");
         StartCoroutine(DeathSequence());
     }
 
     public void ResetCurrentRoom()
     {
         if (isTransitioning) return;
-        Debug.Log("Standard Room Reset Started");
         StartCoroutine(InternalRoomTransition());
     }
-
-    // --- TRANSITION LOGIC ---
 
     private IEnumerator InternalRoomTransition()
     {
@@ -75,13 +65,10 @@ public class LevelManager : MonoBehaviour
         TogglePlayerControl(false);
         SetGlobalUIAlpha(0);
 
-        // Ensure we are using the Standard Animator
-        _deathAnimator.gameObject.SetActive(false);
-        _standardAnimator.gameObject.SetActive(true);
-
         _standardAnimator.Play(_hideScreenAnim);
         yield return new WaitForSeconds(_animDuration);
 
+        ResetPlayerState();
         LoadRoom(currentRoomIndex);
 
         _standardAnimator.Play(_showScreenAnim);
@@ -98,67 +85,48 @@ public class LevelManager : MonoBehaviour
         TogglePlayerControl(false);
         SetGlobalUIAlpha(0);
 
-        // Swap Animators
         if (_standardAnimator != null) _standardAnimator.gameObject.SetActive(false);
         if (_deathAnimator != null) _deathAnimator.gameObject.SetActive(true);
 
-        // 1. Play Death Entry
         _deathAnimator.Play(_deathHideAnim);
-
-        // Timing logic for the gunshot
-        float soundLeadTime = 0.25f;
-        float firstWait = Mathf.Max(0, _animDuration - soundLeadTime);
-
-        yield return new WaitForSeconds(firstWait);
+        yield return new WaitForSeconds(_animDuration);
 
         if (_deathSfx != null && _audioSource != null)
             _audioSource.PlayOneShot(_deathSfx);
 
-        yield return new WaitForSeconds(soundLeadTime);
-
-        // 2. Perform the actual room reload
+        ResetPlayerState();
         LoadRoom(currentRoomIndex);
 
-        // 3. Play Death Exit (Screen clears up)
         _deathAnimator.Play(_deathShowAnim);
         yield return new WaitForSeconds(_animDuration);
 
-        // --- CRITICAL CLEANUP ---
-        // Ensure we switch back to standard animator so regular transitions work again
         if (_deathAnimator != null) _deathAnimator.gameObject.SetActive(false);
         if (_standardAnimator != null)
         {
             _standardAnimator.gameObject.SetActive(true);
-            // Force the standard animator back to its "Idle" or "Visible" state
             _standardAnimator.Play(_showScreenAnim, 0, 1f);
         }
 
         SetGlobalUIAlpha(1);
         TogglePlayerControl(true);
-
-        // Release the lock so other transitions can fire
         isTransitioning = false;
     }
 
     private IEnumerator EntrySequence()
     {
         _shouldFadeOutOnArrival = false;
-        _standardAnimator.gameObject.SetActive(true);
+        ResetPlayerState();
         _standardAnimator.Play(_showScreenAnim);
         yield return new WaitForSeconds(_animDuration);
         TogglePlayerControl(true);
     }
 
-    // --- HELPER METHODS ---
-
     public void LoadNextRoom()
     {
         if (isTransitioning) return;
         currentRoomIndex++;
-        if (currentRoomIndex < roomPrefabs.Length)
-            StartCoroutine(InternalRoomTransition());
-        else
-            StartCoroutine(SceneTransitionSequence());
+        if (currentRoomIndex < roomPrefabs.Length) StartCoroutine(InternalRoomTransition());
+        else StartCoroutine(SceneTransitionSequence());
     }
 
     private IEnumerator SceneTransitionSequence()
@@ -174,21 +142,69 @@ public class LevelManager : MonoBehaviour
     private void LoadRoom(int index)
     {
         if (currentRoomInstance != null) Destroy(currentRoomInstance);
-
         currentRoomInstance = Instantiate(roomPrefabs[index], Vector3.zero, Quaternion.identity);
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
         {
             Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
-            if (rb != null) rb.linearVelocity = Vector2.zero; // Fixed: Use .velocity in modern Unity
+            if (rb != null) rb.linearVelocity = Vector2.zero;
 
             Transform spawnPoint = currentRoomInstance.transform.Find("EntranceSpawnPoint");
             if (spawnPoint != null) player.transform.position = spawnPoint.position;
         }
+    }
 
-        RoomController rc = currentRoomInstance.GetComponent<RoomController>();
-        if (rc != null) rc.ActivateRoom();
+    private void ResetPlayerState()
+    {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player == null) return;
+
+        // 1. Core Movement Reset
+        Movement move = player.GetComponent<Movement>();
+        if (move != null)
+        {
+            move.usingFireMagic = false;
+            move.usingWindMagic = false;
+            move.usingWaterMagic = false;
+            move._rb.linearVelocity = Vector2.zero;
+
+            // Reset Animator Booleans (Assuming your animator uses these names)
+            Animator anim = player.GetComponent<Animator>();
+            if (anim != null)
+            {
+                anim.SetBool("Fire", false);
+                anim.SetBool("Wind", false);
+                anim.SetBool("Water", false);
+                anim.Play("Idle"); // Force back to Idle state
+            }
+        }
+
+        // 2. Reset private _isFireMagicToggled in FireMagic script via Reflection
+        FireMagic fire = player.GetComponent<FireMagic>();
+        if (fire != null)
+        {
+            var field = typeof(FireMagic).GetField("_isFireMagicToggled", BindingFlags.NonPublic | BindingFlags.Instance);
+            if (field != null) field.SetValue(fire, false);
+        }
+
+        // 3. Reset WaterMagic
+        WaterMagic water = player.GetComponent<WaterMagic>();
+        if (water != null) water.DashUsed = false;
+
+        // 4. Force Stats back to default
+        WindMagic wind = player.GetComponent<WindMagic>();
+        if (wind != null)
+        {
+            // Reset scriptable stats via your StopGliding values
+            var statsField = typeof(Movement).GetField("_stats", BindingFlags.NonPublic | BindingFlags.Instance);
+            ScriptableStats stats = statsField?.GetValue(move) as ScriptableStats;
+            if (stats != null)
+            {
+                stats.MaxFallSpeed = 40;
+                stats.MaxSpeed = 14;
+            }
+        }
     }
 
     private void TogglePlayerControl(bool state)
