@@ -200,8 +200,9 @@ public class Movement : MonoBehaviour, IPlayerController
     {
         AudioClip desiredLoop = null;
 
+        // Prioritize magic sounds
         if (usingWindMagic) desiredLoop = _windGlideClip;
-        else if (usingFireMagic) desiredLoop = _fireCannonballClip;
+        else if (usingFireMagic && !_grounded) desiredLoop = _fireCannonballClip; // Only loop fire if NOT grounded
         else if (_grounded && Mathf.Abs(_rb.linearVelocity.x) > 0.5f && !isHiding) desiredLoop = _walkClip;
 
         if (desiredLoop != null)
@@ -213,10 +214,15 @@ public class Movement : MonoBehaviour, IPlayerController
                 _audioSource.Play();
             }
         }
-        else if (_audioSource.isPlaying && _audioSource.loop)
+        else
         {
-            _audioSource.Stop();
-            _audioSource.loop = false;
+            // If no loop is desired (like the moment we hit the ground), STOP immediately
+            if (_audioSource.isPlaying && _audioSource.loop)
+            {
+                _audioSource.Stop();
+                _audioSource.clip = null; // Clear the clip to force a refresh next time
+                _audioSource.loop = false;
+            }
         }
     }
 

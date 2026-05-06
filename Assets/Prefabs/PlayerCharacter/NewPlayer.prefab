@@ -134,6 +134,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _stats: {fileID: 11400000, guid: 94db11c9bf88a66478a24044ea3ab134, type: 2}
   _detectionSize: {x: 2.2, y: 0.5}
+  _breakEffectPrefab: {fileID: 1790084886661550968, guid: 765977a5ba1cc0d4ab6f52ca96970bf6, type: 3}
+  _effectDestroyDelay: 0.66
   CannonSpeed: 60
   CannonAcceleration: 420
   _impactClip: {fileID: 8300000, guid: 459cab39cf8f22844914b3741b607686, type: 3}

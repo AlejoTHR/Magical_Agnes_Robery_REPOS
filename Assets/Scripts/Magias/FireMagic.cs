@@ -6,48 +6,64 @@ public class FireMagic : MonoBehaviour
     [SerializeField] private ScriptableStats _stats;
     [SerializeField] private Vector2 _detectionSize;
 
+    [Header("Effects & Feedback")]
+    [SerializeField] private GameObject _breakEffectPrefab;
+    [SerializeField] private float _effectDestroyDelay = 0.66f;
+
+    [Header("Audio Clips")]
+    [SerializeField] private AudioClip _startFallClip;   // Plays only on toggle ON
+
     private Movement plymov;
     private PlayerInput _input;
-    private AudioSource _impactSource;
+    private AudioSource _audioSource;
     private CapsuleCollider2D _col;
 
     public float CannonSpeed;
     public float CannonAcceleration;
-    [SerializeField] private AudioClip _impactClip;
 
     public Transform _detectTrasnform;
-
-    // Track the toggle state internally
     private bool _isFireMagicToggled = false;
+    private bool _wasGroundedLastFrame;
 
     void Start()
     {
         plymov = GetComponent<Movement>();
         _input = GetComponent<PlayerInput>();
-        _impactSource = GetComponent<AudioSource>();
+        _audioSource = GetComponent<AudioSource>();
         _col = GetComponent<CapsuleCollider2D>();
 
-        _impactSource.playOnAwake = false;
-        _impactSource.spatialBlend = 0f;
+        _audioSource.playOnAwake = false;
+        _audioSource.spatialBlend = 0f;
+
+        _wasGroundedLastFrame = plymov._grounded;
     }
 
     void Update()
     {
-        // Check for toggle input in Update for better responsiveness
         if (_input.actions["Fire"].WasPressedThisFrame())
         {
-            // Only allow toggling ON if in the air; can always toggle OFF
             if (!plymov._grounded || _isFireMagicToggled)
             {
+                bool previousState = _isFireMagicToggled;
                 _isFireMagicToggled = !_isFireMagicToggled;
+
+                if (_isFireMagicToggled && !previousState)
+                {
+                    if (_startFallClip != null) _audioSource.PlayOneShot(_startFallClip);
+                }
             }
         }
 
-        // Auto-disable toggle if we hit the ground
-        if (plymov._grounded)
+        if (plymov._grounded && !_wasGroundedLastFrame)
         {
+            if (_isFireMagicToggled)
+            {
+                TriggerLandingEffect();
+            }
             _isFireMagicToggled = false;
         }
+
+        _wasGroundedLastFrame = plymov._grounded;
     }
 
     void FixedUpdate()
@@ -63,6 +79,16 @@ public class FireMagic : MonoBehaviour
         }
     }
 
+    private void TriggerLandingEffect()
+    {
+        // Animation Prefab only when hitting the GROUND (No sound)
+        if (_breakEffectPrefab != null)
+        {
+            GameObject effect = Instantiate(_breakEffectPrefab, _detectTrasnform.position, Quaternion.identity);
+            Destroy(effect, _effectDestroyDelay);
+        }
+    }
+
     private void ApplyFireMagicStats()
     {
         _stats.MaxFallSpeed = CannonSpeed;
@@ -74,7 +100,7 @@ public class FireMagic : MonoBehaviour
     private void ResetStats()
     {
         plymov.usingFireMagic = false;
-        _stats.MaxFallSpeed = 40; // You might want to pull these from ScriptableStats defaults instead of hardcoding
+        _stats.MaxFallSpeed = 40;
         _stats.FallAcceleration = 80;
     }
 
@@ -86,10 +112,15 @@ public class FireMagic : MonoBehaviour
         {
             if (obj.CompareTag("Destroyable"))
             {
-                if (_impactClip != null) _impactSource.PlayOneShot(_impactClip);
+                // Animation Prefab only (No sound)
+                if (_breakEffectPrefab != null)
+                {
+                    GameObject effect = Instantiate(_breakEffectPrefab, obj.transform.position, Quaternion.identity);
+                    Destroy(effect, _effectDestroyDelay);
+                }
+
                 Destroy(obj.gameObject);
 
-                // Note: If this is a downward "Cannon," we keep the downward velocity
                 plymov._rb.linearVelocity = new Vector2(plymov._rb.linearVelocity.x, -CannonSpeed);
                 plymov._grounded = false;
             }

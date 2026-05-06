@@ -1568,6 +1568,18 @@ PrefabInstance:
       propertyPath: _pauseMenu
       value: 
       objectReference: {fileID: 201371924}
+    - target: {fileID: 4311021707632148132, guid: 916325cf48566cc4e81496a3f5cb3f58, type: 3}
+      propertyPath: _fireCannonballClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c9d50a2510724d74c90cd1ff5fe4d6fe, type: 3}
+    - target: {fileID: 6131330060222661740, guid: 916325cf48566cc4e81496a3f5cb3f58, type: 3}
+      propertyPath: _impactClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7a920b4ea84f62d4f9fe2c5bb6b86f09, type: 3}
+    - target: {fileID: 6131330060222661740, guid: 916325cf48566cc4e81496a3f5cb3f58, type: 3}
+      propertyPath: _startFallClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c9d50a2510724d74c90cd1ff5fe4d6fe, type: 3}
     - target: {fileID: 8865357003082221086, guid: 916325cf48566cc4e81496a3f5cb3f58, type: 3}
       propertyPath: m_Name
       value: Particles
