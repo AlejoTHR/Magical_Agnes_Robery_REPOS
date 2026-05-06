@@ -11,7 +11,7 @@ Library: C:\Users\alumne.PORTATILKATANA1\Magical_Agnes_Robery_REPOS\Temp\BurstOu
 --linker-options=PdbAltPath="Magical_Agnes_Robery_REPOS_Data/Plugins/x86_64/lib_burst_generated.pdb"
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=C:\Users\alumne.PORTATILKATANA1\Magical_Agnes_Robery_REPOS\Temp\Burst
---key-folder=C:/Program Files/Unity/Hub/Editor/6000.0.58f2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport
+--key-folder=C:/Program Files/Unity/Hub/Editor/6000.2.6f2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport
 --decode-folder=C:\Users\alumne.PORTATILKATANA1\Magical_Agnes_Robery_REPOS\Library\Burst
 --output=C:\Users\alumne.PORTATILKATANA1\Magical_Agnes_Robery_REPOS\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
@@ -73,7 +73,7 @@ Library: C:\Users\alumne.PORTATILKATANA1\Magical_Agnes_Robery_REPOS\Temp\BurstOu
 --linker-options=PdbAltPath="Magical_Agnes_Robery_REPOS_Data/Plugins/x86_64/lib_burst_generated.pdb"
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=C:\Users\alumne.PORTATILKATANA1\Magical_Agnes_Robery_REPOS\Temp\Burst
---key-folder=C:/Program Files/Unity/Hub/Editor/6000.0.58f2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport
+--key-folder=C:/Program Files/Unity/Hub/Editor/6000.2.6f2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport
 --decode-folder=C:\Users\alumne.PORTATILKATANA1\Magical_Agnes_Robery_REPOS\Library\Burst
 --output=C:\Users\alumne.PORTATILKATANA1\Magical_Agnes_Robery_REPOS\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
