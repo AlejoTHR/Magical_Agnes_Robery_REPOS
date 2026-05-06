@@ -148863,6 +148863,10 @@ PrefabInstance:
       propertyPath: viewMeshFilter
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4034407556843209585, guid: fff3c5a7843bef947a9637c0fdf30d32, type: 3}
+      propertyPath: obstacleMask.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9143036754170844939, guid: fff3c5a7843bef947a9637c0fdf30d32, type: 3}
       propertyPath: m_LocalPosition.x
       value: 36.8
