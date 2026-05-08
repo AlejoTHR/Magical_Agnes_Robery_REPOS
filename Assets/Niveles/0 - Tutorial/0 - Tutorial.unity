@@ -5408,6 +5408,7 @@ MonoBehaviour:
   controlsMenu: {fileID: 1779659950}
   mainMixer: {fileID: 24100000, guid: f9c617799bb2ee047a7f2a38c5a1fd1d, type: 2}
   musicSlider: {fileID: 1036232519}
+  _globalClickSound: {fileID: 8300000, guid: 0e7c8c1fee551f141a60a4c1cdcc5785, type: 3}
   firstButtonPause: {fileID: 959062184}
   firstButtonControls: {fileID: 1801430961}
   juegoPausado: 0
