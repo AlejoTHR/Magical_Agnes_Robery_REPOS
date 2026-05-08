@@ -5,9 +5,16 @@ using System.Collections;
 
 public class StartMenuManager : MonoBehaviour
 {
+    public static StartMenuManager Instance;
+
     [Header("UI Setup")]
     public GameObject singularButton;
     public string sceneToLoad;
+
+    [Header("Sound Settings")]
+    public AudioClip _globalClickSound;
+    private AudioSource _hoverChannel;
+    private AudioSource _clickChannel;
 
     [Header("Transition Settings")]
     [SerializeField] private Animator _standardAnimator;
@@ -16,6 +23,19 @@ public class StartMenuManager : MonoBehaviour
     [SerializeField] private float _animDuration = 1.0f;
 
     private bool isTransitioning = false;
+
+    void Awake()
+    {
+        Instance = this;
+
+        // Setup dedicated audio channels
+        _hoverChannel = gameObject.AddComponent<AudioSource>();
+        _clickChannel = gameObject.AddComponent<AudioSource>();
+
+        _clickChannel.priority = 0;
+        _hoverChannel.playOnAwake = false;
+        _clickChannel.playOnAwake = false;
+    }
 
     void Start()
     {
@@ -33,10 +53,37 @@ public class StartMenuManager : MonoBehaviour
         }
     }
 
-    // Link this to your Button's OnClick event
+    // --- AUDIO HUB METHODS ---
+
+    public void PlayHoverSound(AudioClip clip)
+    {
+        if (clip == null || isTransitioning || _clickChannel.isPlaying) return;
+        _hoverChannel.Stop();
+        _hoverChannel.clip = clip;
+        _hoverChannel.Play();
+    }
+
+    public void UI_PlayClick()
+    {
+        if (_globalClickSound == null) return;
+        _hoverChannel.Stop();
+        _clickChannel.Stop();
+        _clickChannel.clip = _globalClickSound;
+        _clickChannel.Play();
+
+        // 0.4 second cutoff
+        CancelInvoke(nameof(StopClickAudio));
+        Invoke(nameof(StopClickAudio), 0.4f);
+    }
+
+    private void StopClickAudio() => _clickChannel.Stop();
+
+    // --- TRANSITION LOGIC ---
+
     public void OnButtonPressed()
     {
         if (isTransitioning) return;
+        UI_PlayClick();
         StartCoroutine(ExitSequence());
     }
 
@@ -44,7 +91,6 @@ public class StartMenuManager : MonoBehaviour
     {
         isTransitioning = true;
 
-        // 3. Play the Fade In (Departure)
         if (_standardAnimator != null)
         {
             _standardAnimator.Play(_hideScreenAnim);
@@ -52,7 +98,6 @@ public class StartMenuManager : MonoBehaviour
 
         yield return new WaitForSeconds(_animDuration);
 
-        // 4. Load the next scene
         SceneManager.LoadScene(sceneToLoad);
     }
 }

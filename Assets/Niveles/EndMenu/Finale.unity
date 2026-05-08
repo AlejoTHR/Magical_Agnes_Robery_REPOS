@@ -179,6 +179,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -200,6 +202,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -32768
@@ -234,6 +237,44 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6379508230726063337, guid: 7a72a0941836a6340aadef3618a263b9, type: 3}
   m_PrefabInstance: {fileID: 6816473252023670549}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &309105096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309105094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3d17aa1aa89fe8438b659c24e198b41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuButtonAudio
+  hoverSound: {fileID: 8300000, guid: 0e7c8c1fee551f141a60a4c1cdcc5785, type: 3}
+  scaleMultiplier: 1.15
+  animationSpeed: 15
+  bobAmount: 8
+  bobSpeed: 3
+--- !u!1 &959491514 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5056321602124355872, guid: 7a72a0941836a6340aadef3618a263b9, type: 3}
+  m_PrefabInstance: {fileID: 6816473252023670549}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &959491516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959491514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e014275abe81efb42b2300bec878668a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TMP_Wave
+  bounceAmount: 5
+  speed: 8
+  waveOffset: 0.5
+  isHovered: 0
 --- !u!1 &964180945
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,10 +483,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   singularButton: {fileID: 309105094}
   sceneToLoad: MainMenu
+  _globalClickSound: {fileID: 8300000, guid: 8239ba0d7048ae7409b55bc21da4e901, type: 3}
   _standardAnimator: {fileID: 1201808382}
   _showScreenAnim: Entry
   _hideScreenAnim: Exit
   _animDuration: 1
+--- !u!1 &1584471325 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9057506357046516588, guid: 7a72a0941836a6340aadef3618a263b9, type: 3}
+  m_PrefabInstance: {fileID: 6816473252023670549}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1584471329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584471325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1279bf81059f8849a6317db042fb071, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TMP_ConstantWave
+  bounceAmount: 0.067
+  speed: 5
+  waveOffset: 0.6
+  _enableRainbow: 1
+  _colorFrequency: 2
+  _colorScrollSpeed: 0.5
 --- !u!1001 &6816473252023670549
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -623,6 +688,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2322185673441872239, guid: 7a72a0941836a6340aadef3618a263b9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1455252524}
+    - targetCorrespondingSourceObject: {fileID: 9057506357046516588, guid: 7a72a0941836a6340aadef3618a263b9, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 1584471329}
+    - targetCorrespondingSourceObject: {fileID: 6379508230726063337, guid: 7a72a0941836a6340aadef3618a263b9, type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 309105096}
+    - targetCorrespondingSourceObject: {fileID: 5056321602124355872, guid: 7a72a0941836a6340aadef3618a263b9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 959491516}
   m_SourcePrefab: {fileID: 100100000, guid: 7a72a0941836a6340aadef3618a263b9, type: 3}
 --- !u!1001 &7149728332408215272
 PrefabInstance:

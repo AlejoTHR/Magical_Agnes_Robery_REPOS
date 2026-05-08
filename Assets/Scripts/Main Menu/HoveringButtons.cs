@@ -63,8 +63,12 @@ public class MenuButtonAudio : MonoBehaviour, ISelectHandler, IDeselectHandler, 
         if (!isSelected)
         {
             isSelected = true;
+
+            // Check all three possible Managers
             if (MainMenu.Instance != null) MainMenu.Instance.PlayHoverSound(hoverSound);
             else if (MenuPausa.Instance != null) MenuPausa.Instance.PlayHoverSound(hoverSound);
+            else if (StartMenuManager.Instance != null) StartMenuManager.Instance.PlayHoverSound(hoverSound);
+
             if (waveScript != null) waveScript.isHovered = true;
         }
     }
@@ -77,7 +81,9 @@ public class MenuButtonAudio : MonoBehaviour, ISelectHandler, IDeselectHandler, 
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        // Check all three possible Managers
         if (MainMenu.Instance != null) MainMenu.Instance.UI_PlayClick();
         else if (MenuPausa.Instance != null) MenuPausa.Instance.UI_PlayClick();
+        else if (StartMenuManager.Instance != null) StartMenuManager.Instance.UI_PlayClick();
     }
 }
