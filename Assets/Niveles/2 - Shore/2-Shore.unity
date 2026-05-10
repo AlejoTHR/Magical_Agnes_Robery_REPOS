@@ -527,12 +527,11 @@ MonoBehaviour:
   roomPrefabs:
   - {fileID: 5259594729563029984, guid: 0c2b05fadfe3a7f49b46a09d8e4ceddd, type: 3}
   - {fileID: 7019620404360389633, guid: b47d724dd95622842a1080af140820a0, type: 3}
-  - {fileID: 7019620404360389633, guid: e34d7092f36ea144ca851a04286c35ab, type: 3}
   - {fileID: 7019620404360389633, guid: d45325de9a23e1640a3cdb8c03dfcee2, type: 3}
-  - {fileID: 1921611792972373304, guid: fb1d2289f6c8e7a4f814bb7f1990b98e, type: 3}
   - {fileID: 3941502451297745638, guid: 9278d936c4929b545bca4b135fec0f4e, type: 3}
-  - {fileID: 7019620404360389633, guid: b8c3b05eb34397b45950247132c01169, type: 3}
   - {fileID: 5259594729563029984, guid: b8338c79ab26960418a0c45abe848228, type: 3}
+  - {fileID: 1921611792972373304, guid: fb1d2289f6c8e7a4f814bb7f1990b98e, type: 3}
+  - {fileID: 7019620404360389633, guid: b8c3b05eb34397b45950247132c01169, type: 3}
   - {fileID: 1921611792972373304, guid: bfe8c63ed1574814999c98e4b5aa4ef5, type: 3}
   - {fileID: 3315999691991285671, guid: df5a0295211a9694b8695c916757aa27, type: 3}
   _standardAnimator: {fileID: 1321257318}
@@ -560,6 +559,7 @@ MonoBehaviour:
   controlsMenu: {fileID: 625543008}
   mainMixer: {fileID: 24100000, guid: f9c617799bb2ee047a7f2a38c5a1fd1d, type: 2}
   musicSlider: {fileID: 625543007}
+  _globalClickSound: {fileID: 0}
   firstButtonPause: {fileID: 1028987908}
   firstButtonControls: {fileID: 625543006}
   juegoPausado: 0
@@ -1003,7 +1003,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4606523720582334385, guid: 9eb2baf0d1ae76945a542a364c092c15, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.00000020861626
+      value: 1.9999998
       objectReference: {fileID: 0}
     - target: {fileID: 4606523720582334385, guid: 9eb2baf0d1ae76945a542a364c092c15, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2014,7 +2014,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2685286554317653042, guid: fa2c2f9b79096a44da9c4ac9abd1c54d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.00000020861626
+      value: 1.9999998
       objectReference: {fileID: 0}
     - target: {fileID: 2685286554317653042, guid: fa2c2f9b79096a44da9c4ac9abd1c54d, type: 3}
       propertyPath: m_LocalPosition.z
