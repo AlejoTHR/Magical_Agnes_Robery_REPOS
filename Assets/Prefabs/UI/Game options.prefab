@@ -446,6 +446,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6957373770665195875, guid: 3ef41c7f5febdd34eb367d7262afe7f5, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6957373770665195875, guid: 3ef41c7f5febdd34eb367d7262afe7f5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6099918112631938880, guid: d5fa98b499c8b0f46bf409f105c96778, type: 3}
     - target: {fileID: 7062987911515125690, guid: 3ef41c7f5febdd34eb367d7262afe7f5, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.75
