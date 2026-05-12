@@ -54,10 +54,12 @@ public class MenuButtonAudio : MonoBehaviour, ISelectHandler, IDeselectHandler, 
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (EventSystem.current.currentSelectedGameObject == gameObject)
+        // Add "EventSystem.current != null" to the check
+        if (EventSystem.current != null && EventSystem.current.currentSelectedGameObject == gameObject)
+        {
             EventSystem.current.SetSelectedGameObject(null);
+        }
     }
-
     public void OnSelect(BaseEventData eventData)
     {
         if (!isSelected)
