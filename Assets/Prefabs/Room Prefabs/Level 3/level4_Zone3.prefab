@@ -79749,11 +79749,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4034407556843209585, guid: fff3c5a7843bef947a9637c0fdf30d32, type: 3}
       propertyPath: viewAngle
-      value: 347
+      value: 123
       objectReference: {fileID: 0}
     - target: {fileID: 4034407556843209585, guid: fff3c5a7843bef947a9637c0fdf30d32, type: 3}
       propertyPath: viewRadius
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4034407556843209585, guid: fff3c5a7843bef947a9637c0fdf30d32, type: 3}
+      propertyPath: fovRotation
+      value: 360
       objectReference: {fileID: 0}
     - target: {fileID: 4034407556843209585, guid: fff3c5a7843bef947a9637c0fdf30d32, type: 3}
       propertyPath: viewMeshFilter

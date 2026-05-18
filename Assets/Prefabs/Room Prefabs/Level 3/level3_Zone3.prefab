@@ -125055,29 +125055,45 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2055696031788953330, guid: fff3c5a7843bef947a9637c0fdf30d32, type: 3}
+      propertyPath: rotateSpriteWithCone
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2640420963317730657, guid: fff3c5a7843bef947a9637c0fdf30d32, type: 3}
       propertyPath: m_Name
       value: Invisible guard
       objectReference: {fileID: 0}
+    - target: {fileID: 2640420963317730657, guid: fff3c5a7843bef947a9637c0fdf30d32, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4034407556843209585, guid: fff3c5a7843bef947a9637c0fdf30d32, type: 3}
       propertyPath: viewAngle
-      value: 348
+      value: 138
       objectReference: {fileID: 0}
     - target: {fileID: 4034407556843209585, guid: fff3c5a7843bef947a9637c0fdf30d32, type: 3}
       propertyPath: viewRadius
-      value: 25
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 4034407556843209585, guid: fff3c5a7843bef947a9637c0fdf30d32, type: 3}
+      propertyPath: fovRotation
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4034407556843209585, guid: fff3c5a7843bef947a9637c0fdf30d32, type: 3}
       propertyPath: viewMeshFilter
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4034407556843209585, guid: fff3c5a7843bef947a9637c0fdf30d32, type: 3}
+      propertyPath: obstacleMask.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9143036754170844939, guid: fff3c5a7843bef947a9637c0fdf30d32, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -30.9
+      value: -31.9
       objectReference: {fileID: 0}
     - target: {fileID: 9143036754170844939, guid: fff3c5a7843bef947a9637c0fdf30d32, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -34.7
+      value: -38.1
       objectReference: {fileID: 0}
     - target: {fileID: 9143036754170844939, guid: fff3c5a7843bef947a9637c0fdf30d32, type: 3}
       propertyPath: m_LocalPosition.z
@@ -125111,7 +125127,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1096057751299434404, guid: fff3c5a7843bef947a9637c0fdf30d32, type: 3}
+    - {fileID: 581419523343071406, guid: fff3c5a7843bef947a9637c0fdf30d32, type: 3}
+    - {fileID: 4964909774538285071, guid: fff3c5a7843bef947a9637c0fdf30d32, type: 3}
     m_RemovedGameObjects:
     - {fileID: 5339971942404835820, guid: fff3c5a7843bef947a9637c0fdf30d32, type: 3}
     m_AddedGameObjects: []
