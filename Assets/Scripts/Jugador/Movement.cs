@@ -1,4 +1,5 @@
 using System;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -19,6 +20,10 @@ public class Movement : MonoBehaviour, IPlayerController
     [SerializeField] private AudioClip _fireCannonballClip;
     [SerializeField] private AudioClip _waterDashClip;
     [SerializeField][Range(0, 1)] private float _masterVolume = 0.5f;
+
+    [Header("Pitch Randomization")]
+    [Range(0f, 1f)][SerializeField] private float volModSize;
+    [Range(0f, 1f)][SerializeField] private float pitchModSize;
 
     private PlayerInput _input;
     private AudioSource _audioSource;
@@ -196,6 +201,13 @@ public class Movement : MonoBehaviour, IPlayerController
         }
     }
 
+    private float Modulation(float startValue, float size)
+    {
+        float max = startValue + size/2f;
+        float min = startValue - size/2f;
+        float finalValue = 0; //= Random.Range(min, max);
+        return finalValue;
+    }
     private void HandleMasterAudio()
     {
         AudioClip desiredLoop = null;
@@ -209,6 +221,7 @@ public class Movement : MonoBehaviour, IPlayerController
         {
             if (_audioSource.clip != desiredLoop || !_audioSource.isPlaying)
             {
+
                 _audioSource.clip = desiredLoop;
                 _audioSource.loop = true;
                 _audioSource.Play();
