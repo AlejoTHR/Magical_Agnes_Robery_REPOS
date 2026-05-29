@@ -3173,12 +3173,109 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuButtonAnims
   hoverSound: {fileID: 8300000, guid: 0e7c8c1fee551f141a60a4c1cdcc5785, type: 3}
-  hoverSelcectSound: {fileID: 0}
+  hoverSelcectSound: {fileID: 8300000, guid: 8239ba0d7048ae7409b55bc21da4e901, type: 3}
   hoverSource: {fileID: 0}
   scaleMultiplier: 1.15
   animationSpeed: 10
   bobAmount: 5
   bobSpeed: 3
+--- !u!82 &1656081696
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656081686}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 5948196682962858909, guid: f9c617799bb2ee047a7f2a38c5a1fd1d, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1710569047
 GameObject:
   m_ObjectHideFlags: 0
@@ -3437,7 +3534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6167f4125c9d6024b97ae805ae26817e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuMusicHandler
-  menuSong: {fileID: 8300000, guid: f6aa81aeb185ae943bd5de8f4a838f46, type: 3}
+  menuSong: {fileID: 8300000, guid: 8775f2a10a4f2f94da66202f558e95a1, type: 3}
   targetVolume: 0.5
   fadeDuration: 1.5
 --- !u!82 &1921638133
@@ -3451,7 +3548,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 1677750536286122074, guid: f9c617799bb2ee047a7f2a38c5a1fd1d, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 8775f2a10a4f2f94da66202f558e95a1, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -4320,6 +4417,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 597626183835961476, guid: 3ef41c7f5febdd34eb367d7262afe7f5, type: 3}
       insertIndex: 2
       addedObject: {fileID: 1656081691}
+    - targetCorrespondingSourceObject: {fileID: 597626183835961476, guid: 3ef41c7f5febdd34eb367d7262afe7f5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1656081696}
   m_SourcePrefab: {fileID: 100100000, guid: 3ef41c7f5febdd34eb367d7262afe7f5, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
