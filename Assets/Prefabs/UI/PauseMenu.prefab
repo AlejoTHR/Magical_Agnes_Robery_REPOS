@@ -1223,9 +1223,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3d17aa1aa89fe8438b659c24e198b41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuButtonAudio
-  hoverSound: {fileID: 8300000, guid: 8239ba0d7048ae7409b55bc21da4e901, type: 3}
+  hoverSound: {fileID: 8300000, guid: 0e7c8c1fee551f141a60a4c1cdcc5785, type: 3}
+  hoverSelcectSound: {fileID: 8300000, guid: 8239ba0d7048ae7409b55bc21da4e901, type: 3}
+  hoverSource: {fileID: 0}
   scaleMultiplier: 1.15
   animationSpeed: 15
+  bobAmount: 8
+  bobSpeed: 3
 --- !u!222 &573544698570588950
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2039,9 +2043,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3d17aa1aa89fe8438b659c24e198b41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuButtonAudio
-  hoverSound: {fileID: 8300000, guid: 8239ba0d7048ae7409b55bc21da4e901, type: 3}
+  hoverSound: {fileID: 8300000, guid: 0e7c8c1fee551f141a60a4c1cdcc5785, type: 3}
+  hoverSelcectSound: {fileID: 8300000, guid: 8239ba0d7048ae7409b55bc21da4e901, type: 3}
+  hoverSource: {fileID: 0}
   scaleMultiplier: 1.15
   animationSpeed: 15
+  bobAmount: 8
+  bobSpeed: 3
 --- !u!222 &1445111145065232965
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2188,9 +2196,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3d17aa1aa89fe8438b659c24e198b41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuButtonAudio
-  hoverSound: {fileID: 8300000, guid: 8239ba0d7048ae7409b55bc21da4e901, type: 3}
+  hoverSound: {fileID: 8300000, guid: 0e7c8c1fee551f141a60a4c1cdcc5785, type: 3}
+  hoverSelcectSound: {fileID: 8300000, guid: 8239ba0d7048ae7409b55bc21da4e901, type: 3}
+  hoverSource: {fileID: 0}
   scaleMultiplier: 1.15
   animationSpeed: 15
+  bobAmount: 8
+  bobSpeed: 3
 --- !u!222 &2217187061066126132
 CanvasRenderer:
   m_ObjectHideFlags: 0
