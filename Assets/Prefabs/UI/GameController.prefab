@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6864959259370122674
 Transform:
   m_ObjectHideFlags: 0
@@ -45,3 +45,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelPausa: {fileID: 0}
+  controlsMenu: {fileID: 0}
+  mainMixer: {fileID: 0}
+  musicSlider: {fileID: 0}
+  _globalClickSound: {fileID: 0}
+  firstButtonPause: {fileID: 0}
+  firstButtonControls: {fileID: 0}
+  juegoPausado: 0
