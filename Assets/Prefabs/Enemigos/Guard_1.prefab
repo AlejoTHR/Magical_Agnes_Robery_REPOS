@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 3005296514162203561}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 37.47, y: 0.22, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -58,6 +58,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -79,6 +81,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
@@ -106,8 +109,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCameraMode: 0
-  rotateSpriteWithCone: 1
-  speed: 0
+  rotateSpriteWithCone: 0
+  speed: 3
   waitTime: 1
   pointA: {fileID: 0}
   pointB: {fileID: 0}
@@ -129,7 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   viewRadius: 3
-  viewAngle: 63
+  viewAngle: 39
   fovRotation: 95
   targetMask:
     serializedVersion: 2
@@ -203,8 +206,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.26760858}
-  m_Size: {x: 1.4601585, y: 1.4601585}
+  m_Offset: {x: -0.020659417, y: -0.058679283}
+  m_Size: {x: 0.7085536, y: 0.7425169}
   m_Direction: 0
 --- !u!95 &770523841003063717
 Animator:
@@ -242,7 +245,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2156972724561446298, guid: 8e8a0df39b9e72f42b95c8d2314b0602, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.338
       objectReference: {fileID: 0}
     - target: {fileID: 2156972724561446298, guid: 8e8a0df39b9e72f42b95c8d2314b0602, type: 3}
       propertyPath: m_LocalPosition.z

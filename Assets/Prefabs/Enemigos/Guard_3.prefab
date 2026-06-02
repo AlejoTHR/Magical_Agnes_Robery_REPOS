@@ -58,6 +58,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -79,6 +81,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
@@ -106,8 +109,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCameraMode: 0
-  rotateSpriteWithCone: 1
-  speed: 0
+  rotateSpriteWithCone: 0
+  speed: 3
   waitTime: 1
   pointA: {fileID: 0}
   pointB: {fileID: 0}
@@ -203,8 +206,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.047820807}
-  m_Size: {x: 1.4601585, y: 2.1072254}
+  m_Offset: {x: -0.21981621, y: -0.13478053}
+  m_Size: {x: 0.8369484, y: 1.121681}
   m_Direction: 0
 --- !u!95 &69847382028531881
 Animator:

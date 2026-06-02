@@ -59,7 +59,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Explorador de fitxers"
+              "title": "Files"
             }
           },
           {
@@ -189,13 +189,13 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Obre el selector ràpid": false,
-      "graph:Obre la vista gràfica": false,
-      "canvas:Crea un llenç nou": false,
-      "daily-notes:Obre la nota d'avui": false,
-      "templates:Inserir plantilla": false,
-      "command-palette:Obre la paleta d'ordres": false,
-      "bases:Crea una base nova": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
     }
   },
   "active": "bf9d1e3eb4c2b2f1",
