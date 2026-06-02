@@ -12,14 +12,21 @@ public class MainMenu : MonoBehaviour
     [Header("Canvases")]
     public GameObject _MainPanel;
     public GameObject _OptionsPanel;
+    public GameObject _AudioPanel;
+    public GameObject _CreditsPanel;
+
 
     [Header("Controller Navigation")]
     public GameObject _FirstButtonMain;
     public GameObject _FirstButtonOptions;
+    public GameObject _FirstButtonAudio;
+    public GameObject _FirstButtonCredits;
 
     [Header("Sound Settings")]
     public AudioMixer _AudioMixer;
     public Slider _MusicSlider;
+    public Slider _Mainslider;
+    public Slider _SFXSlider;
     public AudioClip _globalClickSound;
 
     private AudioSource _hoverChannel;
@@ -86,12 +93,43 @@ public class MainMenu : MonoBehaviour
         FocusButton(_FirstButtonOptions);
     }
 
-    public void Back()
+    public void BackFromOptions()
     {
         UI_PlayClick();
         _OptionsPanel.SetActive(false);
         _MainPanel.SetActive(true);
         FocusButton(_FirstButtonMain);
+    }    
+    
+    public void OpenCredits()
+    {
+        UI_PlayClick();
+        _OptionsPanel.SetActive(false);
+        _CreditsPanel.SetActive(true);
+        FocusButton(_FirstButtonCredits);
+    }
+
+    public void BackFromCredits()
+    {
+        UI_PlayClick();
+        _CreditsPanel.SetActive(false);
+        _OptionsPanel.SetActive(true);
+        FocusButton(_FirstButtonOptions);
+    }
+
+    public void OpenAudio()
+    {
+        UI_PlayClick();
+        _OptionsPanel.SetActive(false);
+        _AudioPanel.SetActive(true);
+        FocusButton(_FirstButtonAudio);
+    }
+    public void BackFromAudio()
+    {
+        UI_PlayClick();
+        _AudioPanel.SetActive(false);
+        _OptionsPanel.SetActive(true);
+        FocusButton(_FirstButtonOptions);
     }
 
     public void CloseGame()
@@ -139,8 +177,33 @@ public class MainMenu : MonoBehaviour
         _AudioMixer.SetFloat("music", dB);
         PlayerPrefs.SetFloat("musicVolume", volume);
     }
+    public void SetSFXVolume()
+    {
+        float volume = _SFXSlider.value;
+        float dB = Mathf.Log10(Mathf.Clamp(volume, 0.0001f, 1f)) * 20;
+        _AudioMixer.SetFloat("sfx", dB);
+        PlayerPrefs.SetFloat("sfxVolume", volume);
+    }
+    public void SetMasterVolume()
+    {
+        float volume = _Mainslider.value;
+        float dB = Mathf.Log10(Mathf.Clamp(volume, 0.0001f, 1f)) * 20;
+        _AudioMixer.SetFloat("master", dB);
+        PlayerPrefs.SetFloat("masterVolume", volume);
+    }   
 
-    public void LoadVolume() { _MusicSlider.value = PlayerPrefs.GetFloat("musicVolume", 0.75f); SetMusicVolume(); }
+    public void LoadVolume() { 
+        _MusicSlider.value = PlayerPrefs.GetFloat("musicVolume", 0.75f); 
+        SetMusicVolume(); 
+    }
+    public void LoadMasterVolume() { 
+        _Mainslider.value = PlayerPrefs.GetFloat("masterVolume", 0.75f); 
+        SetMasterVolume(); 
+    }
+    public void LoadSFXVolume() { 
+        _SFXSlider.value = PlayerPrefs.GetFloat("sfxVolume", 0.75f); 
+        SetSFXVolume(); 
+    }
 
     private void FocusButton(GameObject target)
     {
