@@ -86986,7 +86986,7 @@ TilemapRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -95546,7 +95546,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2319399061472292506, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.32
+      value: 4.991
       objectReference: {fileID: 0}
     - target: {fileID: 2319399061472292506, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -95598,11 +95598,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5018075800276276941, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2.0625
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5018075800276276941, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2.1875
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7495680312688452479, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: m_Name

@@ -51081,7 +51081,7 @@ TilemapRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -52029,6 +52029,14 @@ PrefabInstance:
     - target: {fileID: 3005296514162203561, guid: 592284c5ce7d37d4bba201f37bdcc07f, type: 3}
       propertyPath: m_Name
       value: Guard_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246126910366373305, guid: 592284c5ce7d37d4bba201f37bdcc07f, type: 3}
+      propertyPath: viewAngle
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246126910366373305, guid: 592284c5ce7d37d4bba201f37bdcc07f, type: 3}
+      propertyPath: viewRadius
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8354963312616030659, guid: 592284c5ce7d37d4bba201f37bdcc07f, type: 3}
       propertyPath: m_LocalPosition.x

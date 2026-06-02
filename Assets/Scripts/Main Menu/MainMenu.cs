@@ -54,7 +54,10 @@ public class MainMenu : MonoBehaviour
     {
         _MainPanel.SetActive(true);
         _OptionsPanel.SetActive(false);
-        if (PlayerPrefs.HasKey("musicVolume")) LoadVolume();
+
+        LoadMasterVolume();
+        LoadSFXVolume();
+        LoadVolume();
 
         FocusButton(_FirstButtonMain);
 
@@ -172,37 +175,33 @@ public class MainMenu : MonoBehaviour
 
     public void SetMusicVolume()
     {
-        float volume = _MusicSlider.value;
-        float dB = Mathf.Log10(Mathf.Clamp(volume, 0.0001f, 1f)) * 20;
+        float dB = Mathf.Log10(Mathf.Clamp(_MusicSlider.value, 0.0001f, 1f)) * 20;
         _AudioMixer.SetFloat("music", dB);
-        PlayerPrefs.SetFloat("musicVolume", volume);
+        PlayerPrefs.SetFloat("musicVolume", _MusicSlider.value);
     }
     public void SetSFXVolume()
     {
-        float volume = _SFXSlider.value;
-        float dB = Mathf.Log10(Mathf.Clamp(volume, 0.0001f, 1f)) * 20;
-        _AudioMixer.SetFloat("sfx", dB);
-        PlayerPrefs.SetFloat("sfxVolume", volume);
+        float dB = Mathf.Log10(Mathf.Clamp(_SFXSlider.value, 0.0001f, 1f)) * 20;
+        Debug.Log($"SetSFXVolume called. Value: {_SFXSlider.value}, dB: {dB}");
+        _AudioMixer.SetFloat("SFX", dB);
+        PlayerPrefs.SetFloat("sfxVolume", _SFXSlider.value);
     }
     public void SetMasterVolume()
     {
-        float volume = _Mainslider.value;
-        float dB = Mathf.Log10(Mathf.Clamp(volume, 0.0001f, 1f)) * 20;
-        _AudioMixer.SetFloat("master", dB);
-        PlayerPrefs.SetFloat("masterVolume", volume);
+        float dB = Mathf.Log10(Mathf.Clamp(_Mainslider.value, 0.0001f, 1f)) * 20;
+        _AudioMixer.SetFloat("Master", dB);
+        PlayerPrefs.SetFloat("masterVolume", _Mainslider.value);
     }   
 
     public void LoadVolume() { 
         _MusicSlider.value = PlayerPrefs.GetFloat("musicVolume", 0.75f); 
-        SetMusicVolume(); 
     }
     public void LoadMasterVolume() { 
         _Mainslider.value = PlayerPrefs.GetFloat("masterVolume", 0.75f); 
-        SetMasterVolume(); 
+
     }
     public void LoadSFXVolume() { 
         _SFXSlider.value = PlayerPrefs.GetFloat("sfxVolume", 0.75f); 
-        SetSFXVolume(); 
     }
 
     private void FocusButton(GameObject target)

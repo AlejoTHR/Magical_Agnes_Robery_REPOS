@@ -43942,7 +43942,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2319399061472292506, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16.07
+      value: 15.73
       objectReference: {fileID: 0}
     - target: {fileID: 2319399061472292506, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -43994,11 +43994,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5018075800276276941, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2.0625
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5018075800276276941, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2.1875
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7495680312688452479, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: m_Name
@@ -44034,11 +44034,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[0].text
-      value: You want to help?
+      value: Do you want to help?, I noticed you keep following me
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[1].text
-      value: M3 br0k3n, sti11 us3fu11
+      value: M3 br0k3n, but sti11 us3fu11
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[2].text
@@ -44046,7 +44046,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[3].text
-      value: '" Let me open the door for you, ladies first..."'
+      value: "\" Let me open the door for you, ladies first\" $%\xB7!\xB7!\xB7$"
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[4].text
@@ -44075,7 +44075,7 @@ PrefabInstance:
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[0].characterPortrait
       value: 
-      objectReference: {fileID: 3324124651477703288, guid: 9feff022106001247bdbf1b97cb8b214, type: 3}
+      objectReference: {fileID: 5546671543968653177, guid: 7b56eb962fc64f24c851ae7546934bb3, type: 3}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[1].characterPortrait
       value: 
@@ -44083,7 +44083,7 @@ PrefabInstance:
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[2].characterPortrait
       value: 
-      objectReference: {fileID: 3324124651477703288, guid: 9feff022106001247bdbf1b97cb8b214, type: 3}
+      objectReference: {fileID: 5546671543968653177, guid: 7b56eb962fc64f24c851ae7546934bb3, type: 3}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[3].characterPortrait
       value: 

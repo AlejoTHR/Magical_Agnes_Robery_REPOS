@@ -6088,22 +6088,6 @@ PrefabInstance:
       propertyPath: _groundLayer.m_Bits
       value: 128
       objectReference: {fileID: 0}
-    - target: {fileID: 4537000167359287821, guid: 916325cf48566cc4e81496a3f5cb3f58, type: 3}
-      propertyPath: m_Size.x
-      value: 0.8854763
-      objectReference: {fileID: 0}
-    - target: {fileID: 4537000167359287821, guid: 916325cf48566cc4e81496a3f5cb3f58, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.19947514
-      objectReference: {fileID: 0}
-    - target: {fileID: 4995635072813110937, guid: 916325cf48566cc4e81496a3f5cb3f58, type: 3}
-      propertyPath: m_Size.y
-      value: 1.7974329
-      objectReference: {fileID: 0}
-    - target: {fileID: 4995635072813110937, guid: 916325cf48566cc4e81496a3f5cb3f58, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.38121966
-      objectReference: {fileID: 0}
     - target: {fileID: 6131330060222661740, guid: 916325cf48566cc4e81496a3f5cb3f58, type: 3}
       propertyPath: m_Enabled
       value: 0

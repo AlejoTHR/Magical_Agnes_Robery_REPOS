@@ -29508,7 +29508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4277dffee27c64e4e88de17aaf55bc55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractPopup
-  popupUI: {fileID: 0}
+  popupUI: {fileID: 6300510734599355705}
 --- !u!61 &5370706142535783457
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31995,6 +31995,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PopUp_STOMP
       objectReference: {fileID: 0}
+    - target: {fileID: 3426352741440488531, guid: 27160331c98569047943c7e2e1647f2d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 3642100932948968384, guid: 27160331c98569047943c7e2e1647f2d, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -32096,6 +32100,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27160331c98569047943c7e2e1647f2d, type: 3}
+--- !u!1 &6300510734599355705 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1343194310064247136, guid: 27160331c98569047943c7e2e1647f2d, type: 3}
+  m_PrefabInstance: {fileID: 5029418224544967769}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &8594911780833734553 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3642100932948968384, guid: 27160331c98569047943c7e2e1647f2d, type: 3}
