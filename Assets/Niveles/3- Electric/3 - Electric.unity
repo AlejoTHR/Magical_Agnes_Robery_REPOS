@@ -7465,6 +7465,10 @@ PrefabInstance:
       propertyPath: groundedSize
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 5494235091084983899, guid: 916325cf48566cc4e81496a3f5cb3f58, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.22
+      objectReference: {fileID: 0}
     - target: {fileID: 6131330060222661740, guid: 916325cf48566cc4e81496a3f5cb3f58, type: 3}
       propertyPath: m_Enabled
       value: 1
