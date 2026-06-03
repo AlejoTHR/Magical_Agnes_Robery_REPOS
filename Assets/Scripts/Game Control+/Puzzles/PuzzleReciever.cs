@@ -83,6 +83,8 @@ public class PuzzleReceiver : MonoBehaviour
     {
         if (LevelManager.Instance != null)
         {
+            _playerMovement._audioSource.Stop();
+
             LevelManager.Instance.LoadNextRoom();
         }
     }
