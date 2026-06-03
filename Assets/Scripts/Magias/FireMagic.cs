@@ -11,7 +11,7 @@ public class FireMagic : MonoBehaviour
     [SerializeField] private float _effectDestroyDelay = 0.66f;
 
     [Header("Audio Clips")]
-    [SerializeField] private AudioClip _startFallClip;   // Plays only on toggle ON
+    [SerializeField] private AudioClip _startFallClip;
 
     private Movement plymov;
     private PlayerInput _input;
@@ -81,7 +81,6 @@ public class FireMagic : MonoBehaviour
 
     private void TriggerLandingEffect()
     {
-        // Animation Prefab only when hitting the GROUND (No sound)
         if (_breakEffectPrefab != null)
         {
             GameObject effect = Instantiate(_breakEffectPrefab, _detectTrasnform.position, Quaternion.identity);
@@ -112,7 +111,6 @@ public class FireMagic : MonoBehaviour
         {
             if (obj.CompareTag("Destroyable"))
             {
-                // Animation Prefab only (No sound)
                 if (_breakEffectPrefab != null)
                 {
                     GameObject effect = Instantiate(_breakEffectPrefab, obj.transform.position, Quaternion.identity);

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
-using System.Reflection; // Added for resetting private variables
+using System.Reflection; 
 
 public class LevelManager : MonoBehaviour
 {
@@ -160,7 +160,6 @@ public class LevelManager : MonoBehaviour
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player == null) return;
 
-        // 1. Core Movement Reset
         Movement move = player.GetComponent<Movement>();
         if (move != null)
         {
@@ -169,18 +168,16 @@ public class LevelManager : MonoBehaviour
             move.usingWaterMagic = false;
             move._rb.linearVelocity = Vector2.zero;
 
-            // Reset Animator Booleans (Assuming your animator uses these names)
             Animator anim = player.GetComponent<Animator>();
             if (anim != null)
             {
                 anim.SetBool("Fire", false);
                 anim.SetBool("Wind", false);
                 anim.SetBool("Water", false);
-                anim.Play("Idle"); // Force back to Idle state
+                anim.Play("Idle"); 
             }
         }
 
-        // 2. Reset private _isFireMagicToggled in FireMagic script via Reflection
         FireMagic fire = player.GetComponent<FireMagic>();
         if (fire != null)
         {
@@ -188,15 +185,12 @@ public class LevelManager : MonoBehaviour
             if (field != null) field.SetValue(fire, false);
         }
 
-        // 3. Reset WaterMagic
         WaterMagic water = player.GetComponent<WaterMagic>();
         if (water != null) water.DashUsed = false;
 
-        // 4. Force Stats back to default
         WindMagic wind = player.GetComponent<WindMagic>();
         if (wind != null)
         {
-            // Reset scriptable stats via your StopGliding values
             var statsField = typeof(Movement).GetField("_stats", BindingFlags.NonPublic | BindingFlags.Instance);
             ScriptableStats stats = statsField?.GetValue(move) as ScriptableStats;
             if (stats != null)

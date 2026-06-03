@@ -15,7 +15,6 @@ public class MenuMusicHandler : MonoBehaviour
 
     void Awake()
     {
-        // Keeps the music playing into the next scene so it can fade out
         DontDestroyOnLoad(gameObject);
         audioSource = GetComponent<AudioSource>();
     }
@@ -26,16 +25,11 @@ public class MenuMusicHandler : MonoBehaviour
         audioSource.volume = targetVolume;
         audioSource.loop = true;
         audioSource.Play();
-
-        // Subscribe to the scene loaded event
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    // Called automatically whenever a new scene is loaded
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // If we are no longer in the Main Menu (index 0), start fading
-        // Change "0" to your actual Main Menu scene build index if different
         if (scene.buildIndex != 0 && !isFading)
         {
             StartCoroutine(FadeOutAndDestroy());
@@ -50,19 +44,16 @@ public class MenuMusicHandler : MonoBehaviour
         for (float t = 0; t < fadeDuration; t += Time.deltaTime)
         {
             audioSource.volume = Mathf.Lerp(startVolume, 0, t / fadeDuration);
-            yield return null; // Wait for next frame
+            yield return null; 
         }
 
         audioSource.volume = 0;
         audioSource.Stop();
-
-        // Clean up the object so it doesn't leak memory or stay in the game
         Destroy(gameObject);
     }
 
     void OnDestroy()
     {
-        // Unsubscribe to prevent memory leaks
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 }

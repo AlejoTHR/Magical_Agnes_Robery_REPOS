@@ -5,7 +5,7 @@ public class MenuButtonAudio : MonoBehaviour, ISelectHandler, IDeselectHandler, 
 {
     [Header("Audio")]
     public AudioClip hoverSound;
-    public AudioClip hoverSelcectSound; // This acts as your click sound
+    public AudioClip hoverSelcectSound; 
     public AudioSource hoverSource;
 
     [Header("Scaling Animation")]
@@ -15,7 +15,7 @@ public class MenuButtonAudio : MonoBehaviour, ISelectHandler, IDeselectHandler, 
     [Header("Idle Floating (Unfocused Only)")]
     public float bobAmount = 8f;
     public float bobSpeed = 3f;
-    private float randomOffset; // To prevent all buttons from bobbing in perfect unison
+    private float randomOffset; 
 
     private Vector3 initialScale;
     private Vector2 initialPosition;
@@ -31,25 +31,21 @@ public class MenuButtonAudio : MonoBehaviour, ISelectHandler, IDeselectHandler, 
         initialScale = transform.localScale;
         initialPosition = rectTransform.anchoredPosition;
         waveScript = GetComponentInChildren<TMP_Wave>();
-        randomOffset = Random.Range(0f, 5f); // Diversifies the wave start
+        randomOffset = Random.Range(0f, 5f);
     }
 
     void Update()
     {
-        // 1. Scaling Logic
         Vector3 targetScale = isSelected ? initialScale * scaleMultiplier : initialScale;
         transform.localScale = Vector3.Lerp(transform.localScale, targetScale, Time.unscaledDeltaTime * animationSpeed);
 
-        // 2. Swapped Bobbing Logic
         if (!isSelected)
         {
-            // Hover/Bob while NOT selected
             float newY = initialPosition.y + (Mathf.Sin((Time.unscaledTime + randomOffset) * bobSpeed) * bobAmount);
             rectTransform.anchoredPosition = new Vector2(initialPosition.x, newY);
         }
         else
         {
-            // Stay still at the initial position while focused
             rectTransform.anchoredPosition = Vector2.Lerp(rectTransform.anchoredPosition, initialPosition, Time.unscaledDeltaTime * animationSpeed);
         }
     }
@@ -71,7 +67,6 @@ public class MenuButtonAudio : MonoBehaviour, ISelectHandler, IDeselectHandler, 
             isSelected = true;
             hoverSource.clip = hoverSound;
 
-            // Check all three possible Managers
             if (MainMenu.Instance != null)
             {
                 hoverSource.Play();
@@ -97,19 +92,16 @@ public class MenuButtonAudio : MonoBehaviour, ISelectHandler, IDeselectHandler, 
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        // 1. Force stop the hover sound if it's currently playing to clear the channel
         if (hoverSource.isPlaying)
         {
             hoverSource.Stop();
         }
 
-        // 2. Play the click sound using PlayOneShot so it takes instant priority
         if (hoverSelcectSound != null)
         {
             hoverSource.PlayOneShot(hoverSelcectSound);
         }
 
-        // Check all three possible Managers
         if (MainMenu.Instance != null)
         {
             MainMenu.Instance.UI_PlayClick();

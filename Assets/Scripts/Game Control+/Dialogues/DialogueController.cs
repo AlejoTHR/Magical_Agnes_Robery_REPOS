@@ -6,15 +6,6 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 
-/* * HOW TO USE:
- * 1. Attach to a Trigger NPC or Sign.
- * 2. Set 'Transition Type' to 'LoadNextRoomPrefab' to swap prefabs or 'LoadSpecificScene'.
- * 3. Fill the 'Dialogue Sequence' list with text, names, and portraits.
- * 4. Check 'Triggers Level Transition' on the specific dialogue line that should end the level.
- * 5. Requires a Player tagged as "Player" with a 'Movement' script attached.
- */
-
-
 [System.Serializable]
 public class DialogueLine
 {
@@ -29,7 +20,6 @@ public class DialogueLine
 
 public class DialogueController : MonoBehaviour
 {
-    // Added LoadNextRoomPrefab to the enum
     public enum TransitionType { LoadNextRoomPrefab, LoadSpecificScene }
 
     [Header("Mode & Trigger Settings")]
@@ -217,7 +207,6 @@ public class DialogueController : MonoBehaviour
             if (LevelManager.Instance != null)
             {
                 LevelManager.Instance.LoadNextRoom();
-                // We re-enable controls here because we didn't change scenes
                 TogglePlayerControls(true);
             }
         }

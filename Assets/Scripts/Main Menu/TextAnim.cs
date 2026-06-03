@@ -37,7 +37,6 @@ public class TMP_Wave : MonoBehaviour
             Vector3[] sourceVertices = cachedMeshInfo[matIndex].vertices;
             Vector3[] destVertices = textInfo.meshInfo[matIndex].vertices;
 
-            // FIX: Use unscaledTime so it animates while Time.timeScale is 0
             float yOffset = Mathf.Sin(Time.unscaledTime * speed + (i * waveOffset)) * bounceAmount;
             Vector3 offset = new Vector3(0, yOffset, 0);
 

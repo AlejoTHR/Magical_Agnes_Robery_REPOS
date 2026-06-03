@@ -18,8 +18,8 @@ public class StartMenuManager : MonoBehaviour
 
     [Header("Transition Settings")]
     [SerializeField] private Animator _standardAnimator;
-    [SerializeField] private string _showScreenAnim = "FadeOut"; // Clears the screen on start
-    [SerializeField] private string _hideScreenAnim = "FadeIn";  // Darkens the screen on click
+    [SerializeField] private string _showScreenAnim = "FadeOut"; 
+    [SerializeField] private string _hideScreenAnim = "FadeIn"; 
     [SerializeField] private float _animDuration = 1.0f;
 
     private bool isTransitioning = false;
@@ -27,8 +27,6 @@ public class StartMenuManager : MonoBehaviour
     void Awake()
     {
         Instance = this;
-
-        // Setup dedicated audio channels
         _hoverChannel = gameObject.AddComponent<AudioSource>();
         _clickChannel = gameObject.AddComponent<AudioSource>();
 
@@ -39,21 +37,19 @@ public class StartMenuManager : MonoBehaviour
 
     void Start()
     {
-        // 1. Controller Focus
         if (EventSystem.current != null)
         {
             EventSystem.current.SetSelectedGameObject(null);
             EventSystem.current.SetSelectedGameObject(singularButton);
         }
 
-        // 2. Play the Fade Out (Arrival) immediately
+
         if (_standardAnimator != null)
         {
             _standardAnimator.Play(_showScreenAnim);
         }
     }
 
-    // --- AUDIO HUB METHODS ---
 
     public void PlayHoverSound(AudioClip clip)
     {
@@ -71,14 +67,11 @@ public class StartMenuManager : MonoBehaviour
         _clickChannel.clip = _globalClickSound;
         _clickChannel.Play();
 
-        // 0.4 second cutoff
         CancelInvoke(nameof(StopClickAudio));
         Invoke(nameof(StopClickAudio), 0.4f);
     }
 
     private void StopClickAudio() => _clickChannel.Stop();
-
-    // --- TRANSITION LOGIC ---
 
     public void OnButtonPressed()
     {

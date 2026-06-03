@@ -58,7 +58,6 @@ public class PuzzleTrigger : MonoBehaviour
         animator.SetBool("IsPulled", true);
         _leverSFXSource.Play();
 
-        // Visual feedback
         if (TryGetComponent<SpriteRenderer>(out var sr))
         {
             sr.color = Color.gray;
@@ -67,14 +66,12 @@ public class PuzzleTrigger : MonoBehaviour
 
     void SendSignals()
     {
-        // Find and notify receivers
         PuzzleReceiver[] receivers = Object.FindObjectsByType<PuzzleReceiver>(FindObjectsSortMode.None);
         foreach (var receiver in receivers)
         {
             receiver.RegisterLeverActivation(puzzleID);
         }
 
-        // Find and notify lights
         PuzzleLightCue[] lights = Object.FindObjectsByType<PuzzleLightCue>(FindObjectsSortMode.None);
         foreach (var light in lights)
         {

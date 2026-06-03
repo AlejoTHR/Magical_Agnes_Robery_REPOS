@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.SceneManagement; // Required for Scene skipping
+using UnityEngine.SceneManagement; 
 
 public class MagicManager : MonoBehaviour
 {
@@ -20,14 +20,12 @@ public class MagicManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha2) && waterMagic != null) waterMagic.enabled = !waterMagic.enabled;
         if (Input.GetKeyDown(KeyCode.Alpha3) && windMagic != null) windMagic.enabled = !windMagic.enabled;
 
-        // 5: Disable All / 6: Enable All
         if (Input.GetKeyDown(KeyCode.Alpha5)) SetAllMagicState(false);
         if (Input.GetKeyDown(KeyCode.Alpha6)) SetAllMagicState(true);
     }
 
     private void HandleCheatInputs()
     {
-        // 8: SKIP TO NEXT SCENE (Build Index)
         if (Input.GetKeyDown(KeyCode.Alpha8))
         {
             int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
@@ -42,13 +40,11 @@ public class MagicManager : MonoBehaviour
             }
         }
 
-        // 9: SKIP TO NEXT ROOM (Within LevelManager)
         if (Input.GetKeyDown(KeyCode.Alpha9) && LevelManager.Instance != null)
         {
             LevelManager.Instance.LoadNextRoom();
         }
 
-        // 0: UNLOCK DOORS
         if (Input.GetKeyDown(KeyCode.Alpha0)) UnlockEverything();
     }
 

@@ -23,10 +23,4 @@ public class NewMonoBehaviourScript : MonoBehaviour
         _audioSource.playOnAwake = false;
         _audioSource.volume = _masterVolume;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

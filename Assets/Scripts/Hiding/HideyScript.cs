@@ -1,12 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-/* * HOW TO USE:
- * 1. Attach to a "Hiding Spot" prefab (e.g., a vent or closet).
- * 2. Assign the 'Hidespot' Rigidbody2D (center of the object).
- * 3. Assign the 'Empty' and 'Occupied' sprites.
- * 4. Assign the 'Interact Sound' clip in the Inspector.
- */
 
 public class HideyScript : MonoBehaviour
 {
@@ -21,7 +15,7 @@ public class HideyScript : MonoBehaviour
     [SerializeField] private Sprite occupiedSprite;
 
     [Header("Audio")]
-    [SerializeField] private AudioClip interactSound; // The sound of entering/exiting the vent
+    [SerializeField] private AudioClip interactSound;
     private AudioSource audioSource;
 
     private bool playerInRange = false;
@@ -32,7 +26,7 @@ public class HideyScript : MonoBehaviour
     private void Start()
     {
         spotSpriteRenderer = GetComponent<SpriteRenderer>();
-        audioSource = GetComponent<AudioSource>(); // Get the AudioSource component
+        audioSource = GetComponent<AudioSource>(); 
 
         if (agnes == null)
         {
@@ -77,7 +71,7 @@ public class HideyScript : MonoBehaviour
         if (disableCollision != null) disableCollision.isTrigger = true;
         if (playerSprite != null) playerSprite.enabled = false;
 
-        // Update Appearance
+
         if (spotSpriteRenderer != null && occupiedSprite != null)
             spotSpriteRenderer.sprite = occupiedSprite;
 
@@ -91,14 +85,12 @@ public class HideyScript : MonoBehaviour
         if (playerSprite != null) playerSprite.enabled = true;
         agnes.constraints = RigidbodyConstraints2D.FreezeRotation;
 
-        // Update Appearance
         if (spotSpriteRenderer != null && emptySprite != null)
             spotSpriteRenderer.sprite = emptySprite;
     }
 
     private void PlayInteractionSound()
     {
-        // Play the sound if both the source and clip exist
         if (audioSource != null && interactSound != null)
         {
             audioSource.PlayOneShot(interactSound);

@@ -47,8 +47,7 @@ public class Movement : MonoBehaviour, IPlayerController
     public event Action Jumped;
 
     private bool _jumpToConsume;
-
-    ///////
+    
     private ParticleSystem _JumpParticle;
     public void ShowJumpParticle() { _JumpParticle.Play(); }
     
@@ -97,7 +96,6 @@ public class Movement : MonoBehaviour, IPlayerController
     {
         Physics2D.queriesStartInColliders = false;
 
-        // Keep the cast slightly thinner than the player to avoid catching walls
         Vector2 castSize = new Vector2(_col.size.x * groundedSize, _col.size.y);
 
         RaycastHit2D hit = Physics2D.CapsuleCast(
@@ -110,8 +108,6 @@ public class Movement : MonoBehaviour, IPlayerController
             _groundLayer
         );
 
-        // FIX: Only count as ground if the surface is facing UP (y > 0)
-        // hit.normal.y > 0.7f means the surface is flatter than a 45-degree angle
         bool groundHit = hit.collider != null && hit.normal.y > 0.7f;
 
         if (groundHit)
@@ -177,7 +173,6 @@ public class Movement : MonoBehaviour, IPlayerController
 
     private void GatherInput()
     {
-        // 1. Gather movement and jump
         _frameInput = new FrameInput
         {
             JumpDown = _input.actions["Jump"].WasPressedThisFrame(),
@@ -186,8 +181,6 @@ public class Movement : MonoBehaviour, IPlayerController
 
         if (_frameInput.JumpDown) _jumpToConsume = true;
 
-        // 2. Handle Pause Action
-        // Check if the "Pause" action was pressed this frame
         if (_input.actions["Pause"].WasPressedThisFrame())
         {
             if (_pauseMenu != null)
@@ -202,16 +195,16 @@ public class Movement : MonoBehaviour, IPlayerController
     {
         float max = startValue + size/2f;
         float min = startValue - size/2f;
-        float finalValue = 0; //= Random.Range(min, max);
+        float finalValue = 0; 
         return finalValue;
     }
     private void HandleMasterAudio()
     {
         AudioClip desiredLoop = null;
 
-        // Prioritize magic sounds
+
         if (usingWindMagic) desiredLoop = _windGlideClip;
-        else if (usingFireMagic && !_grounded) desiredLoop = _fireCannonballClip; // Only loop fire if NOT grounded
+        else if (usingFireMagic && !_grounded) desiredLoop = _fireCannonballClip; 
         else if (_grounded && Mathf.Abs(_rb.linearVelocity.x) > 0.5f && !isHiding) desiredLoop = _walkClip;
 
         if (desiredLoop != null)
@@ -227,11 +220,11 @@ public class Movement : MonoBehaviour, IPlayerController
         }
         else
         {
-            // If no loop is desired (like the moment we hit the ground), STOP immediately
+
             if (_audioSource.isPlaying && _audioSource.loop)
             {
                 _audioSource.Stop();
-                _audioSource.clip = null; // Clear the clip to force a refresh next time
+                _audioSource.clip = null;
                 _audioSource.loop = false;
             }
         }

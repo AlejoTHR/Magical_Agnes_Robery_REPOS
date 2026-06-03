@@ -37,8 +37,6 @@ public class MenuPausa : MonoBehaviour
     void Awake()
     {
         Instance = this;
-
-        // Setup channels that ignore Time.timeScale = 0
         _hoverChannel = gameObject.AddComponent<AudioSource>();
         _clickChannel = gameObject.AddComponent<AudioSource>();
 
@@ -51,18 +49,14 @@ public class MenuPausa : MonoBehaviour
 
     void Start()
     {
-        // 1. Initialize and apply loaded volumes
         LoadMasterVolume();
         LoadSFXVolume();
         LoadVolume();
 
-        // 2. Programmatically bind sliders to update automatically when dragged
         if (_Mainslider != null) _Mainslider.onValueChanged.AddListener(delegate { SetMasterVolume(); });
         if (_MusicSlider != null) _MusicSlider.onValueChanged.AddListener(delegate { SetMusicVolume(); });
         if (_SFXSlider != null) _SFXSlider.onValueChanged.AddListener(delegate { SetSFXVolume(); });
     }
-
-    // --- AUDIO HUB ---
 
     public void PlayHoverSound(AudioClip clip)
     {
@@ -80,14 +74,12 @@ public class MenuPausa : MonoBehaviour
         _clickChannel.clip = _globalClickSound;
         _clickChannel.Play();
 
-        // Cut off audio after 0.4 seconds
         CancelInvoke(nameof(StopClickAudio));
         Invoke(nameof(StopClickAudio), 0.4f);
     }
 
     private void StopClickAudio() => _clickChannel.Stop();
 
-    // --- PAUSE LOGIC ---
 
     public void OnTogglePause(InputAction.CallbackContext context)
     {
@@ -97,8 +89,6 @@ public class MenuPausa : MonoBehaviour
             else Pausar();
         }
     }
-
-    // --- MENU NAVIGATION ---
 
     public void Pausar()
     {
@@ -202,21 +192,21 @@ public class MenuPausa : MonoBehaviour
     {
         if (_MusicSlider == null) return;
         _MusicSlider.value = PlayerPrefs.GetFloat("musicVolume", 0.75f);
-        SetMusicVolume(); // Forces the mixer to update immediately on load
+        SetMusicVolume(); 
     }
 
     public void LoadMasterVolume()
     {
         if (_Mainslider == null) return;
         _Mainslider.value = PlayerPrefs.GetFloat("masterVolume", 0.75f);
-        SetMasterVolume(); // Forces the mixer to update immediately on load
+        SetMasterVolume();
     }
 
     public void LoadSFXVolume()
     {
         if (_SFXSlider == null) return;
         _SFXSlider.value = PlayerPrefs.GetFloat("sfxVolume", 0.75f);
-        SetSFXVolume(); // Forces the mixer to update immediately on load
+        SetSFXVolume();
     }
 
 

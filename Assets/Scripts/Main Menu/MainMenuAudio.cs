@@ -5,7 +5,7 @@ public class MenuAudioManager : MonoBehaviour
     public static MenuAudioManager Instance;
     private AudioSource source;
     private float lastClickTime;
-    private float clickProtectionDuration = 0.25f; // Time in seconds to ignore hovers after a click
+    private float clickProtectionDuration = 0.25f; 
 
     void Awake()
     {
@@ -16,8 +16,6 @@ public class MenuAudioManager : MonoBehaviour
     public void PlayMenuSound(AudioClip clip, bool isClick)
     {
         if (clip == null) return;
-
-        // If this is a hover request, but we just clicked recently, KILL the request.
         if (!isClick && Time.unscaledTime < lastClickTime + clickProtectionDuration)
         {
             return;

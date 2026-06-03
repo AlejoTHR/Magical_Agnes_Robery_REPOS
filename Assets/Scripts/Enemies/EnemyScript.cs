@@ -2,13 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/* * HOW TO USE:
- * 1. Attach to an Enemy GameObject with a CircleCollider2D (Trigger).
- * 2. Assign 'Target Mask' to your Player layer and 'Obstacle Mask' to Walls/Environment.
- * 3. Assign a MeshFilter to 'View Mesh Filter' to visualize the FOV cone in-game.
- * 4. Adjust 'View Radius' and 'View Angle' to set the detection zone.
- * 5. Requires 'LevelManager' in the scene to trigger a reset upon detection.
- */
 public class EnemyScript : MonoBehaviour
 {
     [Header("Detection Settings")]
@@ -27,7 +20,6 @@ public class EnemyScript : MonoBehaviour
     public int edgeResolveIterations = 4;
     public float edgeDstThreshold = 0.5f;
 
-    // RESTORED FOR THE EDITOR SCRIPT
     [HideInInspector]
     public List<Transform> visibleTargets = new List<Transform>();
 
@@ -51,10 +43,8 @@ public class EnemyScript : MonoBehaviour
 
     void FixedUpdate() { DrawFieldOfView(); }
 
-    // --- NEW FUNCTION: CATCH ON TOUCH ---
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Check if the object touched is on the target layer
         if (((1 << collision.gameObject.layer) & targetMask) != 0)
         {
             if (LevelManager.Instance != null)
@@ -68,7 +58,6 @@ public class EnemyScript : MonoBehaviour
     {
         visibleTargets.Clear();
 
-        // 1. Find the player using a circular overlap
         Collider2D[] targetsInViewRadius = Physics2D.OverlapCircleAll(transform.position, viewRadius, targetMask);
 
         foreach (Collider2D targetCollider in targetsInViewRadius)
@@ -76,23 +65,20 @@ public class EnemyScript : MonoBehaviour
             Transform target = targetCollider.transform;
             Vector2 dirToTarget = (target.position - transform.position).normalized;
 
-            // 2. Angle Check (Is the player in the "slice of pie"?)
             if (Vector2.Angle(new Vector2(Mathf.Sin(fovRotation * Mathf.Deg2Rad), Mathf.Cos(fovRotation * Mathf.Deg2Rad)), dirToTarget) < viewAngle / 2)
             {
                 float dstToTarget = Vector3.Distance(transform.position, target.position);
 
-                // 3. RaycastAll to look "through" the enemy's own body
+
                 RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, dirToTarget, dstToTarget, obstacleMask | targetMask);
 
                 foreach (var hit in hits)
                 {
-                    // If we hit a Wall (Obstacle) first, the view is blocked. Stop looking at this target.
                     if (((1 << hit.collider.gameObject.layer) & obstacleMask) != 0)
                     {
                         break;
                     }
 
-                    // If we hit the Player, check if they are hiding
                     if (((1 << hit.collider.gameObject.layer) & targetMask) != 0)
                     {
                         Movement charMovement = target.GetComponent<Movement>();
@@ -105,14 +91,13 @@ public class EnemyScript : MonoBehaviour
                                 LevelManager.Instance.ResetOnDeath();
                             }
                         }
-                        break; // Found the player, no need to check further hits for this ray
+                        break; 
                     }
                 }
             }
         }
     }
 
-    // --- MESH GENERATION ---
     void DrawFieldOfView()
     {
         int rayCount = Mathf.RoundToInt(viewAngle * meshResolution);

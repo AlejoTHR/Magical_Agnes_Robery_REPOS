@@ -35,10 +35,10 @@ public class MovimientoEnemigo : MonoBehaviour
     public void Start()
     {
         enemyScript = GetComponent<EnemyScript>();
-        sr = GetComponent<SpriteRenderer>(); // Initialize SpriteRenderer
+        sr = GetComponent<SpriteRenderer>();
         if (!isCameraMode)
         {
-            animator = GetComponent<Animator>(); // INITIALIZE ANMTOR CONTROLLER
+            animator = GetComponent<Animator>();
             if (pointB != null) currentTarget = pointB;
             UpdateFacing();
         }
@@ -106,7 +106,7 @@ public class MovimientoEnemigo : MonoBehaviour
             waitTimer -= Time.deltaTime;
             if (waitTimer <= 0)
             {
-                animator.SetBool("IsMoving", true); // ANIMATION SETTER
+                animator.SetBool("IsMoving", true); 
 
                 isWaiting = false;
                 currentTarget = (currentTarget == pointB) ? pointA : pointB;
@@ -126,12 +126,9 @@ public class MovimientoEnemigo : MonoBehaviour
 
         Vector2 dir = (currentTarget.position - transform.position).normalized;
 
-        // Update the FOV logic
         enemyScript.fovRotation = Mathf.Atan2(dir.x, dir.y) * Mathf.Rad2Deg;
 
-        // --- SPRITE FLIP LOGIC ---
-        // If moving right (positive x), don't flip. If moving left (negative x), flip.
-        // Note: Depending on your original sprite orientation, you might need to swap true/false.
+
         if (dir.x > 0.01f)
         {
             sr.flipX = false;
