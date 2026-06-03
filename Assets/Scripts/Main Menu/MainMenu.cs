@@ -15,7 +15,6 @@ public class MainMenu : MonoBehaviour
     public GameObject _AudioPanel;
     public GameObject _CreditsPanel;
 
-
     [Header("Controller Navigation")]
     public GameObject _FirstButtonMain;
     public GameObject _FirstButtonOptions;
@@ -54,10 +53,18 @@ public class MainMenu : MonoBehaviour
     {
         _MainPanel.SetActive(true);
         _OptionsPanel.SetActive(false);
+        _AudioPanel.SetActive(false);
+        _CreditsPanel.SetActive(false);
 
+        // 1. Initialize and apply loaded volumes
         LoadMasterVolume();
         LoadSFXVolume();
         LoadVolume();
+
+        // 2. Programmatically bind sliders to update automatically when dragged
+        if (_Mainslider != null) _Mainslider.onValueChanged.AddListener(delegate { SetMasterVolume(); });
+        if (_MusicSlider != null) _MusicSlider.onValueChanged.AddListener(delegate { SetMusicVolume(); });
+        if (_SFXSlider != null) _SFXSlider.onValueChanged.AddListener(delegate { SetSFXVolume(); });
 
         FocusButton(_FirstButtonMain);
 
@@ -78,13 +85,10 @@ public class MainMenu : MonoBehaviour
     {
         isTransitioning = true;
 
-        // Play the "Hide Screen" (FadeIn to black) animation
         if (_transitionAnimator != null) _transitionAnimator.Play(_hideScreenAnim);
 
         yield return new WaitForSeconds(_animDuration);
 
-        // Reset flag for the next scene and load
-        // LevelManager._shouldFadeOutOnArrival = true; // Uncomment if your LevelManager exists
         SceneManager.LoadScene("0 - Tutorial");
     }
 
@@ -102,8 +106,8 @@ public class MainMenu : MonoBehaviour
         _OptionsPanel.SetActive(false);
         _MainPanel.SetActive(true);
         FocusButton(_FirstButtonMain);
-    }    
-    
+    }
+
     public void OpenCredits()
     {
         UI_PlayClick();
@@ -127,6 +131,7 @@ public class MainMenu : MonoBehaviour
         _AudioPanel.SetActive(true);
         FocusButton(_FirstButtonAudio);
     }
+
     public void BackFromAudio()
     {
         UI_PlayClick();
@@ -162,50 +167,67 @@ public class MainMenu : MonoBehaviour
         _clickChannel.clip = _globalClickSound;
         _clickChannel.Play();
 
-        // Start the cutoff timer
         StartCoroutine(StopAudioAfterDelay(0.4f));
     }
 
     private IEnumerator StopAudioAfterDelay(float delay)
     {
-        // Use WaitForSeconds (standard) or WaitForSecondsRealtime depending on menu style
         yield return new WaitForSeconds(delay);
         _clickChannel.Stop();
     }
 
+    // --- SLIDER VALUE SETTERS ---
+
     public void SetMusicVolume()
     {
+        if (_MusicSlider == null || _AudioMixer == null) return;
         float dB = Mathf.Log10(Mathf.Clamp(_MusicSlider.value, 0.0001f, 1f)) * 20;
         _AudioMixer.SetFloat("music", dB);
         PlayerPrefs.SetFloat("musicVolume", _MusicSlider.value);
     }
+
     public void SetSFXVolume()
     {
+        if (_SFXSlider == null || _AudioMixer == null) return;
         float dB = Mathf.Log10(Mathf.Clamp(_SFXSlider.value, 0.0001f, 1f)) * 20;
-        Debug.Log($"SetSFXVolume called. Value: {_SFXSlider.value}, dB: {dB}");
         _AudioMixer.SetFloat("SFX", dB);
         PlayerPrefs.SetFloat("sfxVolume", _SFXSlider.value);
     }
+
     public void SetMasterVolume()
     {
+        if (_Mainslider == null || _AudioMixer == null) return;
         float dB = Mathf.Log10(Mathf.Clamp(_Mainslider.value, 0.0001f, 1f)) * 20;
         _AudioMixer.SetFloat("Master", dB);
         PlayerPrefs.SetFloat("masterVolume", _Mainslider.value);
-    }   
-
-    public void LoadVolume() { 
-        _MusicSlider.value = PlayerPrefs.GetFloat("musicVolume", 0.75f); 
     }
-    public void LoadMasterVolume() { 
-        _Mainslider.value = PlayerPrefs.GetFloat("masterVolume", 0.75f); 
 
+    // --- VOLUME LOADERS ---
+
+    public void LoadVolume()
+    {
+        if (_MusicSlider == null) return;
+        _MusicSlider.value = PlayerPrefs.GetFloat("musicVolume", 0.75f);
+        SetMusicVolume(); // Forces the mixer to update immediately on load
     }
-    public void LoadSFXVolume() { 
-        _SFXSlider.value = PlayerPrefs.GetFloat("sfxVolume", 0.75f); 
+
+    public void LoadMasterVolume()
+    {
+        if (_Mainslider == null) return;
+        _Mainslider.value = PlayerPrefs.GetFloat("masterVolume", 0.75f);
+        SetMasterVolume(); // Forces the mixer to update immediately on load
+    }
+
+    public void LoadSFXVolume()
+    {
+        if (_SFXSlider == null) return;
+        _SFXSlider.value = PlayerPrefs.GetFloat("sfxVolume", 0.75f);
+        SetSFXVolume(); // Forces the mixer to update immediately on load
     }
 
     private void FocusButton(GameObject target)
     {
+        if (target == null) return;
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(target);
     }
