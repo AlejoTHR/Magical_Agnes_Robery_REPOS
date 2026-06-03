@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Niveles/Puzles/Diseño de niveles y habitaciones.md",
+                "file": "Controles/Esquema de Controles del Jugador.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Diseño de niveles y habitaciones"
+              "title": "Esquema de Controles del Jugador"
             }
           }
         ],
@@ -200,8 +200,18 @@
   },
   "active": "bf9d1e3eb4c2b2f1",
   "lastOpenFiles": [
-    "Mecánicas/Lista de mecánicas.md",
+    "Mecánicas/Locomoción y Controlador Base del Personaje (Movement).md",
+    "Controles/Esquema de Controles del Jugador.md",
+    "Controles",
+    "Magias/Magia de Viento, Planeo (WindMagic).md",
+    "Arte/Diseño y estilo artistico.md",
+    "Audio/Comportamiento y Feedback de Botones (MenuButtonAudio).md",
+    "Audio/Administrador de Audio para Menús (MenuAudioManager).md",
+    "Audio/Controlador de Música del Menú (MenuMusicHandler).md",
+    "Audio/Administrador de Clips de Audio Centralizado (AudioSrc_Controller).md",
     "Niveles/Puzles/Diseño de niveles y habitaciones.md",
+    "Audio/Audio Design Document.md",
+    "Mecánicas/Lista de mecánicas.md",
     "Mecánicas/Mecánica de Escondites e Interacción (HideyScript).md",
     "Niveles/Habitaciones/Gestor de Niveles y Transiciones (LevelManager).md",
     "Enemigos/Lógica de Visión y Cono de Detección del Enemigo (EnemyScript).md",
@@ -209,10 +219,6 @@
     "Menus & UI/Gestor del Menú Principal (MainMenu).md",
     "Menus & UI/Gestor del Menú de Pausa (MenuPausa).md",
     "Arte/Sistema de Animación y Estados (Animation Controller).md",
-    "Audio/Comportamiento y Feedback de Botones (MenuButtonAudio).md",
-    "Audio/Administrador de Audio para Menús (MenuAudioManager).md",
-    "Audio/Controlador de Música del Menú (MenuMusicHandler).md",
-    "Audio/Administrador de Clips de Audio Centralizado (AudioSrc_Controller).md",
     "Camara/Sistema Central de Renderizado y Cámara (CinemachineBrain & Pixel Perfect).md",
     "Dialogos/Controlador de Diálogos y Transiciones de Nivel (DialogueController).md",
     "Magias/Electricidad.md",
@@ -221,13 +227,8 @@
     "Menus & UI/Efectos de Texto Interactivo (TMP_Wave).md",
     "Menus & UI/Indicador Emergente de Interacción (InteractPopup).md",
     "Menus & UI/Gestor de Pantalla Final (FinalMenuScript).md",
-    "Mecánicas/Objeto de Configuración Global de Atributos (ScriptableStats).md",
-    "Mecánicas/Locomoción y Controlador Base del Personaje (Movement).md",
     "Camara",
-    "Enemigos/Sistema de Movimiento y Modos del Enemigo (MovimientoEnemigo).md",
     "Enemigos",
-    "Niveles/Rooms/Controlador de Sala y Cámara Dinámica (RoomController).md",
-    "Niveles/Puzles/Activador de Puzles e Interruptores (PuzzleTrigger).md",
     "Niveles/Habitaciones",
     "Niveles/Puzles",
     "Dialogos",
