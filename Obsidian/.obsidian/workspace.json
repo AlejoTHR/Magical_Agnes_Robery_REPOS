@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mecánicas/Lista de mecánicas.md",
+                "file": "Magias/Electricidad.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lista de mecánicas"
+              "title": "Electricidad"
             }
           }
         ],
@@ -55,7 +55,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical",
+                "sortOrder": "byCreatedTime",
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
@@ -200,19 +200,30 @@
   },
   "active": "bf9d1e3eb4c2b2f1",
   "lastOpenFiles": [
+    "Magias/Sistema de Desbloqueo de Habilidades (MagicObtaining).md",
+    "Magias/Magia de Viento, Planeo (WindMagic).md",
+    "Magias/Magia de Agua, Impulso Fluido (WaterMagic).md",
+    "Magias/Magia de Fuego, Caída en Picado (FireMagic).md",
+    "Menus/Efectos de Texto Dinámico (RegularTextHover).md",
+    "Menus/Efectos de Texto Interactivo (TMP_Wave).md",
+    "Menus/Controlador de Música del Menú (MenuMusicHandler).md",
+    "Menus/Comportamiento y Feedback de Botones (MenuButtonAudio).md",
+    "Menus/Gestor del Menú Principal (MainMenu).md",
+    "Menus/Administrador de Audio para Menús (MenuAudioManager).md",
+    "Arte/Sistema de Animación y Estados (Animation Controller).md",
+    "Menus",
+    "Mecánicas/Esconderse.md",
+    "Arte",
+    "Mecánicas/Lista de mecánicas.md",
     "Mecánicas/Detectar Enemigos (Pol_Provisional).md",
     "Mecánicas/Camara.md",
-    "Mecánicas/Lista de mecánicas.md",
     "Mecánicas/Movimiento Básico.md",
     "Mecánicas/Movimiento Enemigos.md",
-    "Magias/Viento.md",
     "Magias/Electricidad.md",
-    "Magias/Agua.md",
     "IMAGENES/Cono_Detección.png",
     "IMAGENES/Celeste_Gameplay_CameraExample.gif",
     "Historia/Prueba.md",
     "Niveles/Prueba4.md",
-    "Magias/Fuego.md",
     "Sin título.canvas",
     "IMAGENES",
     "Personajes/Prueba5.md"

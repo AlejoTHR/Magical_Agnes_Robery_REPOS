@@ -7,7 +7,7 @@ public class MagicObtaining : MonoBehaviour
     private GameObject player;
     public enum magicToGrant
     {
-        Wind, Fire, Water, Electric
+        Wind, Fire, Water
     }
 
     public magicToGrant givenMagic;
@@ -31,9 +31,6 @@ public class MagicObtaining : MonoBehaviour
                     player.GetComponent<WaterMagic>().enabled = true;
                     this.gameObject.SetActive(false);
                     break;                
-                case magicToGrant.Electric:
-                    this.gameObject.SetActive(false);
-                    break;
             }
         }
     }

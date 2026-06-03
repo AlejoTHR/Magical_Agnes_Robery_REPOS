@@ -7,7 +7,6 @@ public class MagicManager : MonoBehaviour
     [SerializeField] private FireMagic fireMagic;
     [SerializeField] private WaterMagic waterMagic;
     [SerializeField] private WindMagic windMagic;
-    [SerializeField] private ElectricMagic electricMagic;
 
     private void Update()
     {
@@ -20,7 +19,6 @@ public class MagicManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1) && fireMagic != null) fireMagic.enabled = !fireMagic.enabled;
         if (Input.GetKeyDown(KeyCode.Alpha2) && waterMagic != null) waterMagic.enabled = !waterMagic.enabled;
         if (Input.GetKeyDown(KeyCode.Alpha3) && windMagic != null) windMagic.enabled = !windMagic.enabled;
-        if (Input.GetKeyDown(KeyCode.Alpha4) && electricMagic != null) electricMagic.enabled = !electricMagic.enabled;
 
         // 5: Disable All / 6: Enable All
         if (Input.GetKeyDown(KeyCode.Alpha5)) SetAllMagicState(false);
@@ -59,7 +57,6 @@ public class MagicManager : MonoBehaviour
         if (fireMagic) fireMagic.enabled = state;
         if (waterMagic) waterMagic.enabled = state;
         if (windMagic) windMagic.enabled = state;
-        if (electricMagic) electricMagic.enabled = state;
     }
 
     private void UnlockEverything()

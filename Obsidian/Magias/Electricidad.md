@@ -9,3 +9,7 @@ Agua: Si el objeto esta creado, y el jugador se transporta a este mientras usa l
 Fuego: El jugador puede poner el objeto durante la caida, o puede volver a un punto mas alto incluso mientras cae con la magia activada. Activar la magia electrica no cancela la magia de fuego. 
 
 Viento: El jugador puede mantener pulsado el boton de la magia de viento para tenerla activa en el momento en el que se teletransporta al objeto. 
+
+### RELEASE
+
+Se ha eliminado esta magia del juego. Todo el texto respecto a esta magia es irrelevante.
