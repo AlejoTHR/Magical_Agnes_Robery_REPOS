@@ -93,6 +93,7 @@ public class DialogueController : MonoBehaviour
         if (isPlayerInRange && interactAction.WasPressedThisFrame() && !playOnEnter)
         {
             StartDialogueSequence();
+            playerMovementScript._audioSource.Stop();
         }
     }
 

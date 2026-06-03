@@ -13,10 +13,16 @@ public class MenuPausa : MonoBehaviour
     [Header("Panels")]
     public GameObject panelPausa;
     public GameObject controlsMenu;
+    public GameObject _AudioPanel;
+    public GameObject _CreditsPanel;
+    public GameObject _FirstButtonAudio;
+    public GameObject _FirstButtonCredits;
 
     [Header("Sound Settings")]
     public AudioMixer mainMixer;
     public Slider musicSlider;
+    public Slider _Mainslider;
+    public Slider _SFXSlider;
     public AudioClip _globalClickSound;
 
     private AudioSource _hoverChannel;
@@ -97,6 +103,31 @@ public class MenuPausa : MonoBehaviour
         FocusButton(firstButtonPause);
     }
 
+    public void AudioPref()
+    {
+        Time.timeScale = 0f;
+        juegoPausado = true;
+        _AudioPanel.SetActive(true);
+        controlsMenu.SetActive(false);
+        FocusButton(_FirstButtonAudio);
+    }
+    public void CreditPref()
+    {
+        Time.timeScale = 0f;
+        juegoPausado = true;
+        _CreditsPanel.SetActive(true);
+        controlsMenu.SetActive(false);
+        FocusButton(_FirstButtonAudio);
+    }
+    public void BackAudio()
+    {
+        UI_PlayClick();
+        Time.timeScale = 1f;
+        _AudioPanel.SetActive(false);
+        controlsMenu.SetActive(true);
+    }
+
+
     public void Reanudar()
     {
         UI_PlayClick();
@@ -105,6 +136,7 @@ public class MenuPausa : MonoBehaviour
         controlsMenu.SetActive(false);
         juegoPausado = false;
     }
+
 
     // --- MENU NAVIGATION ---
 

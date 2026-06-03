@@ -23,7 +23,7 @@ public class Movement : MonoBehaviour, IPlayerController
     [SerializeField][Range(0, 1)] private float _masterVolume = 0.5f;
 
     private PlayerInput _input;
-    private AudioSource _audioSource;
+    public AudioSource _audioSource;
     [HideInInspector] public Rigidbody2D _rb;
     private CapsuleCollider2D _col;
     private FrameInput _frameInput;
