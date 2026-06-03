@@ -840,7 +840,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 5948196682962858909, guid: f9c617799bb2ee047a7f2a38c5a1fd1d, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1292,7 +1292,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 5948196682962858909, guid: f9c617799bb2ee047a7f2a38c5a1fd1d, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2399,7 +2399,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 5948196682962858909, guid: f9c617799bb2ee047a7f2a38c5a1fd1d, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -3085,6 +3085,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1022431676753373385, guid: 191058ab5a727ce4ebc9fcb1364c4f39, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2049553541}
     - targetCorrespondingSourceObject: {fileID: 597626183835961476, guid: 191058ab5a727ce4ebc9fcb1364c4f39, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1086451375}
@@ -3097,6 +3100,30 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2091700653621066888, guid: 191058ab5a727ce4ebc9fcb1364c4f39, type: 3}
   m_PrefabInstance: {fileID: 2049553538}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2049553540 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1022431676753373385, guid: 191058ab5a727ce4ebc9fcb1364c4f39, type: 3}
+  m_PrefabInstance: {fileID: 2049553538}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2049553541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049553540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3d17aa1aa89fe8438b659c24e198b41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuButtonAudio
+  hoverSound: {fileID: 0}
+  hoverSelcectSound: {fileID: 0}
+  hoverSource: {fileID: 0}
+  scaleMultiplier: 1.15
+  animationSpeed: 15
+  bobAmount: 8
+  bobSpeed: 3
 --- !u!1 &2125156380
 GameObject:
   m_ObjectHideFlags: 0
@@ -3620,7 +3647,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 5948196682962858909, guid: f9c617799bb2ee047a7f2a38c5a1fd1d, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
