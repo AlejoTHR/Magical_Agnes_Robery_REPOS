@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Menus & UI/Gestor del Menú de Pausa (MenuPausa).md",
+                "file": "Niveles/Rooms/Controlador de Sala y Cámara Dinámica (RoomController).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Gestor del Menú de Pausa (MenuPausa)"
+              "title": "Controlador de Sala y Cámara Dinámica (RoomController)"
             }
           }
         ],
@@ -200,8 +200,16 @@
   },
   "active": "bf9d1e3eb4c2b2f1",
   "lastOpenFiles": [
-    "Niveles/Prueba4.md",
+    "Niveles/Rooms/Gestor de Niveles y Transiciones (LevelManager).md",
+    "Niveles/Rooms/Controlador de Sala y Cámara Dinámica (RoomController).md",
+    "Niveles/Puzles/Activador de Puzles e Interruptores (PuzzleTrigger).md",
+    "Niveles/Rooms",
+    "Niveles/Untitled.md",
+    "Niveles/UntitledUntitled.md",
+    "Niveles/Puzles/Receptor y Transición de Puzle (PuzzleReceiver).md",
+    "Niveles/Puzles/Indicador Luminoso de Progreso de Puzle (PuzzleLightCue).md",
     "Menus & UI/Gestor del Menú de Pausa (MenuPausa).md",
+    "Niveles/Prueba4.md",
     "Niveles/Puzles",
     "Menus & UI/Gestor de Pantalla Final (FinalMenuScript).md",
     "Menus & UI/Indicador Emergente de Interacción (InteractPopup).md",
@@ -222,17 +230,10 @@
     "Audio/Administrador de Clips de Audio Centralizado (AudioSrc_Controller).md",
     "Audio/Controlador de Música del Menú (MenuMusicHandler).md",
     "Audio/Administrador de Audio para Menús (MenuAudioManager).md",
-    "Magias/Sistema de Desbloqueo de Habilidades (MagicObtaining).md",
-    "Menus & UI/Gestor del Menú Principal (MainMenu).md",
-    "Menus & UI/Efectos de Texto Dinámico (RegularTextHover).md",
-    "Menus & UI/Efectos de Texto Interactivo (TMP_Wave).md",
-    "Audio/Comportamiento y Feedback de Botones (MenuButtonAudio).md",
     "Audio",
-    "Arte/Sistema de Animación y Estados (Animation Controller).md",
     "Menus & UI",
     "Arte",
     "IMAGENES/Cono_Detección.png",
-    "Historia/Prueba.md",
     "Sin título.canvas",
     "IMAGENES"
   ]

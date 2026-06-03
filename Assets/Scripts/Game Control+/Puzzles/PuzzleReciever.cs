@@ -19,11 +19,9 @@ public class PuzzleReceiver : MonoBehaviour
     {
         animator = GetComponent<Animator>();
 
-        // --- NEW LOGIC FOR 0 LEVER DOORS ---
         if (leversNeeded <= 0)
         {
             isLocked = false;
-            // Ensure the animator exists before setting the parameter
             if (animator != null)
             {
                 animator.SetBool("abir", true);
@@ -43,7 +41,6 @@ public class PuzzleReceiver : MonoBehaviour
         }
     }
 
-    // Extracted to a method to keep code DRY (Don't Repeat Yourself)
     private void UnlockDoor()
     {
         isLocked = false;
