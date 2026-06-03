@@ -1,12 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-/* * HOW TO USE:
- * 1. Attach to a Lever or Pressure Plate.
- * 2. Set 'Puzzle ID' to the door it belongs to.
- * 3. Set 'Specific Lever ID' to the specific light cue it should activate.
- * 4. Requires a Collider2D (Trigger) for the player to stand in.
- */
 public class PuzzleTrigger : MonoBehaviour
 {
     [Header("Connection IDs")]
@@ -31,7 +25,6 @@ public class PuzzleTrigger : MonoBehaviour
 
     private void Update()
     {
-        // We check input in Update for maximum responsiveness
         if (playerInZone && !isPulled && _playerInput != null)
         {
             if (_playerInput.actions["Interact"].WasPressedThisFrame())
@@ -46,7 +39,6 @@ public class PuzzleTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInZone = true;
-            // Cache the reference once when they enter
             if (_playerInput == null) _playerInput = other.GetComponent<PlayerInput>();
         }
     }

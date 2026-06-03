@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 6568777844015200686}
   - component: {fileID: 6131330060222661740}
   - component: {fileID: 9002151512141668640}
-  - component: {fileID: 3812209699909262866}
   - component: {fileID: 2308512921648177989}
   - component: {fileID: 7482675276300028962}
   - component: {fileID: 4537000167359287821}
@@ -74,7 +73,6 @@ MonoBehaviour:
   fireMagic: {fileID: 6131330060222661740}
   waterMagic: {fileID: 9002151512141668640}
   windMagic: {fileID: 6568777844015200686}
-  electricMagic: {fileID: 3812209699909262866}
 --- !u!114 &4311021707632148132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,20 +154,6 @@ MonoBehaviour:
   dashDuration: 0.2
   dashCooldown: 0.5
   DashUsed: 0
---- !u!114 &3812209699909262866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919005749354704414}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85f1a1bfbb434b845b6e9b47684529f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agnes: {fileID: 7482675276300028962}
-  eletrik: {fileID: 3717297783524343271, guid: d417b85210110bd4e951baaa7a308f12, type: 3}
 --- !u!212 &2308512921648177989
 SpriteRenderer:
   m_ObjectHideFlags: 0

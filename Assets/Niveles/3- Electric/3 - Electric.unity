@@ -534,7 +534,7 @@ MonoBehaviour:
   panelPausa: {fileID: 556303391}
   controlsMenu: {fileID: 1924819440}
   mainMixer: {fileID: 24100000, guid: f9c617799bb2ee047a7f2a38c5a1fd1d, type: 2}
-  musicSlider: {fileID: 1924819442}
+  musicSlider: {fileID: 0}
   _globalClickSound: {fileID: 0}
   firstButtonPause: {fileID: 556303390}
   firstButtonControls: {fileID: 1924819441}
@@ -7390,17 +7390,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 250152462158109036, guid: 607888b65d1b3e744a8c4cbe3a090e1a, type: 3}
   m_PrefabInstance: {fileID: 1924819439}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1924819442 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3112005113647417296, guid: 607888b65d1b3e744a8c4cbe3a090e1a, type: 3}
-  m_PrefabInstance: {fileID: 1924819439}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2012192639
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7483,6 +7472,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4061059286040656502, guid: 916325cf48566cc4e81496a3f5cb3f58, type: 3}
+    - {fileID: 3812209699909262866, guid: 916325cf48566cc4e81496a3f5cb3f58, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

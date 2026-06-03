@@ -1,9 +1,4 @@
-/* * HOW TO USE:
- * 1. Attach to the root of your Room Prefab.
- * 2. Assign a 'Cinemachine Camera' (child of prefab) to the 'vCam' slot.
- * 3. Ensure the prefab has a PolygonCollider2D (Is Trigger) defining the room's boundaries.
- * 4. Automatically updates the camera to follow the "Player" tag.
- */
+
 
 using UnityEngine;
 using Unity.Cinemachine;
