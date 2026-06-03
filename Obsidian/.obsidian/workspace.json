@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Arte/Diseño y estilo artistico.md",
+                "file": "Audio/ADD.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Diseño y estilo artistico"
+              "title": "ADD"
             }
           }
         ],
@@ -214,6 +214,13 @@
   },
   "active": "ff83ffd4f7ce06d5",
   "lastOpenFiles": [
+    "AudioDesignDocument_PolLopez_AlejandroPereira_NoHatStudios.pdf",
+    "Audio/Administrador de Clips de Audio Centralizado (AudioSrc_Controller).md",
+    "Audio/ADD.md",
+    "Audio/Administrador de Audio para Menús (MenuAudioManager).md",
+    "Audio/Controlador de Música del Menú (MenuMusicHandler).md",
+    "Audio/Comportamiento y Feedback de Botones (MenuButtonAudio).md",
+    "Arte/Diseño y estilo artistico.md",
     "Menus & UI/Gestor del Menú de Pausa (MenuPausa).md",
     "Magias/Magia de Fuego, Caída en Picado (FireMagic).md",
     "Magias/Sistema de Desbloqueo de Habilidades (MagicObtaining).md",
@@ -227,11 +234,6 @@
     "Mecánicas/Locomoción y Controlador Base del Personaje (Movement).md",
     "Controles/Esquema de Controles del Jugador.md",
     "Controles",
-    "Arte/Diseño y estilo artistico.md",
-    "Audio/Comportamiento y Feedback de Botones (MenuButtonAudio).md",
-    "Audio/Administrador de Audio para Menús (MenuAudioManager).md",
-    "Audio/Controlador de Música del Menú (MenuMusicHandler).md",
-    "Audio/Administrador de Clips de Audio Centralizado (AudioSrc_Controller).md",
     "Niveles/Puzles/Diseño de niveles y habitaciones.md",
     "Audio/Audio Design Document.md",
     "Mecánicas/Lista de mecánicas.md",
@@ -240,8 +242,6 @@
     "Menus & UI/Gestor del Menú Principal (MainMenu).md",
     "Arte/Sistema de Animación y Estados (Animation Controller).md",
     "Magias/Electricidad.md",
-    "Menus & UI/Efectos de Texto Dinámico (RegularTextHover).md",
-    "Menus & UI/Efectos de Texto Interactivo (TMP_Wave).md",
     "Camara",
     "Enemigos",
     "Niveles/Habitaciones",
