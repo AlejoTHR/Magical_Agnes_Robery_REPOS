@@ -45603,11 +45603,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3287162288839985884, guid: 30bc9e9cce338c841ba332a30a9022c4, type: 3}
       propertyPath: dialogueSequence.Array.data[1].text
-      value: M4g1c G3m's s1d3 3ff3cts. 4ll BOTs 1n th1s v1c1n1ty 4r3 w4t3rproof
+      value: M4g1c G3m's s1d3 3ff3cts. 4ll BOTs 1n th1s v1c1n1ty 4r3 w4t3rpr00f
       objectReference: {fileID: 0}
     - target: {fileID: 3287162288839985884, guid: 30bc9e9cce338c841ba332a30a9022c4, type: 3}
       propertyPath: dialogueSequence.Array.data[2].text
-      value: That means we are close, perfec!
+      value: That means we are close, perfect!
       objectReference: {fileID: 0}
     - target: {fileID: 3287162288839985884, guid: 30bc9e9cce338c841ba332a30a9022c4, type: 3}
       propertyPath: dialogueSequence.Array.data[3].text

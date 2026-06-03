@@ -37257,7 +37257,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[1].text
-      value: 3v1l C0rp. D3str0y Tr33s wh1th th3m. Pl3as3 St0p Th3m
+      value: 3v1l C0rp0. D3str0y Tr33s wh1th th3m. Pl3as3 St0p Th3m
       objectReference: {fileID: 0}
     - target: {fileID: 8538850287099959270, guid: 423317f1055badf418cd11f0169bf90b, type: 3}
       propertyPath: dialogueSequence.Array.data[2].text

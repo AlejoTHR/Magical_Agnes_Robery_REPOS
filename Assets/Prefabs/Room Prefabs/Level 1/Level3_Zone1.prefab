@@ -58317,7 +58317,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3287162288839985884, guid: 30bc9e9cce338c841ba332a30a9022c4, type: 3}
       propertyPath: dialogueSequence.Array.data[1].text
-      value: Human 1nt3rv3nt10n 1s n0t r3qu1r3d. BOT 4cc3s 0nly
+      value: Hum4n 1nt3rv3nt10n 1s n0t r3qu1r3d. BOT 4cc3s 0nly
       objectReference: {fileID: 0}
     - target: {fileID: 3287162288839985884, guid: 30bc9e9cce338c841ba332a30a9022c4, type: 3}
       propertyPath: dialogueSequence.Array.data[2].text

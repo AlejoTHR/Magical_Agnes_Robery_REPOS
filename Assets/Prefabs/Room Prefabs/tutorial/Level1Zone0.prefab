@@ -10787,7 +10787,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3287162288839985884, guid: 30bc9e9cce338c841ba332a30a9022c4, type: 3}
       propertyPath: dialogueSequence.Array.data[0].text
-      value: (press Z | A to advance dialogue)
+      value: ' KEYBOARD | PRO CONTROLLER
+
+        (press Z | A to advance dialogue)'
       objectReference: {fileID: 0}
     - target: {fileID: 3287162288839985884, guid: 30bc9e9cce338c841ba332a30a9022c4, type: 3}
       propertyPath: dialogueSequence.Array.data[2].text
@@ -10795,8 +10797,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3287162288839985884, guid: 30bc9e9cce338c841ba332a30a9022c4, type: 3}
       propertyPath: dialogueSequence.Array.data[3].text
-      value: "\"$!!$\"\xB7!\xB7!.... This F0rest Is B34UT1FULL !\xB7!$!\xB7$!\xB7!
-        Mov3 !, 1 C4n't S33 the 3's"
+      value: "\"$!!$\"\xB7!\xB7!.... This F0rest is B34UT1FULL !\xB7!$!\xB7$!\xB7!
+        Mov3 !, I C4n't S33 the 3's"
       objectReference: {fileID: 0}
     - target: {fileID: 3287162288839985884, guid: 30bc9e9cce338c841ba332a30a9022c4, type: 3}
       propertyPath: dialogueSequence.Array.data[4].text
